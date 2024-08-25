@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-
+    <script src="../../../../static/js/submit_answers.js" defer></script> <!-- Include the external JS file -->
 </head>
 <body>
     <div class="container">
         <h1>تمرین 1: مقدمات پایتون</h1>
 
         <!-- User Information -->
-        <form id="user-info-form" action="javascript:void(0);" onsubmit="saveUserInfo()">
+        <form id="user-info-form" action="javascript:void(0);" onsubmit="saveUserInfo(event)">
             <div class="form-group">
                 <label for="name">نام:</label>
                 <input type="text" id="name" name="name" required>
@@ -76,66 +76,5 @@
         </div>
 
     </div>
-
-    <script>
-        function saveUserInfo() {
-            // Prevent default form submission
-            event.preventDefault();
-
-            // Save user info
-            var name = document.getElementById("name").value;
-            var password = document.getElementById("password").value;
-
-            // Save user info in local storage
-            localStorage.setItem("userInfo", JSON.stringify({ name: name, password: password }));
-
-            // Hide user info form
-            document.getElementById("user-info-form").style.display = "none";
-        }
-
-        function submitAllAnswers() {
-            // Get user info from local storage
-            var userInfo = JSON.parse(localStorage.getItem("userInfo"));
-
-            if (!userInfo) {
-                alert("لطفاً ابتدا نام و کلمه عبور خود را وارد کنید.");
-                return;
-            }
-
-            // Collect all answers dynamically
-            var answers = {};
-            document.querySelectorAll('.question textarea').forEach(function (textarea, index) {
-                answers[index] = textarea.value;
-            });
-
-            // Prepare data for submission
-            var data = {
-                date: new Date().toISOString(),
-                name: userInfo.name,
-                password: userInfo.password,
-                answers: answers
-            };
-
-            // Send data using Fetch API
-            fetch('https://mra85x.pythonanywhere.com/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data);
-                alert('پاسخ‌های شما با موفقیت ارسال شد.');
-                localStorage.removeItem("userInfo"); // Clear user info
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-                alert('خطا در ارسال پاسخ‌ها.');
-            });
-        }
-    </script>
-
 </body>
 </html>
