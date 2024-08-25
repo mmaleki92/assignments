@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignments Portal</title>
+    <title>Your Name's Assignment Portal</title>
     <style>
         /* General Styles */
         body {
@@ -24,11 +24,47 @@
         h1 {
             text-align: center;
             color: #0073e6;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+        }
+        h2, h3 {
+            color: #0073e6;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .banner {
+            width: 100%;
+            height: 200px;
+            background-color: #0073e6;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .intro {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .intro img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        .intro h2 {
+            margin: 10px 0 5px;
+        }
+        .intro a {
+            color: #0073e6;
+            text-decoration: none;
+            font-weight: bold;
         }
         .section-title {
             font-size: 1.5em;
-            color: #0073e6;
             margin-bottom: 20px;
             border-bottom: 2px solid #0073e6;
             padding-bottom: 10px;
@@ -48,9 +84,6 @@
             margin-top: 0;
             color: #0073e6;
         }
-        .assignment p, .project p, .link p {
-            margin-bottom: 10px;
-        }
         .assignment a, .project a, .link a {
             display: inline-block;
             color: #fff;
@@ -63,24 +96,63 @@
         .assignment a:hover, .project a:hover, .link a:hover {
             background-color: #005bb5;
         }
+        .nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #0073e6;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 2px solid #0073e6;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .nav a:hover {
+            background-color: #0073e6;
+            color: white;
+        }
+        .nav a.active {
+            background-color: #0073e6;
+            color: white;
+        }
     </style>
 </head>
 <body>
+    <!-- Banner Section -->
+    <div class="banner">
+        <!-- Replace the text below with your custom banner message or image -->
+        <div>Your Custom Banner Message</div>
+    </div>
+
     <div class="container">
-        <h1>Assignments Portal</h1>
+        <!-- Introduction Section -->
+        <div class="intro">
+            <img src="https://via.placeholder.com/100" alt="Your Profile Picture"> <!-- Replace with your profile picture -->
+            <h2>Your Name</h2>
+            <p>Welcome to my assignments portal. Here you can find all the assignments, projects, and useful resources.</p>
+            <p>Visit my <a href="https://github.com/yourusername" target="_blank">GitHub Profile</a> for more projects.</p>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div class="nav">
+            <a href="#assignments" class="active">Assignments</a>
+            <a href="#projects">Projects</a>
+            <a href="#resources">Resources</a>
+        </div>
 
         <!-- Assignments Section -->
-        <div>
+        <div id="assignments">
             <h2 class="section-title">Assignments</h2>
 
-            <!-- Assignment Example -->
             <div class="assignment">
                 <h2>Assignment Title 1</h2>
                 <p>Complete the tasks listed in the Google Form linked below. Ensure that you submit before the due date.</p>
                 <a href="https://forms.gle/your-google-form-link" target="_blank">Submit Assignment</a>
             </div>
 
-            <!-- Additional assignments can be added similarly -->
             <div class="assignment">
                 <h2>Assignment Title 2</h2>
                 <p>Read the provided materials and submit your answers using the Google Form link.</p>
@@ -89,17 +161,15 @@
         </div>
 
         <!-- Projects Section -->
-        <div>
+        <div id="projects">
             <h2 class="section-title">Project Titles</h2>
 
-            <!-- Project Example -->
             <div class="project">
                 <h3>Project Title 1</h3>
                 <p>Brief description of the project. Include objectives, deliverables, and key milestones.</p>
                 <a href="https://your-project-link.com" target="_blank">View Project</a>
             </div>
 
-            <!-- Additional projects can be added similarly -->
             <div class="project">
                 <h3>Project Title 2</h3>
                 <p>Detailed information about the second project. Mention any collaboration tools or platforms if applicable.</p>
@@ -108,17 +178,15 @@
         </div>
 
         <!-- Useful Links Section -->
-        <div>
+        <div id="resources">
             <h2 class="section-title">Useful Links</h2>
 
-            <!-- Useful Link Example -->
             <div class="link">
                 <h3>Resource Title 1</h3>
                 <p>A brief description of the resource and why it might be useful for the assignments or projects.</p>
                 <a href="https://resource-link.com" target="_blank">Visit Resource</a>
             </div>
 
-            <!-- Additional links can be added similarly -->
             <div class="link">
                 <h3>Resource Title 2</h3>
                 <p>Another useful resource that students might need to access frequently.</p>
@@ -127,5 +195,21 @@
         </div>
 
     </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelectorAll('.nav a').forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
