@@ -6,18 +6,24 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-    line-height: 1.6;
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
     font-size: 16px;
-    padding-top: 20px;
+    direction: ltr; /* Default direction for LTR */
 }
 
+/* Container for Content */
 .container {
     width: 90%;
-    max-width: 1100px;
-    margin: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* Language Selection */
@@ -89,9 +95,10 @@ body {
 }
 
 .intro h2 {
-    margin-bottom: 10px;
+    margin: 0 auto 20px;
     font-size: 2rem;
     color: #007bff;
+    max-width: 800px; /* Align with content boxes */
 }
 
 .intro p {
@@ -106,6 +113,7 @@ body {
     border-bottom: 2px solid #007bff;
     display: inline-block;
     padding-bottom: 5px;
+    text-align: center; /* Center align section titles */
 }
 
 /* Content Sections */
@@ -114,10 +122,11 @@ body {
 .assignment,
 .blog-post {
     background-color: #fff;
-    margin-bottom: 20px;
+    margin: 20px auto; /* Center and provide margin */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Box width */
 }
 
 .link h3,
@@ -153,6 +162,37 @@ body {
     color: #0056b3;
 }
 
+/* Specific Assignment Styles */
+.assignment {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    max-width: 800px; /* Box width */
+}
+
+.assignment img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.assignment h2 {
+    margin-top: 0;
+}
+
+.assignment a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.assignment a:hover {
+    text-decoration: underline;
+}
+
 /* Buttons */
 button, a.button {
     background-color: #007bff;
@@ -170,10 +210,30 @@ button:hover, a.button:hover {
     background-color: #0056b3;
 }
 
+/* RTL Support */
+[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .nav {
+    justify-content: flex-start; /* Align navigation to the right */
+}
+
+[dir="rtl"] .nav a {
+    padding-right: 20px;
+    padding-left: 0;
+}
+
+[dir="rtl"] .intro {
+    text-align: right;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav {
         flex-direction: column;
+        align-items: flex-start; /* Align to the left in RTL mode */
     }
 
     .nav a {

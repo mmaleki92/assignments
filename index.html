@@ -3,228 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python More!</title>
+    <title>Python More! - Language Selection</title>
     <link rel="stylesheet" href="static/css/styles.css">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #222;
+        }
+
+        .pattern-canvas {
+            border: 2px solid #fff;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
 
+    <!-- Random Pattern Section -->
+    <div class="pattern-section">
+        <canvas id="patternCanvas" class="pattern-canvas"></canvas>
+    </div>
+
     <!-- Language Selection -->
     <div class="language-selection">
-        <button id="english-button">English</button>
-        <button id="persian-button">فارسی</button>
+        <h1>Select Your Language</h1>
+        <button onclick="location.href='en/index.html'">English</button>
+        <button onclick="location.href='fa/index.html'">فارسی</button>
     </div>
 
-    <!-- Snake Game Section -->
-    <div class="snake-game">
-        <canvas id="gameCanvas"></canvas>
-    </div>
-
-    <div class="container">
-
-        <!-- Introduction Section -->
-        <div class="intro">
-            <img src="https://via.placeholder.com/100" alt="Your Profile Picture">
-            <h2>Python More!</h2>
-            <p>Welcome to my Python More. Here you can find all the assignments, projects, and useful resources.</p>
-            <p>Visit my <a href="https://github.com/mmaleki92" target="_blank">GitHub Profile</a> for more projects.</p>
-        </div>
-
-        <!-- Navigation Menu -->
-        <div class="nav">
-            <a href="assignments.html" class="active"><i class="fas fa-tasks"></i> Assignments</a>
-            <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
-            <a href="#resources"><i class="fas fa-book"></i> Resources</a>
-            <a href="#blog"><i class="fas fa-blog"></i> Blog</a>
-            <a href="#youtube"><i class="fab fa-youtube"></i> YouTube Channel</a>
-        </div>
-
-        <!-- Sections (you can link to separate HTML files as needed) -->
-        <!-- Projects Section -->
-        <div id="projects">
-            <h2 class="section-title">Projects</h2>
-
-            <div class="project">
-                <h3>Project Title 1</h3>
-                <p>Brief description of the project. Include objectives, deliverables, and key milestones.</p>
-                <a href="https://your-project-link.com" target="_blank">View Project</a>
-            </div>
-
-            <div class="project">
-                <h3>Project Title 2</h3>
-                <p>Detailed information about the second project. Mention any collaboration tools or platforms if applicable.</p>
-                <a href="https://your-project-link.com" target="_blank">View Project</a>
-            </div>
-        </div>
-
-        <!-- Useful Links Section -->
-        <div id="resources">
-            <h2 class="section-title">Useful Links</h2>
-
-            <div class="link">
-                <h3>Resource Title 1</h3>
-                <p>A brief description of the resource and why it might be useful for the assignments or projects.</p>
-                <a href="https://resource-link.com" target="_blank">Visit Resource</a>
-            </div>
-
-            <div class="link">
-                <h3>Resource Title 2</h3>
-                <p>Another useful resource that students might need to access frequently.</p>
-                <a href="https://resource-link.com" target="_blank">Visit Resource</a>
-            </div>
-        </div>
-
-        <!-- Blog Section -->
-        <div id="blog">
-            <h2 class="section-title">Blog</h2>
-
-            <div class="blog-post">
-                <h3>Blog Post Title 1</h3>
-                <p>A brief introduction to your blog post. Discuss topics relevant to your work or interests.</p>
-                <a href="https://your-blog-link.com" target="_blank">Read More</a>
-            </div>
-
-            <div class="blog-post">
-                <h3>Blog Post Title 2</h3>
-                <p>Another blog post topic. This could be about projects, tips, tutorials, or anything you want to share.</p>
-                <a href="https://your-blog-link.com" target="_blank">Read More</a>
-            </div>
-        </div>
-
-        <!-- YouTube Channel Section -->
-        <div id="youtube">
-            <h2 class="section-title">YouTube Channel</h2>
-            <p>Subscribe to my <a href="https://www.youtube.com/your-channel-link" target="_blank">YouTube Channel</a> for tutorials, project walkthroughs, and more.</p>
-        </div>
-
-    </div>
-
-    <script>
-        // Smooth scrolling for navigation
-        document.querySelectorAll('.nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelectorAll('.nav a').forEach(link => link.classList.remove('active'));
-                this.classList.add('active');
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-        // Placeholder script for language buttons (can be expanded for actual localization)
-        document.getElementById('english-button').addEventListener('click', () => {
-            alert('English language selected!');
-        });
-
-        document.getElementById('persian-button').addEventListener('click', () => {
-            alert('زبان فارسی انتخاب شد!');
-        });
-
-        // Snake Game Code
-        const canvas = document.getElementById("gameCanvas");
-        const ctx = canvas.getContext("2d");
-        const gridSize = 20;
-        const canvasSize = 400;
-        canvas.width = canvasSize;
-        canvas.height = canvasSize;
-
-        let snake = [{ x: gridSize * 5, y: gridSize * 5 }];
-        let direction = { x: 0, y: 0 };
-        let food = generateFood();
-        let score = 0;
-
-        document.addEventListener("keydown", changeDirection);
-
-        function gameLoop() {
-            if (isGameOver()) {
-                alert("Game Over! Your score was " + score);
-                resetGame();
-            } else {
-                setTimeout(() => {
-                    clearCanvas();
-                    moveSnake();
-                    drawFood();
-                    drawSnake();
-                    gameLoop();
-                }, 100);
-            }
-        }
-
-        function clearCanvas() {
-            ctx.fillStyle = "black";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-        }
-
-        function drawSnake() {
-            ctx.fillStyle = "lime";
-            snake.forEach(segment => {
-                ctx.fillRect(segment.x, segment.y, gridSize, gridSize);
-            });
-        }
-
-        function moveSnake() {
-            const newHead = { x: snake[0].x + direction.x, y: snake[0].y + direction.y };
-            snake.unshift(newHead);
-
-            if (newHead.x === food.x && newHead.y === food.y) {
-                score++;
-                food = generateFood();
-            } else {
-                snake.pop();
-            }
-        }
-
-        function changeDirection(event) {
-            const keyPressed = event.keyCode;
-            const goingUp = direction.y === -gridSize;
-            const goingDown = direction.y === gridSize;
-            const goingRight = direction.x === gridSize;
-            const goingLeft = direction.x === -gridSize;
-
-            if (keyPressed === 37 && !goingRight) { // left arrow key
-                direction = { x: -gridSize, y: 0 };
-            } else if (keyPressed === 38 && !goingDown) { // up arrow key
-                direction = { x: 0, y: -gridSize };
-            } else if (keyPressed === 39 && !goingLeft) { // right arrow key
-                direction = { x: gridSize, y: 0 };
-            } else if (keyPressed === 40 && !goingUp) { // down arrow key
-                direction = { x: 0, y: gridSize };
-            }
-        }
-
-        function drawFood() {
-            ctx.fillStyle = "red";
-            ctx.fillRect(food.x, food.y, gridSize, gridSize);
-        }
-
-        function generateFood() {
-            return {
-                x: Math.floor(Math.random() * (canvasSize / gridSize)) * gridSize,
-                y: Math.floor(Math.random() * (canvasSize / gridSize)) * gridSize
-            };
-        }
-
-        function isGameOver() {
-            for (let i = 1; i < snake.length; i++) {
-                if (snake[i].x === snake[0].x && snake[i].y === snake[0].y) return true;
-            }
-            const hitLeftWall = snake[0].x < 0;
-            const hitRightWall = snake[0].x >= canvas.width;
-            const hitTopWall = snake[0].y < 0;
-            const hitBottomWall = snake[0].y >= canvas.height;
-
-            return hitLeftWall || hitRightWall || hitTopWall || hitBottomWall;
-        }
-
-        function resetGame() {
-            snake = [{ x: gridSize * 5, y: gridSize * 5 }];
-            direction = { x: 0, y: 0 };
-            food = generateFood();
-            score = 0;
-        }
-
-        gameLoop();
-    </script>
+    <script src="static/js/pattern.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Pattern</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #222;
+        }
+
+        canvas {
+            border: 2px solid #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Canvas for Random Pattern -->
+    <canvas id="patternCanvas"></canvas>
+
+    <script>
+        const canvas = document.getElementById('patternCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Set the canvas size
+        canvas.width = window.innerWidth * 0.8;
+        canvas.height = window.innerHeight * 0.8;
+
+        // Generate a random color
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Draw a random pattern
+        function drawPattern() {
+            const patternSize = 100;
+            for (let x = 0; x < canvas.width; x += patternSize) {
+                for (let y = 0; y < canvas.height; y += patternSize) {
+                    ctx.fillStyle = getRandomColor();
+                    ctx.fillRect(x, y, patternSize, patternSize);
+                }
+            }
+        }
+
+        // Redraw the pattern on resize
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth * 0.8;
+            canvas.height = window.innerHeight * 0.8;
+            drawPattern();
+        });
+
+        // Initial draw
+        drawPattern();
+    </script>
+
+</body>
+</html>
