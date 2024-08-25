@@ -15,7 +15,7 @@ body, html {
     color: #333;
     line-height: 1.6;
     font-size: 16px;
-    direction: ltr; /* Default direction for LTR */
+    direction: rtl; /* Adjusted for RTL direction */
 }
 
 /* Container for Content */
@@ -24,6 +24,47 @@ body, html {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+}
+
+/* Section Titles */
+h1, .section-title {
+    text-align: center; /* Center align section titles */
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2rem; /* Larger font size for h1 */
+}
+
+
+.assignment {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.assignment img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.assignment h2 {
+    margin-top: 0;
+}
+
+.assignment a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.assignment a:hover {
+    text-decoration: underline;
 }
 
 /* Language Selection */
@@ -103,17 +144,6 @@ body, html {
 
 .intro p {
     margin-bottom: 10px;
-}
-
-/* Section Titles */
-.section-title {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
-    display: inline-block;
-    padding-bottom: 5px;
-    text-align: center; /* Center align section titles */
 }
 
 /* Content Sections */
