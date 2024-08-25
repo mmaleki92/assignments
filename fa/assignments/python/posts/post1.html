@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تمرین 1: مقدمات پایتون</title>
-    
+
     <link rel="stylesheet" href="../../../../static/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
@@ -34,6 +34,27 @@
             white-space: pre;
             margin-top: 10px;
         }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .submit-button {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -41,19 +62,24 @@
     <div class="container">
         <h1>تمرین 1: مقدمات پایتون</h1>
 
+        <!-- User Information -->
+        <form id="user-info-form" action="javascript:void(0);" onsubmit="saveUserInfo()">
+            <div class="form-group">
+                <label for="name">نام:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="password">کلمه عبور:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <input type="submit" value="ثبت اطلاعات">
+        </form>
+
         <!-- Question 0: Basics of Python -->
         <div class="question">
             <h2>سؤال 0: مبانی پایتون</h2>
-            <p>آیا نرم افزار 
-                IDLE
-                پایتون را نصب کرده‌اید؟</p>
-            
-            <form action="https://mra85x.pythonanywhere.com/submit" method="POST">
-                <label for="answer0">پاسخ:</label><br>
-                <textarea id="answer0" name="answer0" rows="4" cols="50" required></textarea><br>
-                <input type="hidden" name="question" value="0">
-                <input type="submit" value="ارسال پاسخ">
-            </form>
+            <p>آیا نرم افزار IDLE پایتون را نصب کرده‌اید؟</p>
+            <textarea id="answer0" name="answer0" rows="4" cols="50" required></textarea>
         </div>
 
         <!-- Question 1: Basics of Python -->
@@ -61,28 +87,15 @@
             <h2>سؤال 1: مبانی پایتون</h2>
             <p>پایتون یک زبان برنامه‌نویسی سطح بالا و همه‌منظوره است که برای ساخت انواع مختلف برنامه‌ها و اسکریپت‌ها استفاده می‌شود. برخی از ویژگی‌های اصلی پایتون شامل سادگی در نوشتن کد، خوانایی و قابلیت توسعه‌پذیری است.</p>
             <p>در زیر یک مثال ساده از نحوه استفاده از متغیرها و چاپ خروجی در پایتون آورده شده است:</p>
-           
             <script src="https://gist.github.com/mmaleki92/b0b3dc07338a51052e800f83f7b4374c.js"></script>
-
-            <form action="https://mra85x.pythonanywhere.com/submit" method="POST">
-                <label for="answer1">پاسخ:</label><br>
-                <textarea id="answer1" name="answer1" rows="4" cols="50" required></textarea><br>
-                <input type="hidden" name="question" value="1">
-                <input type="submit" value="ارسال پاسخ">
-            </form>
+            <textarea id="answer1" name="answer1" rows="4" cols="50" required></textarea>
         </div>
 
         <!-- Question 2: Using IDLE -->
         <div class="question">
             <h2>سؤال 2: استفاده از IDLE</h2>
             <p>IDLE (Integrated Development and Learning Environment) محیط توسعه رسمی برای پایتون است. شما می‌توانید از آن برای نوشتن و اجرای کدهای پایتون استفاده کنید.</p>
-
-            <form action="https://mra85x.pythonanywhere.com/submit" method="POST">
-                <label for="answer2">پاسخ:</label><br>
-                <textarea id="answer2" name="answer2" rows="4" cols="50" required></textarea><br>
-                <input type="hidden" name="question" value="2">
-                <input type="submit" value="ارسال پاسخ">
-            </form>
+            <textarea id="answer2" name="answer2" rows="4" cols="50" required></textarea>
         </div>
 
         <!-- Question 3: Python Version -->
@@ -90,13 +103,7 @@
             <h2>سؤال 3: نسخه پایتون</h2>
             <p>برای بررسی نسخه پایتون که در حال حاضر بر روی سیستم شما نصب شده است، می‌توانید از دستور زیر در ترمینال استفاده کنید:</p>
             <script src="https://gist.github.com/mmaleki92/adb2da81fe3286dcd03ca3a72b0fe8c5.js"></script>
-
-            <form action="https://mra85x.pythonanywhere.com/submit" method="POST">
-                <label for="answer3">پاسخ:</label><br>
-                <textarea id="answer3" name="answer3" rows="4" cols="50" required></textarea><br>
-                <input type="hidden" name="question" value="3">
-                <input type="submit" value="ارسال پاسخ">
-            </form>
+            <textarea id="answer3" name="answer3" rows="4" cols="50" required></textarea>
         </div>
 
         <!-- Question 4: Input and Output -->
@@ -105,16 +112,74 @@
             <p>در پایتون، می‌توانید از تابع <code>input()</code> برای دریافت ورودی از کاربر و از تابع <code>print()</code> برای نمایش خروجی استفاده کنید.</p>
             <p>در زیر یک مثال ساده از نحوه دریافت ورودی و نمایش آن به کاربر آورده شده است:</p>
             <script src="https://gist.github.com/mmaleki92/e0ca98d392ead998d7421e2c3cca839b.js"></script>
+            <textarea id="answer4" name="answer4" rows="4" cols="50" required></textarea>
+        </div>
 
-            <form action="https://mra85x.pythonanywhere.com/submit" method="POST">
-                <label for="answer4">پاسخ:</label><br>
-                <textarea id="answer4" name="answer4" rows="4" cols="50" required></textarea><br>
-                <input type="hidden" name="question" value="4">
-                <input type="submit" value="ارسال پاسخ">
-            </form>
+        <div class="submit-button">
+            <button onclick="submitAllAnswers()">ارسال تمام پاسخ‌ها</button>
         </div>
 
     </div>
+
+    <script>
+        function saveUserInfo() {
+            // Prevent default form submission
+            event.preventDefault();
+
+            // Save user info
+            var name = document.getElementById("name").value;
+            var password = document.getElementById("password").value;
+
+            // Save user info in local storage
+            localStorage.setItem("userInfo", JSON.stringify({ name: name, password: password }));
+
+            // Hide user info form
+            document.getElementById("user-info-form").style.display = "none";
+        }
+
+        function submitAllAnswers() {
+            // Get user info from local storage
+            var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+
+            if (!userInfo) {
+                alert("لطفاً ابتدا نام و کلمه عبور خود را وارد کنید.");
+                return;
+            }
+
+            // Collect all answers
+            var answers = {
+                date: new Date().toISOString(),
+                name: userInfo.name,
+                password: userInfo.password,
+                answers: {
+                    "0": document.getElementById("answer0").value,
+                    "1": document.getElementById("answer1").value,
+                    "2": document.getElementById("answer2").value,
+                    "3": document.getElementById("answer3").value,
+                    "4": document.getElementById("answer4").value
+                }
+            };
+
+            // Send data using Fetch API
+            fetch('https://mra85x.pythonanywhere.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(answers)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                alert('پاسخ‌های شما با موفقیت ارسال شد.');
+                localStorage.removeItem("userInfo"); // Clear user info
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('خطا در ارسال پاسخ‌ها.');
+            });
+        }
+    </script>
 
 </body>
 </html>
