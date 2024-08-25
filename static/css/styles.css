@@ -17,7 +17,11 @@ body, html {
     font-size: 16px;
     direction: rtl; /* Adjusted for RTL direction */
 }
-
+/* General Rule for Mixed Direction Text */
+.mixed-direction {
+    direction: rtl;
+    unicode-bidi: isolate;
+}
 /* Container for Content */
 .container {
     width: 90%;
