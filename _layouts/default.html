@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
 
-    <link rel="stylesheet" href="{{ site.baseurl }}/static/css/styles.css">
+    <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
@@ -14,12 +14,72 @@
     <div class="container">
         <h1>{{ page.title }}</h1>
 
-        <!-- Include content from the page -->
         {{ content }}
 
-        <script>
-            // Your JavaScript code
-        </script>
+        <div class="submit-button">
+            <button onclick="submitAllAnswers()">ارسال تمام پاسخ‌ها</button>
+        </div>
     </div>
+
+    <script>
+        function saveUserInfo() {
+            // Prevent default form submission
+            event.preventDefault();
+
+            // Save user info
+            var name = document.getElementById("name").value;
+            var password = document.getElementById("password").value;
+
+            // Save user info in local storage
+            localStorage.setItem("userInfo", JSON.stringify({ name: name, password: password }));
+
+            // Hide user info form
+            document.getElementById("user-info-form").style.display = "none";
+        }
+
+        function submitAllAnswers() {
+            // Get user info from local storage
+            var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+
+            if (!userInfo) {
+                alert("لطفاً ابتدا نام و کلمه عبور خود را وارد کنید.");
+                return;
+            }
+
+            // Collect all answers
+            var answers = {
+                date: new Date().toISOString(),
+                name: userInfo.name,
+                password: userInfo.password,
+                answers: {
+                    "0": document.getElementById("answer0").value,
+                    "1": document.getElementById("answer1").value,
+                    "2": document.getElementById("answer2").value,
+                    "3": document.getElementById("answer3").value,
+                    "4": document.getElementById("answer4").value
+                }
+            };
+
+            // Send data using Fetch API
+            fetch('https://mra85x.pythonanywhere.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(answers)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                alert('پاسخ‌های شما با موفقیت ارسال شد.');
+                localStorage.removeItem("userInfo"); // Clear user info
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('خطا در ارسال پاسخ‌ها.');
+            });
+        }
+    </script>
+
 </body>
 </html>
