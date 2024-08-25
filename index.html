@@ -4,56 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name's Portal</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+
     <!-- Language Selection -->
     <div class="language-selection">
-        <button id="english-btn">English</button>
-        <button id="persian-btn">فارسی</button>
+        <button id="english-button">English</button>
+        <button id="persian-button">فارسی</button>
     </div>
 
     <!-- Banner Section -->
     <div class="banner">
-        <img src="{{ url_for('static', filename='img/banner.jpg') }}" alt="Banner Image">
+        <img src="static/img/banner.jpg" alt="Banner Image">
     </div>
 
-    <!-- Navigation Menu -->
-    <div class="nav">
-        <a href="#resources"><i class="fas fa-book"></i> Resources</a>
-        <a href="https://www.youtube.com/yourchannel" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
-        <a href="assignments.html"><i class="fas fa-tasks"></i> Assignments</a>
-        <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
-        <a href="#blog"><i class="fas fa-blog"></i> Blog</a>
-    </div>
-
-    <!-- Main Content -->
     <div class="container">
+
         <!-- Introduction Section -->
         <div class="intro">
             <img src="https://via.placeholder.com/100" alt="Your Profile Picture">
             <h2>Your Name</h2>
-            <p>Welcome to my portal. Here you can find all my assignments, projects, and useful resources.</p>
+            <p>Welcome to my portal. Here you can find all the assignments, projects, and useful resources.</p>
             <p>Visit my <a href="https://github.com/yourusername" target="_blank">GitHub Profile</a> for more projects.</p>
         </div>
 
-        <!-- Resources Section -->
-        <div id="resources">
-            <h2 class="section-title">Useful Links</h2>
-
-            <div class="link">
-                <h3>Resource Title 1</h3>
-                <p>A brief description of the resource and its importance.</p>
-                <a href="https://resource-link.com" target="_blank">Visit Resource</a>
-            </div>
-
-            <div class="link">
-                <h3>Resource Title 2</h3>
-                <p>Another useful resource description.</p>
-                <a href="https://resource-link.com" target="_blank">Visit Resource</a>
-            </div>
+        <!-- Navigation Menu -->
+        <div class="nav">
+            <a href="assignments.html" class="active"><i class="fas fa-tasks"></i> Assignments</a>
+            <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
+            <a href="#resources"><i class="fas fa-book"></i> Resources</a>
+            <a href="#blog"><i class="fas fa-blog"></i> Blog</a>
+            <a href="#youtube"><i class="fab fa-youtube"></i> YouTube Channel</a>
         </div>
+
+        <!-- Sections (you can link to separate HTML files as needed) -->
 
         <!-- Projects Section -->
         <div id="projects">
@@ -61,14 +48,31 @@
 
             <div class="project">
                 <h3>Project Title 1</h3>
-                <p>Brief description of the project.</p>
+                <p>Brief description of the project. Include objectives, deliverables, and key milestones.</p>
                 <a href="https://your-project-link.com" target="_blank">View Project</a>
             </div>
 
             <div class="project">
                 <h3>Project Title 2</h3>
-                <p>Detailed information about the second project.</p>
+                <p>Detailed information about the second project. Mention any collaboration tools or platforms if applicable.</p>
                 <a href="https://your-project-link.com" target="_blank">View Project</a>
+            </div>
+        </div>
+
+        <!-- Useful Links Section -->
+        <div id="resources">
+            <h2 class="section-title">Useful Links</h2>
+
+            <div class="link">
+                <h3>Resource Title 1</h3>
+                <p>A brief description of the resource and why it might be useful for the assignments or projects.</p>
+                <a href="https://resource-link.com" target="_blank">Visit Resource</a>
+            </div>
+
+            <div class="link">
+                <h3>Resource Title 2</h3>
+                <p>Another useful resource that students might need to access frequently.</p>
+                <a href="https://resource-link.com" target="_blank">Visit Resource</a>
             </div>
         </div>
 
@@ -78,28 +82,45 @@
 
             <div class="blog-post">
                 <h3>Blog Post Title 1</h3>
-                <p>A brief description of the blog post.</p>
+                <p>A brief introduction to your blog post. Discuss topics relevant to your work or interests.</p>
                 <a href="https://your-blog-link.com" target="_blank">Read More</a>
             </div>
 
             <div class="blog-post">
                 <h3>Blog Post Title 2</h3>
-                <p>Details about the second blog post.</p>
+                <p>Another blog post topic. This could be about projects, tips, tutorials, or anything you want to share.</p>
                 <a href="https://your-blog-link.com" target="_blank">Read More</a>
             </div>
         </div>
+
+        <!-- YouTube Channel Section -->
+        <div id="youtube">
+            <h2 class="section-title">YouTube Channel</h2>
+            <p>Subscribe to my <a href="https://www.youtube.com/your-channel-link" target="_blank">YouTube Channel</a> for tutorials, project walkthroughs, and more.</p>
+        </div>
+
     </div>
 
     <script>
-        // Language selection functionality
-        document.getElementById('english-btn').addEventListener('click', function () {
-            document.documentElement.setAttribute('lang', 'en');
+        // Smooth scrolling for navigation
+        document.querySelectorAll('.nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelectorAll('.nav a').forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
         });
 
-        document.getElementById('persian-btn').addEventListener('click', function () {
-            document.documentElement.setAttribute('lang', 'fa');
-            document.body.style.direction = 'rtl';
+        // Placeholder script for language buttons (can be expanded for actual localization)
+        document.getElementById('english-button').addEventListener('click', () => {
+            alert('English language selected!');
+        });
+
+        document.getElementById('persian-button').addEventListener('click', () => {
+            alert('زبان فارسی انتخاب شد!');
         });
     </script>
+
 </body>
 </html>
