@@ -10,7 +10,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 
-
 </head>
 <body>
     <div class="container">
@@ -28,7 +27,7 @@
             </div>
 
             <div class="submit-button">
-            <input type="submit" value="ثبت اطلاعات">
+                <input type="submit" value="ثبت اطلاعات">
             </div>
         </form>
 
@@ -103,18 +102,18 @@
                 return;
             }
 
-            // Collect all answers
-            var answers = {
+            // Collect all answers dynamically
+            var answers = {};
+            document.querySelectorAll('.question textarea').forEach(function (textarea, index) {
+                answers[index] = textarea.value;
+            });
+
+            // Prepare data for submission
+            var data = {
                 date: new Date().toISOString(),
                 name: userInfo.name,
                 password: userInfo.password,
-                answers: {
-                    "0": document.getElementById("answer0").value,
-                    "1": document.getElementById("answer1").value,
-                    "2": document.getElementById("answer2").value,
-                    "3": document.getElementById("answer3").value,
-                    "4": document.getElementById("answer4").value
-                }
+                answers: answers
             };
 
             // Send data using Fetch API
@@ -123,7 +122,7 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(answers)
+                body: JSON.stringify(data)
             })
             .then(response => response.json())
             .then(data => {
