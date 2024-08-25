@@ -38,3 +38,8 @@ window.addEventListener('resize', () => {
     resizeCanvas();
     drawPattern();
 });
+
+// Change the pattern every second
+setInterval(() => {
+    drawPattern();
+}, 1000); // 1000 milliseconds = 1 second
