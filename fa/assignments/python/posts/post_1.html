@@ -10,11 +10,21 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="../../../../static/js/submit_answers.js" defer></script> <!-- Include the external JS file -->
+    <script src="../../../../static/js/tetris_python.js" defer></script> <!-- Include the Tetris JS file -->
+
+    <style>
+        /* Ensure the canvas spans the full width of the page */
+        #tetrisCanvas {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>تمرین 1: مقدمات پایتون</h1>
-
+        <canvas id="tetrisCanvas"></canvas>
         <!-- User Information -->
         <form id="user-info-form" action="javascript:void(0);" onsubmit="saveUserInfo(event)">
             <div class="form-group">
