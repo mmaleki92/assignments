@@ -26,6 +26,53 @@ body, html {
     padding: 20px;
 }
 
+/* Header Styling */
+header {
+    background-color: #333; /* Dark background color */
+    padding: 20px; /* Padding for the header */
+    border-radius: 8px; /* Match the border-radius of other elements */
+    margin-bottom: 30px; /* Space below the header */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Consistent box-shadow */
+}
+
+header nav ul {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Align items horizontally */
+    justify-content: space-around; /* Space between items */
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 18px; /* Font size */
+    padding: 10px 20px; /* Padding inside each link */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    border-radius: 5px; /* Rounded corners for consistency */
+    display: block; /* Ensure full clickable area */
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    background-color: #007bff; /* Match the hover color of other elements */
+    color: #fff; /* Keep text color white on hover */
+}
+
+/* Section Titles */
+h1, .section-title {
+    text-align: center; /* Center align section titles */
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2rem; /* Larger font size for h1 */
+}
 /* Section Titles */
 h1, .section-title {
     text-align: center; /* Center align section titles */
