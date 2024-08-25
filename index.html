@@ -3,212 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name's Assignment Portal</title>
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #0073e6;
-            margin-bottom: 20px;
-        }
-        h2, h3 {
-            color: #0073e6;
-        }
-        p {
-            line-height: 1.6;
-        }
-        .banner {
-            width: 100%;
-            height: 200px;
-            background-color: #0073e6;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.5em;
-            text-align: center;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .intro {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .intro img {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            margin-bottom: 10px;
-        }
-        .intro h2 {
-            margin: 10px 0 5px;
-        }
-        .intro a {
-            color: #0073e6;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .section-title {
-            font-size: 1.5em;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #0073e6;
-            padding-bottom: 10px;
-        }
-        .assignment, .project, .link {
-            margin-bottom: 20px;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #fafafa;
-            transition: box-shadow 0.3s ease;
-        }
-        .assignment:hover, .project:hover, .link:hover {
-            box-shadow: 0 0 10px rgba(0, 115, 230, 0.3);
-        }
-        .assignment h2, .project h3, .link h3 {
-            margin-top: 0;
-            color: #0073e6;
-        }
-        .assignment a, .project a, .link a {
-            display: inline-block;
-            color: #fff;
-            background-color: #0073e6;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .assignment a:hover, .project a:hover, .link a:hover {
-            background-color: #005bb5;
-        }
-        .nav {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .nav a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #0073e6;
-            font-weight: bold;
-            padding: 10px 20px;
-            border: 2px solid #0073e6;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        .nav a:hover {
-            background-color: #0073e6;
-            color: white;
-        }
-        .nav a.active {
-            background-color: #0073e6;
-            color: white;
-        }
-    </style>
+    <title>Your Name's Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Banner Section -->
-    <div class="banner">
-        <!-- Replace the text below with your custom banner message or image -->
-        <div>Your Custom Banner Message</div>
+    <!-- Language Selection -->
+    <div class="language-selection">
+        <button id="english-btn">English</button>
+        <button id="persian-btn">فارسی</button>
     </div>
 
+    <!-- Banner Section -->
+    <div class="banner">
+        <img src="{{ url_for('static', filename='img/banner.jpg') }}" alt="Banner Image">
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="nav">
+        <a href="#resources"><i class="fas fa-book"></i> Resources</a>
+        <a href="https://www.youtube.com/yourchannel" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+        <a href="assignments.html"><i class="fas fa-tasks"></i> Assignments</a>
+        <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
+        <a href="#blog"><i class="fas fa-blog"></i> Blog</a>
+    </div>
+
+    <!-- Main Content -->
     <div class="container">
         <!-- Introduction Section -->
         <div class="intro">
-            <img src="https://via.placeholder.com/100" alt="Your Profile Picture"> <!-- Replace with your profile picture -->
+            <img src="https://via.placeholder.com/100" alt="Your Profile Picture">
             <h2>Your Name</h2>
-            <p>Welcome to my assignments portal. Here you can find all the assignments, projects, and useful resources.</p>
+            <p>Welcome to my portal. Here you can find all my assignments, projects, and useful resources.</p>
             <p>Visit my <a href="https://github.com/yourusername" target="_blank">GitHub Profile</a> for more projects.</p>
         </div>
 
-        <!-- Navigation Menu -->
-        <div class="nav">
-            <a href="#assignments" class="active">Assignments</a>
-            <a href="#projects">Projects</a>
-            <a href="#resources">Resources</a>
-        </div>
-
-        <!-- Assignments Section -->
-        <div id="assignments">
-            <h2 class="section-title">Assignments</h2>
-
-            <div class="assignment">
-                <h2>Assignment Title 1</h2>
-                <p>Complete the tasks listed in the Google Form linked below. Ensure that you submit before the due date.</p>
-                <a href="https://forms.gle/your-google-form-link" target="_blank">Submit Assignment</a>
-            </div>
-
-            <div class="assignment">
-                <h2>Assignment Title 2</h2>
-                <p>Read the provided materials and submit your answers using the Google Form link.</p>
-                <a href="https://forms.gle/your-google-form-link" target="_blank">Submit Assignment</a>
-            </div>
-        </div>
-
-        <!-- Projects Section -->
-        <div id="projects">
-            <h2 class="section-title">Project Titles</h2>
-
-            <div class="project">
-                <h3>Project Title 1</h3>
-                <p>Brief description of the project. Include objectives, deliverables, and key milestones.</p>
-                <a href="https://your-project-link.com" target="_blank">View Project</a>
-            </div>
-
-            <div class="project">
-                <h3>Project Title 2</h3>
-                <p>Detailed information about the second project. Mention any collaboration tools or platforms if applicable.</p>
-                <a href="https://your-project-link.com" target="_blank">View Project</a>
-            </div>
-        </div>
-
-        <!-- Useful Links Section -->
+        <!-- Resources Section -->
         <div id="resources">
             <h2 class="section-title">Useful Links</h2>
 
             <div class="link">
                 <h3>Resource Title 1</h3>
-                <p>A brief description of the resource and why it might be useful for the assignments or projects.</p>
+                <p>A brief description of the resource and its importance.</p>
                 <a href="https://resource-link.com" target="_blank">Visit Resource</a>
             </div>
 
             <div class="link">
                 <h3>Resource Title 2</h3>
-                <p>Another useful resource that students might need to access frequently.</p>
+                <p>Another useful resource description.</p>
                 <a href="https://resource-link.com" target="_blank">Visit Resource</a>
             </div>
         </div>
 
+        <!-- Projects Section -->
+        <div id="projects">
+            <h2 class="section-title">Projects</h2>
+
+            <div class="project">
+                <h3>Project Title 1</h3>
+                <p>Brief description of the project.</p>
+                <a href="https://your-project-link.com" target="_blank">View Project</a>
+            </div>
+
+            <div class="project">
+                <h3>Project Title 2</h3>
+                <p>Detailed information about the second project.</p>
+                <a href="https://your-project-link.com" target="_blank">View Project</a>
+            </div>
+        </div>
+
+        <!-- Blog Section -->
+        <div id="blog">
+            <h2 class="section-title">Blog</h2>
+
+            <div class="blog-post">
+                <h3>Blog Post Title 1</h3>
+                <p>A brief description of the blog post.</p>
+                <a href="https://your-blog-link.com" target="_blank">Read More</a>
+            </div>
+
+            <div class="blog-post">
+                <h3>Blog Post Title 2</h3>
+                <p>Details about the second blog post.</p>
+                <a href="https://your-blog-link.com" target="_blank">Read More</a>
+            </div>
+        </div>
     </div>
 
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('.nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+        // Language selection functionality
+        document.getElementById('english-btn').addEventListener('click', function () {
+            document.documentElement.setAttribute('lang', 'en');
+        });
 
-                document.querySelectorAll('.nav a').forEach(link => link.classList.remove('active'));
-                this.classList.add('active');
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+        document.getElementById('persian-btn').addEventListener('click', function () {
+            document.documentElement.setAttribute('lang', 'fa');
+            document.body.style.direction = 'rtl';
         });
     </script>
 </body>
