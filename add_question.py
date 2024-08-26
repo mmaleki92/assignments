@@ -41,9 +41,9 @@ def add_new_questions_to_json(json_file_path, new_questions):
     
     existing_questions = data.get('questions', [])
     
-    existing_titles = {q['title'] for q in existing_questions}
-    if all(q['title'] in existing_titles for q in new_questions):
-        return "All new questions already exist. No updates made."
+    # existing_titles = {q['title'] for q in existing_questions}
+    # if all(q['title'] in existing_titles for q in new_questions):
+    #     return "All new questions already exist. No updates made."
     
     next_id = determine_next_id(existing_questions)
     

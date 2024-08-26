@@ -23,5 +23,10 @@
         "title": "پایگیم",
         "description": "سوالات پایگیم",
         "file_path": "posts/post_5.html"
+    },
+    {
+        "title": "فایل‌ها",
+        "description": "تمرین‌های فایل‌ها در پایتون",
+        "file_path": "post_6.json"
     }
 ]
