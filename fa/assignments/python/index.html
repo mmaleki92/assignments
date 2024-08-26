@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الگوریتم‌ها</title>
+    <title>پایتون</title>
     <link rel="stylesheet" href="../../../static/css/styles.css">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -23,25 +23,42 @@
     <div class="container">
         <h1>پایتون</h1>
         
-        <div class="assignment">
-            <h2><a href="posts/post_1.html">1.
-                مقدمات پایتون
-            </a></h2>
-            <p>
-               تمرینی برای بررسی مفاهیم مقدماتی پایتون</p>
-        </div>
-
-        <div class="assignment">
-            <h2><a href="posts/post_2.html">
-            2. رشته‌ها
-
-            </a></h2>
-            <p>جایی برای آشنایی و یادگیری رشته‌ها</p>
-        </div>
-
-        <!-- Add more posts as needed -->
+        <!-- Posts will be dynamically inserted here -->
+        <div id="posts-container"></div>
 
     </div>
 
+    <script>
+        // Path to the JSON index file
+        const jsonPath = '../../../data/python/questions/index.json';
+
+        fetch(jsonPath)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(posts => {
+                // Get the container to hold the posts
+                const postsContainer = document.getElementById('posts-container');
+
+                // Iterate over each post and create the HTML elements
+                posts.forEach(post => {
+                    const assignmentDiv = document.createElement('div');
+                    assignmentDiv.classList.add('assignment');
+
+                    // Create HTML content for the post
+                    assignmentDiv.innerHTML = `
+                        <h2><a href="${post.file_path}">${post.title}</a></h2>
+                        <p>${post.description}</p>
+                    `;
+
+                    // Append the new post to the container
+                    postsContainer.appendChild(assignmentDiv);
+                });
+            })
+            .catch(error => console.error('Error fetching posts JSON:', error));
+    </script>
 </body>
 </html>
