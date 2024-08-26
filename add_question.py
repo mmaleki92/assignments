@@ -8,11 +8,12 @@ index_json_path = f'data/{category}/questions/index.json'
 
 new_questions = [
     {
-        "title": "مثال جدید 1",
+        "title": "پلتفرم در صفحه",
         "content": """<div class='question'>
-        <p class='mixed-direction'>این یک مثال جدید است.</p>
-        <script src="https://gist.github.com/mmaleki92/5671654bec8602b6c51bc022f0c8e796.js"></script>
-        <textarea id='answer{question_id}' name='answer{question_id}' rows='4' required></textarea>
+        <p class='mixed-direction'>
+
+        برای بازی اولیه مار متحرک دیوار یک پلتفرم ایجاد کنید، به این صورت که وقتی وارد آن می‌شود از مربع دیگر خارج شود.
+                </p>
         </div>"""
     }
 ]
@@ -30,11 +31,11 @@ def create_default_json_file(json_file_path):
     default_data = {
         "metadata": {
             "version": "1.0.0",
-            "author": "Unknown",
+            "author": "Morteza Maleki",
             "date_created": "N/A",
             "description": "Default JSON structure",
-            "category": "Unknown",
-            "title": "Default Title"
+            "category": "پایگیم",
+            "title": "تمرین‌های پایگیم"
         },
         "questions": []
     }
@@ -105,8 +106,11 @@ def process_new_questions():
 
     with open("templates/questions.html", "r") as f:
         new_question_html = f.read().replace("__file_name__", post_name)
-    with open(f"fa/learning/{category}/posts/{post_name}.html", "w") as file:
-        file.write(new_question_html)
+
+    new_html = f"fa/learning/{category}/posts/{post_name}.html"
+    if not os.path.exists(new_html): 
+        with open(new_html, "w") as file:
+            file.write(new_question_html)
 
 # Call the function to process new questions and update index
 process_new_questions()
