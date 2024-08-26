@@ -15,7 +15,7 @@
         },
         {
             "id": 1,
-            "title": "سوال 1: متد جایگزنی",
+            "title": "سوال 1: متد جایگزینی",
             "content": "<div class='question'><p class='mixed-direction'> آیا متد replace رشته را تغییر می دهد؟</p><textarea id='answer1' name='answer1' rows='4' required></textarea></div>"
         },
         {
