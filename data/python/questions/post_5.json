@@ -9,7 +9,7 @@
     },
     "questions": [
         {
-            "title": "متد count",
+            "title": "دیوار pygame",
             "content": "<div class='question'>\n        <p class='mixed-direction'> \nبرای بازی اولیه مار متحرک دیوار اضافه کنید که با برخورد به آن بازی تمام شود.\n                  </p>    </div>",
             "id": 1
         },
