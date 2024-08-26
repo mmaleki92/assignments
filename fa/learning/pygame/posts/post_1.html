@@ -3,83 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">تمرین</title>
-
+    <title>توضیح کد Pygame</title>
     <link rel="stylesheet" href="../../../../static/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="../../../../static/js/submit_answers.js" defer></script> <!-- Include the external JS file -->
-    <script src="../../../../static/js/tetris_python.js" defer></script> <!-- Include the Tetris JS file -->
+    <script src="../../../../static/js/submit_answers.js" defer></script>
+    <script src="../../../../static/js/tetris_python.js" defer></script>
 
-    <style>
-        /* Ensure the canvas spans the full width of the page */
-        #tetrisCanvas {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+
+    <!-- Prism.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+    <!-- Prism.js language support (optional, for specific languages) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script> <!-- Example for Python -->
+
 </head>
 <body>
+
     <header>
-        <nav>
-            <ul>
-                <li><a href="../../index.html">خانه</a></li>
-                <li><a href="../index.html">پایتون</a></li>
-            </ul>
-        </nav>
+        <h1>توضیح کد Pygame</h1>
+        <a href="../index.html" class="back-button">بازگشت</a>
     </header>
-    <div class="container">
-        <h1 id="main-header">تمرین</h1>
-        <canvas id="tetrisCanvas"></canvas>
-        
-        <!-- User Information -->
-        <form id="user-info-form" action="javascript:void(0);" onsubmit="saveUserInfo(event)">
-            <div class="form-group">
-                <label for="name">نام:</label>
-                <input type="text" id="name" name="name" required>
+
+    <div class="blog-container">
+        <article class="blog-post">
+            <h2>بررسی کد ساده Pygame</h2>
+            <p>در این پست قصد داریم کد ساده‌ای که با استفاده از کتابخانه <code>pygame</code> نوشته شده است را بررسی کنیم. این کد یک پنجره گرافیکی ایجاد کرده و رویدادهای مختلف را ثبت و نمایش می‌دهد. در ادامه هر خط از کد به صورت کامل توضیح داده شده است.</p>
+
+            <div class="code-block">
+                <code>import pygame</code>
             </div>
-            <div class="form-group">
-                <label for="password">کلمه عبور:</label>
-                <input type="password" id="password" name="password" required>
+            <p>در ابتدا کتابخانه <code>pygame</code> را وارد می‌کنیم. این کتابخانه برای ایجاد و کنترل برنامه‌های گرافیکی، بازی‌ها و موارد مشابه در پایتون استفاده می‌شود.</p>
+
+            <div class="code-block">
+                <code>display = pygame.display.set_mode((500, 500))</code>
             </div>
+            <p>در این خط، یک پنجره گرافیکی با ابعاد ۵۰۰x۵۰۰ پیکسل ایجاد می‌شود. تابع <code>set_mode</code> یک پنجره ایجاد کرده و آن را برای نمایش محتوای گرافیکی آماده می‌کند. متغیر <code>display</code> برای نگهداری این پنجره به کار می‌رود.</p>
 
-            <div class="submit-button">
-                <input type="submit" value="ثبت اطلاعات">
+            <div class="code-block">
+                <code>game = True</code>
             </div>
-        </form>
+            <p>این خط یک متغیر به نام <code>game</code> تعریف می‌کند و مقدار آن را برابر <code>True</code> قرار می‌دهد. این متغیر برای کنترل چرخه اصلی بازی (یا برنامه گرافیکی) استفاده می‌شود.</p>
 
-        <!-- Questions Container -->
-        <div id="questions-container"></div>
+            <div class="code-block">
+                <code>while game:</code>
+            </div>
+            <p>این خط آغاز یک حلقه بی‌نهایت است که تا زمانی که مقدار <code>game</code> برابر <code>True</code> باشد، اجرا خواهد شد. این حلقه برای اجرای مداوم بازی یا برنامه گرافیکی استفاده می‌شود.</p>
 
-        <div class="submit-button">
-            <button onclick="submitAllAnswers()">ارسال تمام پاسخ‌ها</button>
-        </div>
-    </div>
+            <div class="code-block">
+                <code>events = pygame.event.get()</code>
+            </div>
+            <p>در این خط، تمامی رویدادهای موجود در صف رویدادها دریافت می‌شوند. <code>pygame.event.get()</code> یک لیست از تمامی رویدادهای ورودی مانند فشار دادن کلیدها یا کلیک کردن ماوس را برمی‌گرداند.</p>
 
-    <script>
-        // Fetch the JSON file and update the HTML content
-        fetch('../../../../data/pygame/posts/post_1.json')
-            .then(response => response.json())
-            .then(data => {
-                // Set the page title and header from metadata
-                document.getElementById('page-title').textContent = data.metadata.title;
-                document.getElementById('main-header').textContent = data.metadata.title;
+            <div class="code-block">
+                <code>for event in events:</code>
+            </div>
+            <p>این حلقه برای عبور از روی تمامی رویدادهایی که در لیست <code>events</code> وجود دارند استفاده می‌شود. هر رویداد به صورت جداگانه بررسی می‌شود.</p>
 
-                // Generate and insert the questions into the container
-                const questionsContainer = document.getElementById('questions-container');
-                data.questions.forEach(question => {
-                    const questionDiv = document.createElement('div');
-                    questionDiv.classList.add('question');
-                    questionDiv.innerHTML = `
-                        <h2>${question.title}</h2>
-                        ${question.content}
-                    `;
-                    questionsContainer.appendChild(questionDiv);
-                });
-            })
-            .catch(error => console.error('Error fetching JSON:', error));
-    </script>
+            <div class="code-block">
+                <code>print(event)</code>
+            </div>
+            <p>درون حلقه، هر رویداد به کنسول چاپ می‌شود. این کار برای مشاهده نوع و جزئیات هر رویداد انجام می‌گیرد.</p>
+
+            <div class="code-block">
+                <code>pygame.display.update()</code>
+            </div>
+            <p>در این خط، صفحه نمایش به‌روزرسانی می‌شود. این تابع تمام تغییراتی که در پنجره گرافیکی ایجاد شده‌اند را نمایش می‌دهد.</p>
+            <script src="https://gist.github.com/mmaleki92/882ff08bbbe92d62fb9625cc4607c468.js"></script>
+</div>
+
+</article>
+    
+</div>
+
+
 </body>
 </html>

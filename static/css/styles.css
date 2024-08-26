@@ -544,7 +544,26 @@ textarea {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
 }
+/* Styling for inline code within paragraphs */
+.blog-container p code {
+    direction: ltr; /* Ensure inline code is left-to-right */
+    text-align: left; /* Align text to the left */
+    display: inline; /* Ensure code is inline with text */
+    background-color: #f5f5f5; /* Light background for visibility */
+    border-radius: 3px; /* Slightly rounded corners */
+    padding: 2px 4px; /* Padding for better readability */
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font for code */
+}
+/* Ensure code blocks inside the blog container are left-to-right */
+.blog-container code {
+    direction: ltr;
+    text-align: left;
+    display: block;
+    unicode-bidi: embed; /* Ensure the LTR text direction is enforced inside the code block */
+    padding: 10px;
 
+    font-family: 'Courier New', Courier, monospace; /* Use a monospaced font for code */
+}
 /* Header Styling */
 header {
     background-color: #333;
@@ -643,3 +662,25 @@ footer a:hover {
             font-size: 1rem;
             border-radius: 0 0 8px 8px;
         }
+
+/* Enhanced Code Block Styling */
+.code-block {
+    background-color: #2d2d2d; /* Dark background for better readability */
+    color: #f8f8f2; /* Light text color */
+    border: 1px solid #44475a; /* Subtle border for contrast */
+    padding: 15px; /* Increased padding for readability */
+    border-radius: 5px; /* Consistent border radius */
+    margin: 15px 0; /* Slightly increased margin */
+    overflow-x: auto; /* Ensure horizontal scrolling */
+    font-size: 0.95rem; /* Slightly smaller font size */
+    line-height: 1.5; /* Improve line spacing */
+    direction: ltr;
+
+}
+
+/* Code Element Styling */
+code {
+    padding: 4px 6px; /* Increased padding for better visibility */
+    border-radius: 4px; /* Consistent border radius */
+    font-size: 0.9rem; /* Slightly smaller font size */
+}
