@@ -154,6 +154,102 @@ body {
             font-size: 0.9em;
             color: #777;
         }
+
+/* Ensure list items are properly spaced and button doesn't overlap */
+.list-group {
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Remove default list styling */
+}
+
+.list-group-item {
+    margin-bottom: 10px; /* Add space between list items */
+    padding: 10px;
+    background-color: #fff; /* Background color for each list item */
+    border: 1px solid #ddd; /* Border for each list item */
+    border-radius: 8px; /* Rounded corners for list items */
+}
+
+.list-group-item a {
+    color: #007BFF;
+    text-decoration: none;
+    display: block; /* Make the entire list item clickable */
+}
+
+.list-group-item a:hover {
+    text-decoration: underline;
+}
+
+.button-container {
+    text-align: center; /* Center-align the button */
+    margin-top: 20px; /* Space above the button */
+}
+
+.button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+header, footer {
+    /* background-color: #f4f4f4; */
+    padding: 10px;
+    text-align: center;
+}
+.back-button, footer a {
+    text-decoration: none;
+    color: #007bff;
+}
+.back-button:hover, footer a:hover {
+    text-decoration: underline;
+}
+.container {
+    display: flex;
+}
+.sidebar {
+    width: 25%;
+    background-color: #f8f9fa;
+    padding: 15px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+.sidebar h3 {
+    margin-top: 0;
+}
+.content {
+    width: 75%;
+    padding: 15px;
+}
+/* .blog-container {
+    display: flex;
+    flex-direction: column;
+} */
+article.blog-post {
+    margin-bottom: 20px;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li {
+    margin: 10px 0;
+}
+.sidebar ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.16.0/tocbot.min.js"></script>
 </head>
