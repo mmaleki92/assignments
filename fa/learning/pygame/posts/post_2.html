@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بررسی کد مدیریت کلیدهای ASDW در Pygame</title>
+    <link rel="stylesheet" href="../../../../static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .video-button {
+            display: inline-block;
+            background-color: #ff0000;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+        }
+        .video-button:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>رویدادها - کلیدها در پایگیم</h1>
+        <a href="../index.html" class="back-button">بازگشت</a>
+    </header>
+
+    <div class="blog-container">
+        <article class="blog-post">
+            <h2>رویدادها - کلیدها در پایگیم</h2>
+            <p>در پست قبلی، ما به بررسی کدهای پایه‌ای پرداختیم. در این پست، به بررسی کد جدیدی خواهیم پرداخت که به طور خاص به مدیریت رویدادها و کلیدها در پایگیم اختصاص دارد.</p>
+
+            <div class="code-block">
+                <code>import pygame</code>
+            </div>
+            <p>در این خط، همانند قبل، کتابخانه <code>pygame</code> وارد می‌شود.</p>
+
+            <div class="code-block">
+                <code>pygame.init()</code>
+            </div>
+            <p>این خط برای راه‌اندازی تمام ماژول‌های مورد نیاز <code>pygame</code> استفاده می‌شود.</p>
+
+            <div class="code-block">
+                <code>display = pygame.display.set_mode((500, 500))</code>
+            </div>
+            <p>پنجره گرافیکی با ابعاد ۵۰۰x۵۰۰ پیکسل ایجاد می‌شود.</p>
+
+
+            <div class="code-block">
+                <code>for event in events:</code>
+            </div>
+            <p>حلقه‌ای برای پردازش رویدادهای موجود.</p>
+
+            <div class="code-block">
+                <code>if event.type == pygame.QUIT: <br>game = False </code>
+            </div>
+            <p>بررسی رویداد بسته شدن پنجره و تغییر وضعیت بازی.</p>
+
+            <div class="code-block">
+                <code>if event.type == pygame.KEYDOWN:</code>
+            </div>
+            <p>بررسی فشار کلیدها.</p>
+
+            <div class="code-block">
+                <code>if event.key == pygame.K_a:</code>
+                <code>print("a feshar dade shode!")</code>
+            </div>
+            <p>چاپ پیام مخصوص کلید <code>A</code>.</p>
+
+            <div class="code-block">
+                <code>elif event.key == pygame.K_s:</code>
+                <code>print("s feshar dade shode!")</code>
+            </div>
+            <p>چاپ پیام مخصوص کلید <code>S</code>.</p>
+
+            <div class="code-block">
+                <code>elif event.key == pygame.K_d:</code>
+                <code>print("d feshar dade shode!")</code>
+            </div>
+            <p>چاپ پیام مخصوص کلید <code>D</code>.</p>
+
+            <div class="code-block">
+                <code>elif event.key == pygame.K_w:</code>
+                <code>print("w feshar dade shode!")</code>
+            </div>
+            <p>چاپ پیام مخصوص کلید <code>W</code>.</p>
+
+            <div class="code-block">
+                <code>pygame.display.update()</code>
+            </div>
+            <p>بروزرسانی صفحه نمایش.</p>
+
+            <div class="code-block">
+                <code>pygame.quit()</code>
+            </div>
+            <p>پایان و پاک‌سازی منابع مربوط به <code>pygame</code>.</p>
+
+            <h3>رویدادها - کلیدها در پایگیم</h3>
+            <p>در این کد، مدیریت کلیدها با استفاده از رویدادهای <code>KEYDOWN</code> انجام می‌شود. هر کلید به طور خاص شناسایی شده و پیام‌های مرتبط چاپ می‌شود، که به شما امکان می‌دهد تا ورودی‌های کاربر را به طور دقیق پردازش کنید.</p>
+
+            <h3>تماشای ویدیو آموزشی</h3>
+            <p>برای مشاهده توضیحات بیشتر و دیدن کد در عمل، می‌توانید ویدیو آموزشی ما را تماشا کنید:</p>
+            <a href="https://www.youtube.com/watch?v=bCVbocW4Ifk" class="video-button" target="_blank">تماشا کنید</a>
+
+            <script src="https://gist.github.com/mmaleki92/1a6decab321465333ae4f8bafe1e02d0.js"></script>
+                </article>
+    </div>
+
+</body>
+</html>

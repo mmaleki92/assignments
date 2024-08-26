@@ -3,5 +3,10 @@
         "title": "آموزش 0: مقدمات پایگیم",
         "description": "آموزش مفاهیم اولیه‌ی پایگیم",
         "file_path": "posts/post_1.html"
+    },
+    {
+        "title": "آموزش 1: رویدادها - کلیدها در پایگیم",
+        "description": "آموزش رویدادها - کلیدها در پایگیم",
+        "file_path": "posts/post_2.html"
     }
 ]
