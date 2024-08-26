@@ -1,0 +1,58 @@
+{
+    "metadata": {
+      "version": "1.0.0",
+      "author": "Morteza Maleki",
+      "date_created": "2024-08-26",
+      "description": "This JSON file contains a set of questions for a Python basics exercise, including IDLE usage, Python version checking, and basic input/output operations.",
+      "category": "Python",
+      "title": "آموزش 0: مقدمات پایگیم"
+    },
+    "posts": [
+      {
+        "id": 0,
+        "title": "آموزش 0: مبانی پایگیم",
+        "content": "<p>در این پست قصد داریم کد ساده‌ای که با استفاده از کتابخانه <code>pygame</code> نوشته شده است را بررسی کنیم. این کد یک پنجره گرافیکی ایجاد کرده و رویدادهای مختلف را ثبت و نمایش می‌دهد. در ادامه هر خط از کد به صورت کامل توضیح داده شده است.</p>
+
+    <div class="code-block">
+        <code>import pygame</code>
+    </div>
+    <p>در ابتدا کتابخانه <code>pygame</code> را وارد می‌کنیم. این کتابخانه برای ایجاد و کنترل برنامه‌های گرافیکی، بازی‌ها و موارد مشابه در پایتون استفاده می‌شود.</p>
+
+    <div class="code-block">
+        <code>display = pygame.display.set_mode((500, 500))</code>
+    </div>
+    <p>در این خط، یک پنجره گرافیکی با ابعاد ۵۰۰x۵۰۰ پیکسل ایجاد می‌شود. تابع <code>set_mode</code> یک پنجره ایجاد کرده و آن را برای نمایش محتوای گرافیکی آماده می‌کند. متغیر <code>display</code> برای نگهداری این پنجره به کار می‌رود.</p>
+
+    <div class="code-block">
+        <code>game = True</code>
+    </div>
+    <p>این خط یک متغیر به نام <code>game</code> تعریف می‌کند و مقدار آن را برابر <code>True</code> قرار می‌دهد. این متغیر برای کنترل چرخه اصلی بازی (یا برنامه گرافیکی) استفاده می‌شود.</p>
+
+    <div class="code-block">
+        <code>while game:</code>
+    </div>
+    <p>این خط آغاز یک حلقه بی‌نهایت است که تا زمانی که مقدار <code>game</code> برابر <code>True</code> باشد، اجرا خواهد شد. این حلقه برای اجرای مداوم بازی یا برنامه گرافیکی استفاده می‌شود.</p>
+
+    <div class="code-block">
+        <code>events = pygame.event.get()</code>
+    </div>
+    <p>در این خط، تمامی رویدادهای موجود در صف رویدادها دریافت می‌شوند. <code>pygame.event.get()</code> یک لیست از تمامی رویدادهای ورودی مانند فشار دادن کلیدها یا کلیک کردن ماوس را برمی‌گرداند.</p>
+
+    <div class="code-block">
+        <code>for event in events:</code>
+    </div>
+    <p>این حلقه برای عبور از روی تمامی رویدادهایی که در لیست <code>events</code> وجود دارند استفاده می‌شود. هر رویداد به صورت جداگانه بررسی می‌شود.</p>
+
+    <div class="code-block">
+        <code>print(event)</code>
+    </div>
+    <p>درون حلقه، هر رویداد به کنسول چاپ می‌شود. این کار برای مشاهده نوع و جزئیات هر رویداد انجام می‌گیرد.</p>
+
+    <div class="code-block">
+        <code>pygame.display.update()</code>
+    </div>
+    <p>در این خط، صفحه نمایش به‌روزرسانی می‌شود. این تابع تمام تغییراتی که در پنجره گرافیکی ایجاد شده‌اند را نمایش می‌دهد.</p>"
+      }
+    ]
+  }
+  
