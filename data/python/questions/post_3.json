@@ -5,22 +5,22 @@
         "date_created": "2024-08-27",
         "description": "تمرینی برای بررسی مفاهیم مقدماتی پایتون",
         "category": "Python",
-        "title": "تمرین 3: مقدمات پایتون"
+        "title": "مقدمات پایتون"
     },
     "questions": [
         {
             "id": 0,
-            "title": "سوال 0: متد رشته چیست؟",
+            "title": "متد رشته چیست؟",
             "content": "<div class='question'><p class='mixed-direction'> متد در ساختارهایی مانند رشته به چه معناست، توضیح دهید.</p><textarea id='answer0' name='answer0' rows='4' required></textarea></div>"
         },
         {
             "id": 1,
-            "title": "سوال 1: متد جایگزینی",
+            "title": "متد جایگزینی",
             "content": "<div class='question'><p class='mixed-direction'> آیا متد replace رشته را تغییر می دهد؟</p><textarea id='answer1' name='answer1' rows='4' required></textarea></div>"
         },
         {
             "id": 1,
-            "title": "سوال 3: یافتن رشته",
+            "title": "یافتن رشته",
             "content": "<div class='question'><p class='mixed-direction'>چگونه می‌توان یک رشته را درون رشته‌ی دیگر پیدا کرد؟</p><textarea id='answer2' name='answer2' rows='4' required></textarea></div>"
         }
     ]

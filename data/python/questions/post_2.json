@@ -5,42 +5,42 @@
         "date_created": "2024-08-26",
         "description": "تمرینی برای بررسی مفاهیم مقدماتی پایتون",
         "category": "Python",
-        "title": "تمرین 2: مقدمات پایتون"
+        "title": "مقدمات پایتون"
     },
     "questions": [
         {
             "id": 0,
-            "title": "سوال 0: معکوس رشته‌",
+            "title": "معکوس رشته‌",
             "content": "<div class='question'><p class='mixed-direction'>برنامه‌ای بنویسید که رشته‌ای را دریافت کرده و معکوس آن را چاپ کند</p><textarea id='answer0' name='answer0' rows='4' required></textarea></div>"
         },
         {
             "id": 1,
-            "title": "سوال 1: تکرار کاراکتر",
+            "title": "تکرار کاراکتر",
             "content": "<div class='question'><p class='mixed-direction'>برنامه‌ای بنویسید که رشته‌ای را دریافت کرده و تعداد ظاهر شدن هر کاراکتر چاپ کند</p><textarea id='answer1' name='answer1' rows='4' required></textarea></div>"
         },
         {
             "id": 2,
-            "title": "سوال 2: اندازه رشته",
+            "title": "اندازه رشته",
             "content": "<div class='question'><p class='mixed-direction'>برنامه‌ای بنویسید که اندازه‌ی یک رشته را حساب کند</p><textarea id='answer2' name='answer2' rows='4' required></textarea></div>"
         },
         {
             "id": 3,
-            "title": "سوال 3: ترکیب رشته‌ها",
+            "title": "ترکیب رشته‌ها",
             "content": "<div class='question'><p>برنامه‌ای بنویسید که دو رشته را با هم ترکیب کند و چاپ کند.</p><textarea id='answer3' name='answer3' rows='4' required></textarea></div>"
         },
         {
             "id": 4,
-            "title": "سوال 4: استفاده از",
+            "title": "استفاده از",
             "content": "<div class='question'><p>برنامه‌ای بنویسید که حروف صدادار یک رشته را بشمارد (حروف a e i o u)</p><textarea id='answer4' name='answer4' rows='4' required></textarea></div>"
         },
         {
             "id": 5,
-            "title": "سؤال 5: حذف فاصله خالی",
+            "title": "حذف فاصله خالی",
             "content": "<div class='question'><p>برنامه‌ای بنویسید که فاصله‌های خالی را از یک رشته حذف کند.</p><textarea id='answer5' name='answer5' rows='4' required></textarea></div>"
         },
         {
             "id": 6,
-            "title": "سؤال 6: جایگذاری در متغیر",
+            "title": "جایگذاری در متغیر",
             "content": "<div class='question'><p>برنامه‌ای بنویسید که سه رشته از کاربر بگیرد و در متغیرهای aو bو c قرار دهد</p><textarea id='answer6' name='answer6' rows='4' required></textarea></div>"
         }
     ]
