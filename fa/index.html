@@ -16,27 +16,6 @@
             text-align: right; /* Align text to the right */
         }
 
-        .nav {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #333;
-            padding: 10px 0;
-            color: #fff;
-        }
-
-        .nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px;
-            display: block;
-            font-size: 16px;
-        }
-
-        .nav a:hover {
-            background-color: #555;
-        }
-
         .intro {
             max-width: 800px;
             margin: 20px auto;
@@ -74,50 +53,6 @@
         .intro .links a {
             display: block;
             margin-bottom: 10px;
-        }
-
-        .gallery {
-            max-width: 800px;
-            margin: 20px auto;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 0;
-        }
-
-        .gallery-item {
-            flex: 1 1 calc(33.333% - 20px); /* Three items per row, minus gap space */
-            box-sizing: border-box;
-            background-color: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            text-align: center;
-            text-decoration: none;
-            color: #333;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .gallery-item-caption {
-            padding: 10px;
-            background-color: #f8f8f8;
-            border-top: 1px solid #ddd;
-        }
-
-        @media (max-width: 768px) {
-            .gallery-item {
-                flex: 1 1 calc(50% - 20px); /* Two items per row on smaller screens */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .gallery-item {
-                flex: 1 1 100%; /* One item per row on very small screens */
-            }
         }
 
     </style>
@@ -159,8 +94,11 @@
             <img src="../static/img/Python-Emblem.png" alt="تمرین پایتون">
             <div class="gallery-item-caption">تمرین پایتون</div>
         </a>
+        </a>
         <!-- Add more items as needed -->
     </div>
+
+    <!-- Include other sections as needed -->
 
 </body>
 </html>
