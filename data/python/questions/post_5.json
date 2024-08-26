@@ -1,0 +1,17 @@
+{
+    "metadata": {
+        "version": "1.0.0",
+        "author": "Morteza Maleki",
+        "date_created": "N/A",
+        "description": "Default JSON structure",
+        "category": "پایگیم",
+        "title": "تمرین‌های پایگیم"
+    },
+    "questions": [
+        {
+            "title": "متد count",
+            "content": "<div class='question'>\n        <p class='mixed-direction'> \nبرای بازی اولیه مار متحرک دیوار اضافه کنید که با برخورد به آن بازی تمام شود.\n                  </p>\n        <script src=\"https://gist.github.com/mmaleki92/5671654bec8602b6c51bc022f0c8e796.js\"></script>        <textarea id='answer1' name='answer1' rows='4' required></textarea>\n        </div>",
+            "id": 1
+        }
+    ]
+}

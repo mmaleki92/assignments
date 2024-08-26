@@ -18,5 +18,10 @@
         "title": "لیست",
         "description": "تمرین‌های لیست ",
         "file_path": "posts/post_4.html"
+    },
+    {
+        "title": "مثال جدید",
+        "description": "سوالات جدید اضافه شده",
+        "file_path": "posts/post_5.html"
     }
 ]
