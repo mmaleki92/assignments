@@ -17,6 +17,11 @@
             "id": 1,
             "title": "سوال 1: معکوس رشته‌",
             "content": "<div class='question'><p class='mixed-direction'> آیا متد replace رشته را تغییر می دهد؟</p><textarea id='answer1' name='answer1' rows='4' required></textarea></div>"
+        },
+        {
+            "id": 1,
+            "title": "سوال 3: یافتن رشته",
+            "content": "<div class='question'><p class='mixed-direction'>چگونه می‌توان یک رشته را درون رشته‌ی دیگر پیدا کرد؟</p><textarea id='answer2' name='answer2' rows='4' required></textarea></div>"
         }
     ]
 }
