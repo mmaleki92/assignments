@@ -28,5 +28,15 @@
         "title": "فایل‌ها",
         "description": "تمرین‌های فایل‌ها در پایتون",
         "file_path": "post_6.json"
+    },
+    {
+        "title": "عبارت شرطی",
+        "description": "تمرین عبارت‌های شرطی ",
+        "file_path": "post_7.json"
+    },
+    {
+        "title": "دیکشنری",
+        "description": "تمرین‌های دیکشنری",
+        "file_path": "post_8.json"
     }
 ]
