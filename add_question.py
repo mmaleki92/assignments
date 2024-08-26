@@ -72,7 +72,7 @@ def create_default_json_file(json_file_path, title="Untitled", description=""):
             "author": "Morteza Maleki",
             "date_created": "N/A",
             "description": description,
-            "category": "پایگیم",
+            "category": category,
             "title": title
         },
         "questions": []
@@ -142,7 +142,7 @@ def view_post(post_name):
                 image_url = url_for('static', filename=f'img/{image_filename}')
                 # Directly insert image into content
                 content += f'<img src="../../../..{image_url}" alt="Image">'
-        
+                content += "<textarea id='answer3' name='answer3' rows='4' required></textarea>"
         new_question = {
             "title": title,
             "content": content

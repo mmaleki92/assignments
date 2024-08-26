@@ -10,42 +10,42 @@
     "questions": [
         {
             "title": "دنباله‌ی فیبونانچی",
-            "content": "برنامه‌ای بنویسید که دنباله‌ی فیبونانچی را توسط حلقه‌ی for چاپ کند.\r\nبرنامه‌ی شما می‌بایست این دنباله را تا مقدار n که از کاربر می‌گیرد ادامه دهد.",
+            "content": "برنامه‌ای بنویسید که دنباله‌ی فیبونانچی را توسط حلقه‌ی for چاپ کند.\r\nبرنامه‌ی شما می‌بایست این دنباله را تا مقدار n که از کاربر می‌گیرد ادامه دهد.<textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 1
         },
         {
             "title": "فاکتوریل",
-            "content": "برنامه‌ای بنویسید که فاکتوریل یک عدد را توسط حلقه‌ی for محاسبه کند.",
+            "content": "برنامه‌ای بنویسید که فاکتوریل یک عدد را توسط حلقه‌ی for محاسبه کند.<textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 2
         },
         {
             "title": "عدد اول",
-            "content": "برنامه‌ای بنویسید که با حلقه‌ی for بررسی کند که آیا عدد داده شده اول است یا خیر",
+            "content": "برنامه‌ای بنویسید که با حلقه‌ی for بررسی کند که آیا عدد داده شده اول است یا خیر<textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 3
         },
         {
             "title": "الگوی مثلث",
-            "content": " الگوری زیر را با حلقه for  انجام دهید<img src=\"../../../../static/img/Screenshot_from_2024-08-26_20-58-04.png\" alt=\"Image\">",
+            "content": " الگوری زیر را با حلقه for  انجام دهید<img src=\"../../../../static/img/Screenshot_from_2024-08-26_20-58-04.png\" alt=\"Image\"><textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 4
         },
         {
             "title": "الگوی ساعت شنی",
-            "content": " الگوی زیر را با حلقه for  انجام دهید.\r\n\r\n<img src=\"../../../../static/img/Screenshot_from_2024-08-26_20-59-23.png\" alt=\"Image\">",
+            "content": " الگوی زیر را با حلقه for  انجام دهید.\r\n\r\n<img src=\"../../../../static/img/Screenshot_from_2024-08-26_20-59-23.png\" alt=\"Image\"><textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 5
         },
         {
             "title": "الگوی مثلث تو پر",
-            "content": "الگوی زیر را با حلقه  for انجام دهید.\r\n<img src=\"../../../../static/img/Screenshot_from_2024-08-26_21-00-43.png\" alt=\"Image\">",
+            "content": "الگوی زیر را با حلقه  for انجام دهید.\r\n<img src=\"/static/img/Screenshot_from_2024-08-26_21-00-43.png\" alt=\"Image\"><textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 6
         },
         {
             "title": "الگوی لوزی",
-            "content": " الگوی زیر را با حلقه for انجام دهید. <img src=\"../../../../static/img/Screenshot_from_2024-08-26_21-01-25.png\" alt=\"Image\">",
+            "content": " الگوی زیر را با حلقه for انجام دهید. <img src=\"/static/img/Screenshot_from_2024-08-26_21-01-25.png\" alt=\"Image\"><textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 7
         },
         {
             "title": "الگوی درخت",
-            "content": " الگوی زیر را با حلقه for انجام دهید. \r\n<img src=\"../../../../static/img/Screenshot_from_2024-08-26_21-02-27.png\" alt=\"Image\">",
+            "content": " الگوی زیر را با حلقه for انجام دهید. \r\n<img src=\"/static/img/Screenshot_from_2024-08-26_21-02-27.png\" alt=\"Image\"><textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 8
         }
     ]

@@ -10,52 +10,52 @@
     "questions": [
         {
             "title": "شمارش محتوای فایل متنی",
-            "content": "برنامه‌ای بنویسید که تعداد خطوط، کلمات و کاراکترهای یک فایل متنی را\r\n شمارش کند و چاپ کند.\r\n(توجه: فایلی مانند mammad.txt که شامل جندین خط نوشته باشد را کنار فایل پایتون قرار دهید تا آن را بخوانید و شمارش را انجام دهد)",
+            "content": "برنامه‌ای بنویسید که تعداد خطوط، کلمات و کاراکترهای یک فایل متنی را\r\n شمارش کند و چاپ کند.\r\n(توجه: فایلی مانند mammad.txt که شامل جندین خط نوشته باشد را کنار فایل پایتون قرار دهید تا آن را بخوانید و شمارش را انجام دهد)<textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 1
         },
         {
             "title": "ویرایش فایل متنی موجود",
-            "content": "برنامه‌ای بنویسید که داده‌ها را از یک فایل متنی (.txt) بخواند و پس از تغییر بخشی از محتویات آن، محتوای جدید را در یک فایل دیگر ذخیره کند.",
+            "content": "برنامه‌ای بنویسید که داده‌ها را از یک فایل متنی (.txt) بخواند و پس از تغییر بخشی از محتویات آن، محتوای جدید را در یک فایل دیگر ذخیره کند.<textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 2
         },
         {
             "title": "بستن فایل",
-            "content": "در پایتون چنانچه فایلی را توسط open باز کنیم و آن را close نکنیم، چه اتفاقی می‌افتد؟",
+            "content": "در پایتون چنانچه فایلی را توسط open باز کنیم و آن را close نکنیم، چه اتفاقی می‌افتد؟<textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 3
         },
         {
             "title": "ایجاد فولدر (پوشه)",
-            "content": "برنامه‌ای بنویسید که یک فولدر ایجاد کند و درون آن فولدر دو فولدر با نام‌های متفاوت ایجاد کند.",
+            "content": "برنامه‌ای بنویسید که یک فولدر ایجاد کند و درون آن فولدر دو فولدر با نام‌های متفاوت ایجاد کند.<textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 4
         },
         {
             "title": "کد زیر چه کاری انجام می‌دهد؟ توضیح دهید.",
-            "content": "<script src=\"https://gist.github.com/mmaleki92/662e93bcc720b869708884511540f413.js\"></script>",
+            "content": "<script src=\"https://gist.github.com/mmaleki92/662e93bcc720b869708884511540f413.js\"></script><textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 5
         },
         {
             "title": "کد زیر چه کاری انجام می‌دهد؟ توضیح دهید.",
-            "content": "<script src=\"https://gist.github.com/mmaleki92/b2b643c55f9ac9bfaf3dc6728c071f4d.js\"></script>",
+            "content": "<script src=\"https://gist.github.com/mmaleki92/b2b643c55f9ac9bfaf3dc6728c071f4d.js\"></script><textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 6
         },
         {
             "title": "کد زیر چه کاری انجام می‌دهد؟ توضیح دهید.",
-            "content": "<script src=\"https://gist.github.com/mmaleki92/d821b7cd0d32d65d870d3cfe0b1c2ecc.js\"></script>",
+            "content": "<script src=\"https://gist.github.com/mmaleki92/d821b7cd0d32d65d870d3cfe0b1c2ecc.js\"></script><textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 7
         },
         {
             "title": "ایجاد فولدر (پوشه) در فولدر",
-            "content": "10 فولدر ایجاد کنید و در هر یک از فولدرهای ایجاد شده ۱۰ فولدر ایجاد کنید. ",
+            "content": "10 فولدر ایجاد کنید و در هر یک از فولدرهای ایجاد شده ۱۰ فولدر ایجاد کنید. <textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 8
         },
         {
             "title": "ایجاد فایل درون فولدر",
-            "content": "توسط یک کد پایتون یک فولدر ایجاد کنید و وارد آن شوید سپس در آن فولدر یک فایل تکست ایجاد کنید.",
+            "content": "توسط یک کد پایتون یک فولدر ایجاد کنید و وارد آن شوید سپس در آن فولدر یک فایل تکست ایجاد کنید.<textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 9
         },
         {
             "title": "فرمت‌های فایل",
-            "content": "فرمت فایل‌هایی که می‌شیناسید را نام ببرید، در مورد فرمت mp4 تحقیق کنید و توضیح دهید.",
+            "content": "فرمت فایل‌هایی که می‌شیناسید را نام ببرید، در مورد فرمت mp4 تحقیق کنید و توضیح دهید.<textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 10
         }
     ]
