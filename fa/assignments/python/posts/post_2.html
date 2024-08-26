@@ -3,18 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تمرین 1: مقدمات پایتون</title>
+    <title id="page-title">تمرین</title>
 
     <link rel="stylesheet" href="../../../../static/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="../../../../static/js/submit_answers.js" defer></script> <!-- Include the external JS file -->
+    <script src="../../../../static/js/tetris_python.js" defer></script> <!-- Include the Tetris JS file -->
+
+    <style>
+        /* Ensure the canvas spans the full width of the page */
+        #tetrisCanvas {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">خانه</a></li>
+                <li><a href="../index.html">پایتون</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="container">
-        <h1>تمرین 1: مقدمات پایتون</h1>
-
+        <h1 id="main-header">تمرین</h1>
+        <canvas id="tetrisCanvas"></canvas>
+        
         <!-- User Information -->
         <form id="user-info-form" action="javascript:void(0);" onsubmit="saveUserInfo(event)">
             <div class="form-group">
@@ -31,50 +50,36 @@
             </div>
         </form>
 
-        <!-- Question 0: Basics of Python -->
-        <div class="question">
-            <h2>سؤال 0: مبانی پایتون</h2>
-            <p class="mixed-direction">آیا نرم افزار IDLE پایتون را نصب کرده‌اید؟</p>
-            <textarea id="answer0" name="answer0" rows="4" required></textarea>
-        </div>
-
-        <!-- Question 1: Basics of Python -->
-        <div class="question">
-            <h2>سؤال 1: مبانی پایتون</h2>
-            <p>پایتون یک زبان برنامه‌نویسی سطح بالا و همه‌منظوره است که برای ساخت انواع مختلف برنامه‌ها و اسکریپت‌ها استفاده می‌شود. برخی از ویژگی‌های اصلی پایتون شامل سادگی در نوشتن کد، خوانایی و قابلیت توسعه‌پذیری است.</p>
-            <p>در زیر یک مثال ساده از نحوه استفاده از متغیرها و چاپ خروجی در پایتون آورده شده است:</p>
-            <script src="https://gist.github.com/mmaleki92/b0b3dc07338a51052e800f83f7b4374c.js"></script>
-            <textarea id="answer1" name="answer1" rows="4" required></textarea>
-        </div>
-
-        <!-- Question 2: Using IDLE -->
-        <div class="question">
-            <h2>سؤال 2: استفاده از IDLE</h2>
-            <p>IDLE (Integrated Development and Learning Environment) محیط توسعه رسمی برای پایتون است. شما می‌توانید از آن برای نوشتن و اجرای کدهای پایتون استفاده کنید.</p>
-            <textarea id="answer2" name="answer2" rows="4" required></textarea>
-        </div>
-
-        <!-- Question 3: Python Version -->
-        <div class="question">
-            <h2>سؤال 3: نسخه پایتون</h2>
-            <p>برای بررسی نسخه پایتون که در حال حاضر بر روی سیستم شما نصب شده است، می‌توانید از دستور زیر در ترمینال استفاده کنید:</p>
-            <script src="https://gist.github.com/mmaleki92/adb2da81fe3286dcd03ca3a72b0fe8c5.js"></script>
-            <textarea id="answer3" name="answer3" rows="4" required></textarea>
-        </div>
-
-        <!-- Question 4: Input and Output -->
-        <div class="question">
-            <h2>سؤال 4: ورودی و خروجی در پایتون</h2>
-            <p class="mixed-direction">در پایتون، می‌توانید از تابع input() برای دریافت ورودی از کاربر و از تابع print() برای نمایش خروجی استفاده کنید.</p>
-            <p>در زیر یک مثال ساده از نحوه دریافت ورودی و نمایش آن به کاربر آورده شده است:</p>
-            <script src="https://gist.github.com/mmaleki92/e0ca98d392ead998d7421e2c3cca839b.js"></script>
-            <textarea id="answer4" name="answer4" rows="4" required></textarea>
-        </div>
+        <!-- Questions Container -->
+        <div id="questions-container"></div>
 
         <div class="submit-button">
             <button onclick="submitAllAnswers()">ارسال تمام پاسخ‌ها</button>
         </div>
-
     </div>
+
+    <script>
+        // Fetch the JSON file and update the HTML content
+        fetch('../../../../data/python/questions/post_2.json')
+            .then(response => response.json())
+            .then(data => {
+                // Set the page title and header from metadata
+                document.getElementById('page-title').textContent = data.metadata.title;
+                document.getElementById('main-header').textContent = data.metadata.title;
+
+                // Generate and insert the questions into the container
+                const questionsContainer = document.getElementById('questions-container');
+                data.questions.forEach(question => {
+                    const questionDiv = document.createElement('div');
+                    questionDiv.classList.add('question');
+                    questionDiv.innerHTML = `
+                        <h2>${question.title}</h2>
+                        ${question.content}
+                    `;
+                    questionsContainer.appendChild(questionDiv);
+                });
+            })
+            .catch(error => console.error('Error fetching JSON:', error));
+    </script>
 </body>
 </html>
