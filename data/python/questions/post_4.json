@@ -20,72 +20,72 @@
         },
         {
             "title": "ارجاع در لیست",
-            "content": "<div class='question'>\n        <p class='mixed-direction'> این کد چه تغییری در y ایجاد می‌کند؟</p>\n        <script src=\"https://gist.github.com/mmaleki92/5671654bec8602b6c51bc022f0c8e796.js\"></script>        <textarea id='answer2' name='answer2' rows='4' required></textarea>\n        </div>",
+            "content": "<div class='question'>\n        <p class='mixed-direction'> این کد چه تغییری در y ایجاد می‌کند؟</p>\n   <script src=\"https://gist.github.com/mmaleki92/5671654bec8602b6c51bc022f0c8e796.js\"></script>             <textarea id='answer2' name='answer2' rows='4' required></textarea>\n        </div>",
             "id": 2
         },
         {
             "title": "کاربرد متدها",
-            "content": "<div class='question'>\n        <p class='mixed-direction'> \n        چگونه از یک متد مانند متد لیست استفاده می‌کنیم؟ کدی از کاربرد count بنویسید\n        </p>\n        <script src=\"https://gist.github.com/mmaleki92/5671654bec8602b6c51bc022f0c8e796.js\"></script>        <textarea id='answer3' name='answer3' rows='4' required></textarea>\n        </div>",
+            "content": "<div class='question'>\n        <p class='mixed-direction'> \n        چگونه از یک متد مانند متد لیست استفاده می‌کنیم؟ کدی از کاربرد count بنویسید\n        </p>\n                <textarea id='answer3' name='answer3' rows='4' required></textarea>\n        </div>",
             "id": 3
         },
         {
             "title": "تابع max در پایتون",
-            "content": "<div class='question'>\n        <p class='mixed-direction'> \n        برنامه ای بنویسید که بزرگترین عدد درون یک لیست را حساب کند.\n        </p>\n        <script src=\"https://gist.github.com/mmaleki92/5671654bec8602b6c51bc022f0c8e796.js\"></script>        <textarea id='answer4' name='answer4' rows='4' required></textarea>\n        </div>",
+            "content": "<div class='question'>\n        <p class='mixed-direction'> \n        برنامه ای بنویسید که بزرگترین عدد درون یک لیست را حساب کند.\n        </p>\n                <textarea id='answer4' name='answer4' rows='4' required></textarea>\n        </div>",
             "id": 4
         },
         {
             "title": "جابجایی مقادیر لیست",
-            "content": "<div class='question'>\n        <p class='mixed-direction'> \n        ،برنامه‌ای بنویسید که مولفه های اول و آخر یک لیست را با هم جابجا کند\n     یعنی [1, 2, 3,  4] به \n     [4, 2, 3, 1]\n     تبدیل شود.\n        </p>\n        <script src=\"https://gist.github.com/mmaleki92/5671654bec8602b6c51bc022f0c8e796.js\"></script>        <textarea id='answer5' name='answer5' rows='4' required></textarea>\n        </div>",
+            "content": "<div class='question'>\n        <p class='mixed-direction'> \n        ،برنامه‌ای بنویسید که مولفه های اول و آخر یک لیست را با هم جابجا کند\n     یعنی [1, 2, 3,  4] به \n     [4, 2, 3, 1]\n     تبدیل شود.\n        </p>\n                <textarea id='answer5' name='answer5' rows='4' required></textarea>\n        </div>",
             "id": 5
         },
         {
             "title": " حذف تکرار در لیست",
-            "content": "<div class='question'>\n        <p class='mixed-direction'> \n        برنامه ای بنویسید که اعضای تکراری یک لیست را حذف کند.\n        </p>\n        <script src=\"https://gist.github.com/mmaleki92/5671654bec8602b6c51bc022f0c8e796.js\"></script>        <textarea id='answer6' name='answer6' rows='4' required></textarea>\n        </div>",
+            "content": "<div class='question'>\n        <p class='mixed-direction'> \n        برنامه ای بنویسید که اعضای تکراری یک لیست را حذف کند.\n        </p>\n                <textarea id='answer6' name='answer6' rows='4' required></textarea>\n        </div>",
             "id": 6
         },
         {
             "title": " یافتن مولفه درون لیست",
-            "content": "<div class='question'>\n        <p class='mixed-direction'> \nبرنامه‌ای بنویسید که اندیس یک مولفه در لیست را پیدا کند.\nبه طور مثال\n[1,2,3,4,5]\nوقتی 2 را بدهیم بگوید که اندیس آن 1 است.\nراهنمایی: از متدهای لیست استفاده کنید\n        </p>\n        <script src=\"https://gist.github.com/mmaleki92/5671654bec8602b6c51bc022f0c8e796.js\"></script>        <textarea id='answer7' name='answer7' rows='4' required></textarea>\n        </div>",
+            "content": "<div class='question'>\n        <p class='mixed-direction'> \nبرنامه‌ای بنویسید که اندیس یک مولفه در لیست را پیدا کند.\nبه طور مثال\n[1,2,3,4,5]\nوقتی 2 را بدهیم بگوید که اندیس آن 1 است.\nراهنمایی: از متدهای لیست استفاده کنید\n        </p>\n                <textarea id='answer7' name='answer7' rows='4' required></textarea>\n        </div>",
             "id": 7
         },
         {
             "title": "اندازه لیست",
-            "content": "<div class='question'>\n        <p class='mixed-direction'> \n        تعداد مولفه های یک لیست را حساب کند.\n        </p>\n        <script src=\"https://gist.github.com/mmaleki92/5671654bec8602b6c51bc022f0c8e796.js\"></script>        <textarea id='answer8' name='answer8' rows='4' required></textarea>\n        </div>",
+            "content": "<div class='question'>\n        <p class='mixed-direction'> \n        تعداد مولفه های یک لیست را حساب کند.\n        </p>\n                <textarea id='answer8' name='answer8' rows='4' required></textarea>\n        </div>",
             "id": 8
         },
         {
             "title": "مرتب کردن از کوچک به بزرگ",
-            "content": "<div class='question'>\n        <p class='mixed-direction'> \n       .تعداد مولفه های یک لیست را حساب کند و مولفه های آن را مرتب کند.\n        از کوچک به بزرگ\n        </p>\n        <script src=\"https://gist.github.com/mmaleki92/5671654bec8602b6c51bc022f0c8e796.js\"></script>        <textarea id='answer9' name='answer9' rows='4' required></textarea>\n        </div>",
+            "content": "<div class='question'>\n        <p class='mixed-direction'> \n       .تعداد مولفه های یک لیست را حساب کند و مولفه های آن را مرتب کند.\n        از کوچک به بزرگ\n        </p>\n                <textarea id='answer9' name='answer9' rows='4' required></textarea>\n        </div>",
             "id": 9
         },
         {
             "title": "بررسی مقدار درون لیست",
-            "content": "<div class='question'>\n        <p class='mixed-direction'> \n        برنامه‌ای بنویسید که چک کند یک مولفه درون لیست وجود دارد یا خیر\n        </p>\n        <script src=\"https://gist.github.com/mmaleki92/5671654bec8602b6c51bc022f0c8e796.js\"></script>        <textarea id='answer10' name='answer10' rows='4' required></textarea>\n        </div>",
+            "content": "<div class='question'>\n        <p class='mixed-direction'> \n        برنامه‌ای بنویسید که چک کند یک مولفه درون لیست وجود دارد یا خیر\n        </p>\n                <textarea id='answer10' name='answer10' rows='4' required></textarea>\n        </div>",
             "id": 10
         },
         {
             "title": "متد split رشته",
-            "content": "<div class='question'>\n        <p class='mixed-direction'> \n        یک لیست توسط جدا کردن رشته توسط\n        split\n        ایجاد کنید.       \n          </p>\n        <script src=\"https://gist.github.com/mmaleki92/5671654bec8602b6c51bc022f0c8e796.js\"></script>        <textarea id='answer11' name='answer11' rows='4' required></textarea>\n        </div>",
+            "content": "<div class='question'>\n        <p class='mixed-direction'> \n        یک لیست توسط جدا کردن رشته توسط\n        split\n        ایجاد کنید.       \n          </p>\n                <textarea id='answer11' name='answer11' rows='4' required></textarea>\n        </div>",
             "id": 11
         },
         {
             "title": "شرط + لیست",
-            "content": "<div class='question'>\n        <p class='mixed-direction'> \n    تعداد مولفه‌های یک لیست را چک کنید و چنانچه مقدارشان برابر ۴ بود نتیجه‌ی موفقیت آمیز اعلام کنید.\n          </p>\n        <script src=\"https://gist.github.com/mmaleki92/5671654bec8602b6c51bc022f0c8e796.js\"></script>        <textarea id='answer12' name='answer12' rows='4' required></textarea>\n        </div>",
+            "content": "<div class='question'>\n        <p class='mixed-direction'> \n    تعداد مولفه‌های یک لیست را چک کنید و چنانچه مقدارشان برابر ۴ بود نتیجه‌ی موفقیت آمیز اعلام کنید.\n          </p>\n                <textarea id='answer12' name='answer12' rows='4' required></textarea>\n        </div>",
             "id": 12
         },
         {
             "title": "میانگین لیست",
-            "content": "<div class='question'>\n        <p class='mixed-direction'> \nدر ابتدا لیستی از اعداد درست کنید، سپس مقدار میانگین آن را محاسبه نمایید و چاپ کنید.          </p>\n        <script src=\"https://gist.github.com/mmaleki92/5671654bec8602b6c51bc022f0c8e796.js\"></script>        <textarea id='answer13' name='answer13' rows='4' required></textarea>\n        </div>",
+            "content": "<div class='question'>\n        <p class='mixed-direction'> \nدر ابتدا لیستی از اعداد درست کنید، سپس مقدار میانگین آن را محاسبه نمایید و چاپ کنید.          </p>\n                <textarea id='answer13' name='answer13' rows='4' required></textarea>\n        </div>",
             "id": 13
         },
         {
             "title": "متد extend",
-            "content": "<div class='question'>\n        <p class='mixed-direction'> \nدو لیست را توسط متد\nextend\nترکیب کنید.\n                  </p>\n        <script src=\"https://gist.github.com/mmaleki92/5671654bec8602b6c51bc022f0c8e796.js\"></script>        <textarea id='answer14' name='answer14' rows='4' required></textarea>\n        </div>",
+            "content": "<div class='question'>\n        <p class='mixed-direction'> \nدو لیست را توسط متد\nextend\nترکیب کنید.\n                  </p>\n                <textarea id='answer14' name='answer14' rows='4' required></textarea>\n        </div>",
             "id": 14
         },
         {
             "title": "متد count",
-            "content": "<div class='question'>\n        <p class='mixed-direction'> \nیک لیست حاوی چند رقم را ایجاد کنید، تعداد رخداد رقم ۶ را در آن چاپ نمایید.\nبا استفاده از count\n                  </p>\n        <script src=\"https://gist.github.com/mmaleki92/5671654bec8602b6c51bc022f0c8e796.js\"></script>        <textarea id='answer15' name='answer15' rows='4' required></textarea>\n        </div>",
+            "content": "<div class='question'>\n        <p class='mixed-direction'> \nیک لیست حاوی چند رقم را ایجاد کنید، تعداد رخداد رقم ۶ را در آن چاپ نمایید.\nبا استفاده از count\n                  </p>\n                <textarea id='answer15' name='answer15' rows='4' required></textarea>\n        </div>",
             "id": 15
         }
     ]
