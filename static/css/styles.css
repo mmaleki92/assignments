@@ -684,3 +684,49 @@ code {
     border-radius: 4px; /* Consistent border radius */
     font-size: 0.9rem; /* Slightly smaller font size */
 }
+
+/* Ensure list items are properly spaced and button doesn't overlap */
+.list-group {
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Remove default list styling */
+}
+
+.list-group-item {
+    margin-bottom: 10px; /* Add space between list items */
+    padding: 10px;
+    background-color: #fff; /* Background color for each list item */
+    border: 1px solid #ddd; /* Border for each list item */
+    border-radius: 8px; /* Rounded corners for list items */
+}
+
+.list-group-item a {
+    color: #007BFF;
+    text-decoration: none;
+    display: block; /* Make the entire list item clickable */
+}
+
+.list-group-item a:hover {
+    text-decoration: underline;
+}
+
+.button-container {
+    text-align: center; /* Center-align the button */
+    margin-top: 20px; /* Space above the button */
+}
+
+.button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}

@@ -4,43 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Select a Post</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1 {
-            color: #333;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin: 10px 0;
-        }
-        a {
-            text-decoration: none;
-            color: #007BFF;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .new-post-link {
-            margin-top: 20px;
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <h1>Select a Post</h1>
-    <ul>
-        {% for post in posts %}
-        <li>
-            <a href="{{ url_for('view_post', post_name=post.name) }}">{{ post.title }}</a>
-        </li>
-        {% endfor %}
-    </ul>
-    <a class="new-post-link" href="{{ url_for('create_post') }}">Create New Post</a>
+    <div class="container">
+        <header>
+            <h1>Select a Post</h1>
+        </header>
+        <section class="blog-container">
+            <ul class="list-group">
+                {% for post in posts %}
+                <li class="list-group-item">
+                    <a href="{{ url_for('view_post', post_name=post.name) }}">{{ post.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+            <div class="button-container">
+                <a class="button" href="{{ url_for('create_post') }}">Create New Post</a>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
