@@ -25,27 +25,27 @@
         },
         {
             "title": "الگوی مثلث",
-            "content": " الگوری زیر را با حلقه for  انجام دهید<img src=\"/static/img/Screenshot_from_2024-08-26_20-58-04.png\" alt=\"Image\">",
+            "content": " الگوری زیر را با حلقه for  انجام دهید<img src=\"../../../../static/img/Screenshot_from_2024-08-26_20-58-04.png\" alt=\"Image\">",
             "id": 4
         },
         {
             "title": "الگوی ساعت شنی",
-            "content": " الگوی زیر را با حلقه for  انجام دهید.\r\n\r\n<img src=\"/static/img/Screenshot_from_2024-08-26_20-59-23.png\" alt=\"Image\">",
+            "content": " الگوی زیر را با حلقه for  انجام دهید.\r\n\r\n<img src=\"../../../../static/img/Screenshot_from_2024-08-26_20-59-23.png\" alt=\"Image\">",
             "id": 5
         },
         {
             "title": "الگوی مثلث تو پر",
-            "content": "الگوی زیر را با حلقه  for انجام دهید.\r\n<img src=\"/static/img/Screenshot_from_2024-08-26_21-00-43.png\" alt=\"Image\">",
+            "content": "الگوی زیر را با حلقه  for انجام دهید.\r\n<img src=\"../../../../static/img/Screenshot_from_2024-08-26_21-00-43.png\" alt=\"Image\">",
             "id": 6
         },
         {
             "title": "الگوی لوزی",
-            "content": " الگوی زیر را با حلقه for انجام دهید. <img src=\"/static/img/Screenshot_from_2024-08-26_21-01-25.png\" alt=\"Image\">",
+            "content": " الگوی زیر را با حلقه for انجام دهید. <img src=\"../../../../static/img/Screenshot_from_2024-08-26_21-01-25.png\" alt=\"Image\">",
             "id": 7
         },
         {
             "title": "الگوی درخت",
-            "content": " الگوی زیر را با حلقه for انجام دهید. \r\n<img src=\"/static/img/Screenshot_from_2024-08-26_21-02-27.png\" alt=\"Image\">",
+            "content": " الگوی زیر را با حلقه for انجام دهید. \r\n<img src=\"../../../../static/img/Screenshot_from_2024-08-26_21-02-27.png\" alt=\"Image\">",
             "id": 8
         }
     ]
