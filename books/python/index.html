@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کتاب پایتون</title>
+    <link rel="stylesheet" href="../../static/css/styles.css">
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>کتاب پایتون</h1>
+        <a href="../index.html" class="back-button">بازگشت</a>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>محتویات</h3>
+            <ul id="sidebar-list">
+                <!-- Sidebar content will be injected here by JavaScript -->
+            </ul>
+        </aside>
+
+            <div class="blog-container">
+                <article class="blog-post">
+                    <h2 id="section1">عنوان زیرین پست</h2>
+                    <p>محتوای پست بلاگ شما در اینجا قرار می‌گیرد. اینجا می‌توانید متن، تصاویر، ویدئوها و هر چیز دیگری را اضافه کنید.</p>
+                    <p>برای اطلاعات بیشتر، به <a href="#">لینک خارجی</a> مراجعه کنید.</p>
+ 
+                    <h2 id="section2">بخش 2</h2>
+                    <p>محتوای اضافی برای بخش 2.</p>
+                    <h2 id="section3">بخش 3</h2>
+                    <p>محتوای اضافی برای بخش 3.</p>
+                    <h2 id="section4">بخش 6</h2>
+                    <p>محتوای اضافی برای بخش 4.</p>
+                </article>
+            </div>
+        </div>
+
+    <footer>
+        <a href="../index.html">بازگشت به بلاگ</a>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sidebarList = document.getElementById('sidebar-list');
+            const headings = document.querySelectorAll('.blog-container h2');
+
+            headings.forEach(function (heading) {
+                const id = heading.id;
+                const text = heading.innerText;
+                const listItem = document.createElement('li');
+                const link = document.createElement('a');
+
+                link.href = `#${id}`;
+                link.innerText = text;
+
+                listItem.appendChild(link);
+                sidebarList.appendChild(listItem);
+            });
+        });
+    </script>
+
+</body>
+</html>
