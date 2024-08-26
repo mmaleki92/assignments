@@ -38,5 +38,10 @@
         "title": "دیکشنری",
         "description": "تمرین‌های دیکشنری",
         "file_path": "post_8.json"
+    },
+    {
+        "title": "تاپل",
+        "description": "تمرین‌های ساختار تاپل",
+        "file_path": "post_9.json"
     }
 ]
