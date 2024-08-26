@@ -13,5 +13,10 @@
         "title": "متدهای رشته‌",
         "description": "متدهای رشته",
         "file_path": "posts/post_3.html"
+    },
+    {
+        "title": "لیست",
+        "description": "تمرین‌های لیست ",
+        "file_path": "posts/post_4.html"
     }
 ]

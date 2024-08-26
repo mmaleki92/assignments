@@ -1,0 +1,22 @@
+{
+    "metadata": {
+        "version": "1.0.0",
+        "author": "Morteza Maleki",
+        "date_created": "2024-08-26",
+        "description": "تمرینی برای بررسی ساختار داده لیست",
+        "category": "Python",
+        "title": "لیست"
+    },
+    "questions": [
+        {
+            "id": 0,
+            "title": "تغییر مقادیر لیست",
+            "content": "<div class='question'><p class='mixed-direction'>چگونه مقدار یکی از مولفه‌های یک لیست را می‌توان تغییر داد؟ کدی از تغییر مقدار بنویسید.</p><textarea id='answer0' name='answer0' rows='4' required></textarea></div>"
+        },
+        {
+            "id": 1,
+            "title": "افزودن لیست به خود",
+            "content": "<div class='question'><p class='mixed-direction'> چنانچه یک لیست را به خودش توسطappendاضافه کنیم چه اتفاقی می‌افتد؟.</p><textarea id='answer0' name='answer0' rows='4' required></textarea></div>"
+        }
+    ]
+}
