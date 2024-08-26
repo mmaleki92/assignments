@@ -1,0 +1,23 @@
+{
+    "metadata": {
+        "version": "1.0.0",
+        "author": "Morteza Maleki",
+        "date_created": "2024-08-27",
+        "description": "تمرینی برای بررسی مفاهیم مقدماتی پایتون",
+        "category": "Python",
+        "title": "تمرین 3: مقدمات پایتون"
+    },
+    "questions": [
+        {
+            "id": 0,
+            "title": "سوال 0: متد رشته چیست؟",
+            "content": "<div class='question'><p class='mixed-direction'> متد در ساختارهایی مانند رشته به چه معناست، توضیح دهید.</p><textarea id='answer0' name='answer0' rows='4' required></textarea></div>"
+        },
+        {
+            "id": 1,
+            "title": "سوال 1: معکوس رشته‌",
+            "content": "<div class='question'><p class='mixed-direction'> آیا متد replace رشته را تغییر می دهد؟</p><textarea id='answer1' name='answer1' rows='4' required></textarea></div>"
+        }
+    ]
+}
+
