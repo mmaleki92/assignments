@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 import json
 import os
+import re  # For regular expressions
 
 app = Flask(__name__)
 
@@ -108,6 +109,18 @@ def update_index_json(index_json_path, new_file_path, new_title, new_description
 
     return "New post added to the index successfully."
 
+# Function to determine the next available post number
+def get_next_post_name():
+    pattern = re.compile(r'post_(\d+)')
+    existing_posts = [f for f in os.listdir(questions_dir_path) if f.endswith('.json') and f != 'index.json']
+    highest_number = 0
+    for post in existing_posts:
+        match = pattern.search(post)
+        if match:
+            number = int(match.group(1))
+            highest_number = max(highest_number, number)
+    return f'post_{highest_number + 1}'
+
 @app.route('/')
 def index():
     posts = list_available_posts()
@@ -140,9 +153,12 @@ def create_post_html(post_name):
 @app.route('/create_post', methods=['GET', 'POST'])
 def create_post():
     if request.method == 'POST':
-        post_name = request.form['post_name']
+        post_name = request.form['post_name'].strip()  # Strip any extra spaces
         title = request.form['title']
         description = request.form['description']
+        
+        if not post_name:
+            post_name = get_next_post_name()
         
         json_file_path = os.path.join(questions_dir_path, f'{post_name}.json')
         
