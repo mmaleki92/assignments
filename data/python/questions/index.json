@@ -43,5 +43,10 @@
         "title": "تاپل",
         "description": "تمرین‌های ساختار تاپل",
         "file_path": "post_9.json"
+    },
+    {
+        "title": "حلقه‌ی for",
+        "description": "تمرین‌های حلقه for",
+        "file_path": "post_10.json"
     }
 ]
