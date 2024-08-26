@@ -5,9 +5,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>کتاب پایتون</title>
     <link rel="stylesheet" href="../../static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.16.0/tocbot.css">
     <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #818080;
+        direction: rtl;
+        text-align: right;
+    }
+    /* header, footer {
+        background-color: #f4f4f4;
+        padding: 10px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    } */
+    .back-button, footer a {
+        text-decoration: none;
+        color: #060607;
+    }
+    .back-button:hover, footer a:hover {
+        text-decoration: underline;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px; /* Adjust gap */
+    }
+    .sidebar {
+        width: 20%; /* Reduce sidebar width */
+        background-color: #ffffff;
+        padding: 15px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        border: 1px solid #ddd;
+    }
+    .sidebar h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    .content {
+        width: 78%; /* Increase content width */
+        padding: 0;
+        border-radius: 10px;
+    }
+    .blog-container {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    article.blog-post {
+        margin-bottom: 20px;
+    }
+    #toc {
+        position: sticky;
+        top: 20px;
+        max-height: 80vh;
+        overflow-y: auto;
+        padding-right: 10px;
+    }
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #818080;
+    direction: rtl;
+    text-align: right;
+}
 
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.content {
+    width: 78%;
+    padding: 0;
+    border-radius: 10px;
+    }
+
+    /* Counter for automatic numbering */
+    .content {
+        counter-reset: section; /* Reset section numbering */
+    }
+
+    h2 {
+        counter-reset: subsection; /* Reset subsection numbering */
+    }
+
+    h2::before {
+        counter-increment: section; /* Increment section number */
+        content: counter(section) ". "; /* Display section number */
+    }
+
+    h3::before {
+        counter-increment: subsection; /* Increment subsection number */
+        content: counter(section) "." counter(subsection) " "; /* Display subsection number */
+    }
+
+    h4::before {
+        content: counter(section) "." counter(subsection) "." counter(subsubsection, decimal) " "; /* Display sub-subsection number */
+        counter-increment: subsubsection; /* Increment sub-subsection number */
+    }
+    p {
+    text-align: justify;
+}
+body {
+            direction: rtl;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        h2, h3, h4, h5 {
+            color: #333;
+        }
+        .note {
+            color: #555;
+            font-style: italic;
+        }
+        .good {
+            color: green;
+            font-weight: bold;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        figure {
+            text-align: center;
+            margin: 20px 0;
+        }
+        figcaption {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #777;
+        }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.16.0/tocbot.min.js"></script>
 </head>
 <body>
 
@@ -19,26 +167,204 @@
     <div class="container">
         <aside class="sidebar">
             <h3>محتویات</h3>
-            <ul id="sidebar-list">
-                <!-- Sidebar content will be injected here by JavaScript -->
-            </ul>
+            <div id="toc"></div>
         </aside>
 
-            <div class="blog-container">
+        <div class="content" id="content">
                 <article class="blog-post">
-                    <h2 id="section1">عنوان زیرین پست</h2>
-                    <p>محتوای پست بلاگ شما در اینجا قرار می‌گیرد. اینجا می‌توانید متن، تصاویر، ویدئوها و هر چیز دیگری را اضافه کنید.</p>
-                    <p>برای اطلاعات بیشتر، به <a href="#">لینک خارجی</a> مراجعه کنید.</p>
- 
-                    <h2 id="section2">بخش 2</h2>
-                    <p>محتوای اضافی برای بخش 2.</p>
-                    <h2 id="section3">بخش 3</h2>
-                    <p>محتوای اضافی برای بخش 3.</p>
-                    <h2 id="section4">بخش 6</h2>
-                    <p>محتوای اضافی برای بخش 4.</p>
+                    <h1 id="section">کتاب پایتون</h1>
+
+                    <h2 id="section">مبانی پایه</h2>                    
+                    <h3 id="section1-1">کامپیوتر و تعامل اجزای آن</h3>
+                    <p>چنانچه بخواهیم در یک زبان برنامه‌نویسی مهارت پیدا کنیم و برنامه‌های محکم و دقیقی از خود به جای بگذاریم، می‌بایست در مورد کامپیوتر، اجزای تشکیل دهنده‌ی آن و همچنین ارتباط آن اجزا با یکدیگر آگاهی داشته باشیم.
+                        کامپیوتر مانند خودرویی است که ما سوار می‌شویم و ما به عنوان راننده شاید نیازی به دانستن تک‌تک اجزای آن خودرو نداریم، اما برای اینکه بتوانیم با مهارت و به درستی این خودرو را برانیم ملزم به داشتن اطلاعاتی در مورد آن هستیم.
+                        حال برای اینکه مطلب را بهتر متوجه شویم شاید بهتر است با یک مثال، اجزای کامپیوتر و ارتباط آن‌ها به هم را مرور کنیم.
+                        چنانچه به یک نانوایی نگاه بیندازیم متوجه وجود اجزای اصلی زیر در آن می‌شویم:
+                    </p>
+                    <h2>اجزای کامپیوتر و ارتباط آن با اجزای یک نانوایی</h2>
+                    <ol>
+                        <li>مخزن آرد</li>
+                        <li>ظرف خمیر</li>
+                        <li>تنور</li>
+                        <li>نانوا</li>
+                    </ol>
+                    <p>البته اجزای دیگری نیز وجود دارد که به ما به اجزای اصلی بسنده کردیم. حال چنانچه به ارتباط این اجزا نگاه کنیم می‌توانیم رویه کار آن را به کامپیوتر تناظر دهیم. مثلا مخزن آرد می‌تواند حکم هارد کامپیوتر ما را داشته باشد، وقتی نانوایی بسته می‌شود تنها قسمتی که فعال می‌ماند مخزن آرد است، همین رویه برای سیستم کامپیوتری ما صادق است و برای همین است فایل‌هایمان را پس از خاموش و روشن کردن سیستم از دست نمی‌دهیم.</p>
+                    <p class="note">در هارد کامپیوتر پردازش اطلاعات رخ نمی‌دهد و تنها مکانی برای ذخیره‌ی اطلاعات است.</p>
+                    <p>حال چنانچه ظرف خمیر را بررسی کنیم می‌بینیم این قسمت نیز مانند رم <strong>(RAM)</strong> سیستم ما می‌باشد، بطوریکه هر موقع سیستم را روشن کنیم داده‌هایی که می‌خواهیم پردازش شوند در آن قرار می‌گیرند، همانطور که می‌دانید نانواها نمی‌توانند بیشتر از ظرف خمیری که دارند در هر وعده پخت داشته باشند که همین اتفاق برای کامپیوترهای ما رخ می‌دهد، یعنی ما نیز بیشتر از رم کامپیوتر نمی‌توانیم برنامه باز داشته باشیم و چنانچه این کار را انجام دهیم سیستم ما متوقف می‌شود.</p>
+                    <p class="good">حتما متوقف شدن سیستم یا اصطلاحا هنگ کردن سیستم را دیده‌اید، یکی از دلایل آن همین است.</p>
+                    <p>اما تنور نانوایی، مهم‌ترین بخش نانوایی است که معادل واحد پردازش <strong>(CPU)</strong> کامپیوتر ما می‌باشد. تنور قوی معادل پردازش قوی است و سرعت اجرای برنامه‌هایی است که ما برای اجرا قرار داده‌ایم.</p>
+                    <h3>اما نانوا معادل چه چیزی در کامپیوتر است؟</h3>
+                    <p>تا الان متوجه شدیم که در رم و هارد پردازشی رخ نمی‌دهد و داده‌ها می‌بایست از هارد به رم منتقل شوند و سپس در صف قرار گیرند تا توسط <strong>واحد پردازش</strong>، پردازش شوند. وظیفه‌ی نقل و انتقال داده‌ها بین این بخش‌ها بر عهده‌ی <strong>BUS</strong> می‌باشد (که در نانوایی همان نانوا است).</p>
+                    <p>حال که این بخش‌ها را بررسی کردیم احتمالا اهمیت هر کدام از بخش‌ها و البته تعامل آن‌ها با یکدیگر را بهتر متوجه شویم.</p>
+                    <h3>چنانچه یک کامپیوتر رم بالا و cpu ضعیفی داشته باشد، با چه مشکلی روبرو خواهد شد؟ به احتمال‌های دیگر نیز فکر کنید.</h3>
+                
+                    <h2>ارتباط زبان برنامه نویسی پایتون به کامپیوتر</h2>
+                
+                    <h3>مفسر پایتون</h3>
+                    <p>پایتون دارای یک محیط توسعه و یادگیری یکپارچه است که به IDLE یا حتی IDE کوتاه شناخته‌می‌شود. اینها دسته‌ای از برنامه‌ها هستند که به شما کمک می‌کنند کد را کارآمدتر بنویسید. در حالی که IDE های زیادی برای انتخاب وجود دارد، Python IDLE بسیار ساده است، که آن را به ابزاری عالی برای یک برنامه نویس مبتدی تبدیل می‌کند.</p>
+                    <p class="note">ویرایشگر استاندارد پایتون تنها موردی نیست که وجود دارد و علاوه بر آن ویرایشگرهای بسیار غنی‌تری نیز وجود دارد که برای شروع ما از این ویرایشگر استفاده خواهیم کرد و پس از آن به دیگر ویرایشگرها خواهیم پرداخت.</p>
+                    <p>برای نصب این ویرایشگر می‌توانیم مراحل زیر را طی کنیم:</p>
+                    <dl>
+                        <dt><strong>قدم اول</strong></dt>
+                        <dd>برای دانلود ویرایشگر به سایت رسمی پایتون با لینک <a href="http://www.python.org/downloads">www.python.org/downloads</a> مراجعه کنید و نسخه‌ی مورد نظر را برای سیستم عامل خود انتخاب کنید.</dd>
+                        <figure>
+                            <img src="../../static/img/book/python/figures/1.png" alt="Python Downloads Page" width="500">
+                        </figure>
+                        <p class="note">پایتون دو نسخه‌ی با تغییرات اساسی دارد<br>
+                        <strong>پایتون ۲:</strong> در سال ۲۰۲۰ از دور خارج شد.<br>
+                        <strong>پایتون ۳:</strong> نسخه‌ی کنونی</p>
+                        <p class="note">ممکن است برای شما نسخه‌ی ۳.۱۰ باشد و این برای کار ما تفاوت زیادی نمی‌کند.</p>
+                
+                        <dt><strong>قدم دوم</strong></dt>
+                        <dd>پس از دانلود و باز کردن فایل نصبی با صفحه‌ی زیر مواجه خواهیم شد</dd>
+                        <figure>
+                            <img src="../../static//img/book/python/figures/2.png" alt="Python Installer" width="500">
+                        </figure>
+                        <p class="note">حتما تیک Add python 3.6 to PATH را بزنید تا در آینده برای نصب پکیج‌ها با مشکل مواجه نشویم.</p>
+                
+                        <dt><strong>قدم سوم</strong></dt>
+                        <dd>پس از کلیک بر install now پنجره‌ی زیر را خواهید دید:</dd>
+                        <figure>
+                            <img src="../../static//img/book/python/figures/3.png" alt="Installing Python" width="500">
+                        </figure>
+                
+                        <dt><strong>قدم چهارم</strong></dt>
+                        <dd>پس از اتمام نصب با صفحه‌ی زیر مواجه خواهید شد که می‌توانید close را بزنید</dd>
+                        <figure>
+                            <img src="../../static//img/book/python/figures/4.png" alt="Python Installation Complete" width="500">
+                        </figure>
+                    </dl>
+                
+                    <p>حال همه چیز برای ما مهیا شد تا بتوانیم کدزنی را شروع کنیم. در ابتدا بخش‌های مختلف IDLE پایتون را با هم بررسی می‌کنیم و پس از آن به مقدمات پایتون خواهیم پرداخت. مفسر پایتون از دو بخش اصلی تشکیل می‌شود:</p>
+
+                    <h2>مفاهیم اصلی</h2>
+                    <ol>
+                        <li>مفسر تعاملی <span class="footnote">Interactive Interpreter</span></li>
+                        <li>ویرایشگر فایل</li>
+                    </ol>
+                
+                    <h3>مفسر تعاملی</h3>
+                    <p>بهترین مکان برای آزمایش کد پایتون در مفسر تعاملی است که به آن shell یا console نیز گفته می‌شود. shell یک حلقه اصلی Read-Eval-Print (REPL) است. عملکرد shell به این صورت است که یک دستور پایتون را می‌خواند، نتیجه آن عبارت را ارزیابی می‌کند و سپس نتیجه را روی صفحه چاپ می‌کند. سپس، برای خواندن عبارت بعدی، دوباره حلقه می‌زند.</p>
+                    <p>shell پایتون یک بخش بسیار عالی برای بررسی کدهای کوچک است.</p>
+                
+                    <h3>ویرایشگر فایل</h3>
+                    <p>هر برنامه‌نویسی باید بتواند فایل‌های متنی را ویرایش و ذخیره کند. برنامه‌های پایتون فایل‌هایی با پسوند <code>.py</code> هستند که حاوی خطوط کد پایتون هستند. IDLE پایتون به شما امکان ایجاد و ویرایش این فایل‌ها را به راحتی می‌دهد.</p>
+                
+                    <p class="good">IDLE پایتون همچنین چندین ویژگی مفید را ارائه می‌دهد که در IDEهای حرفه‌ای مشاهده خواهید کرد، مانند برجسته کردن سینتکس اولیه، تکمیل کد و تورفتگی خودکار. IDEهای حرفه‌ای نرم‌افزارهای قوی‌تری هستند و یادگیری آن‌ها زمان‌بر است. اگر به تازگی سفر برنامه‌نویسی پایتون خود را آغاز کرده‌اید، Python IDLE یک جایگزین عالی است!</p>
+                
+                    <p class="good"><strong>فایل‌های اجرایی در پایتون</strong><br>
+                    پایتون به طور عام دو نوع فایل اجرایی دارد:
+                    <ol>
+                        <li>فایل‌‌ با پسوند <code>.py</code> (اسکریپت پایتون)</li>
+                        <li>فایل با پسوند <code>.ipynb</code> (نوتبوک ژوپیتر)</li>
+                    </ol>
+                    ما در ابتدا کلاس‌مان را با اسکریپت پایتون شروع می‌کنیم و پس از آن به پسوند دیگر خواهیم پرداخت.</p>
+                
+                    <p>چنانچه از قسمت <code>start</code> ویندوز <code>IDLE</code> را جستجو کنید می‌توانید <code>Python IDLE</code> را بیابید و با کلیک بر آن شروع کنید. با شروع آن با صفحه‌ای مانند صفحه‌ی زیر مواجه خواهید شد:</p>
+                    <figure>
+                        <img src="../../static//img/book/python/figures/idle_1.png" alt="Python IDLE Interface" width="800">
+                        <figcaption>که در قسمت بالا نسخه‌ی پایتونی که نصب کرده‌ایم را می‌بینیم و در جایی که <code>&gt;&gt;&gt;</code> قرار گرفته است می‌توانیم فرمان پایتون را وارد کنیم و با فشردن کلید <code>Enter</code> آن دستور را اجرا کنیم و نتیجه را ببینیم.</figcaption>
+                    </figure>
+                
+                    <h3>اولین برنامه در پایتون</h3>
+                    <p>معمولاً اولین کدی که برنامه‌نویسان در شروع کار به اجرا می‌گذارند <code>Hello World!</code> است، برای این کار می‌توانید از دستور پایتون استفاده کنید و متن خود را بین <code>""</code> قرار دهید.</p>
+                    <p>به طور مثال:</p>
+                    <figure>
+                        <img src="../../static//img/book/python/figures/idle_2.png" alt="Hello World Program" width="800">
+                        <figcaption>مثال اجرای Hello World</figcaption>
+                    </figure>
+                
+                    <p class="note">تابع <code>print</code> یک تابع از پیش ساخته شده در پایتون است که در بخش‌های بعد بیشتر با آن آشنا خواهیم شد.</p>
+                
+                    <h2>اسکریپت در پایتون</h2>
+                    <p>در محاسبات، کلمه اسکریپت برای اشاره به فایلی استفاده می‌شود که حاوی توالی منطقی از دستوراتی است که می‌بایست به طور منظم پردازش شوند.</p>
+                    <p>اسکریپت‌ها همواره توسط نوعی مفسر <span class="footnote">Interpreter</span> پردازش می‌شوند که وظیفه اجرای هر دستور را به صورت متوالی بر عهده دارد.</p>
+                    <p>یک فایل متنی ساده حاوی کد پایتون که قرار است مستقیماً توسط کاربر اجرا شود معمولاً <strong>اسکریپت</strong> نامیده می‌شود.</p>
+                    <p>چنانچه فایل متنی ساده که حاوی کد پایتون است را برای وارد کردن و استفاده در یک فایل پایتون دیگر استفاده کنیم به آن <strong>ماژول</strong> می‌گویند.</p>
+                    <p>بنابراین، تفاوت اصلی بین یک ماژول و یک اسکریپت در این است که ماژول‌ها برای وارد شدن هستند، در حالی که اسکریپت‌ها برای اجرای مستقیم ساخته می‌شوند.</p>
+                    <p>در هر صورت، نکته مهم این است که بدانیم چگونه کد پایتونی را که می‌نویسیم در ماژول‌ها و اسکریپت‌های خود اجرا کنیم.</p>
+                
+                    <h3>اجرای اسکریپت در IDLE</h3>
+                    <p><em>%TODO</em></p>
+                
+                    <h3>تفاوت اسکریپت و shell</h3>
+                    <p><em>%TODO</em></p>
+                
+                    <h3>توضیح یا کامنت</h3>
+                    <p><em>%TODO</em></p>
+                
+                    <h2>انواع داده در پایتون</h2>
+                    <p>اکنون که می‌دانیم چگونه با مفسر پایتون تعامل داشته باشیم و کد پایتون را اجرا کنیم وقت آن رسیده که زبان پایتون را بررسی کنیم. ابتدا به انواع داده‌های اساسی که در پایتون وجود دارند خواهیم پرداخت.</p>
+                
+                    <h3>اعداد صحیح (integers)</h3>
+                    <p>در پایتون 3، عملاً هیچ محدودیتی برای اندازه‌ی یک مقدار صحیح وجود ندارد. البته، مانند همه چیزها به مقدار حافظه‌ای که سیستم شما دارد محدود می‌شود، اما بصورت کلی، یک عدد صحیح می‌تواند تا هر اندازه‌ای که شما نیاز دارید باشد:</p>
+                    <pre><code class="language-python"># Sample code snippet
+                number = 10
+                print(type(number))</code></pre>
+                    <p>در پایتون عددی را که هیچگونه پیشوندی ندارد را یک عدد طبیعی در مبنای ده در نظر می‌گیرد. مثلا پایتون به طور خودکار عدد <code>10</code> را عددی صحیح و در مبنای <code>10</code> در نظر می‌گیرد.</p>
+                    <p class="good">بطور مثال چنانچه قبل از عددمان از <code>0b</code> استفاده کنیم عدد باینری خواهیم داشت.</p>
+                    <p>عدد صحیح یا <code>integer</code> را می‌توان براحتی و فقط با نوشتن یک عدد صحیح بدون ممیز در پایتون تعریف کرد. نوع این عدد در پایتون با <code>int</code> مشخص می‌شود. به طور مثال چنانچه از تابع از پیش تعریف‌شده‌ی <code>type()</code> استفاده کنیم و از پایتون بخواهیم نوع این مقدار را به ما بدهد به ما می‌گوید که عددمان <code>int</code> است.</p>
+                
+                    <h2>اعداد اعشاری</h2>
+                    <p>ما در ریاضیات با اعداد اعشاری <span class="footnote">Floating-Point Numbers</span> شده‌ایم، عددی مانند <code>2.4</code> اعشاری می‌باشد. در پایتون نوع این اعداد با <code>float</code> شناخته می‌شود. این اعداد نام نوع خود را از عدد نقطه شناور گرفته‌اند که بحث مفصلی دارد و در آینده سعی می‌شود به آن پرداخته شود. بطورکلی چیزی که الان نیاز است در مورد این اعداد بدانیم این است که هنگام استفاده یا معرفی اعداد با ممیز، پایتون متوجه خواهد شد و آن اعداد را به عنوان اعداد اعشاری خواهد شناخت.</p>
+                    <p class="note">در زبان پایتون ممیز اعداد با <code>.</code> نمایش داده می‌شود و نباید با <code>/</code> که در زبان فارسی استفاده می‌شود اشتباه شود.</p>
+                    <pre><code class="language-python"># Sample code snippet for float
+                number = 2.4
+                print(type(number))</code></pre>
+                    <p>مانند عدد صحیح که پیش از این به آن پرداختیم چنانچه نوع یک عدد اعشاری را با استفاده از تابع <code>type()</code> بپرسیم، به ما <code>float</code> را خواهد داد.</p>
+                    <pre><code class="language-python"># Sample code snippet
+                number = 2.4
+                print(type(number))</code></pre>
+                    <p class="note">در پایتون می‌توان از زبان علمی نیز استفاده کرد، به این صورت که به اندازه‌ی اعشاری که نیاز داریم <strong>توان</strong> آن را بنویسیم. می‌توان این کار را با افزودن <code>e</code> یا <code>E</code> در آخر عدد نوشت.</p>
+                    <pre><code class="language-python"># Sample code snippet for scientific notation
+                number = 1e-10
+                print(number)</code></pre>
+                    <p>در عدد بالا در واقع عدد <code>5 × 10<sup>-324</sup></code> را نوشته‌ایم.</p>
+                
+                    <h3>رشته</h3>
+                    <p>رشته، نویسه یا <code>string</code> یکی از انواع داده در پایتون است که به صورت یک نوشته می‌باشد. در زبان پایتون این نوع داده نوشته‌ای است که بین دو علامت نقل قول <code>""</code> قرار می‌گیرد. منظور از نوشته تنها حروف نیست و می‌توان از اعداد و علایم ریاضی نیز استفاده کرد، در واقع حتی می‌توان از emoji نیز استفاده کرد.</p>
+                    <p class="good">emoji شکل‌های گرافیکی می‌باشند که توسط کدهایی به عنوان <code>unicode</code> در پایتون تعبیه شده‌اند.</p>
+                    <pre><code class="language-python"># Sample code snippet for strings
+                text = "Hello World"
+                print(text)</code></pre>
+                    <p>برای چاپ یک رشته می‌توان به صورت زیر عمل کرد:</p>
+                    <p>همانطور که می‌بینید برای چاپ عبارت <code>Hello World</code> ما آن عبارت را بین دو علامت نقل قول به صورت <code>"Hello World"</code> نوشتیم، با این کار پایتون آن عبارت را به عنوان <code>string</code> شناخت و توانست آن را چاپ کند. چنانچه بخواهیم ببینیم نوع عبارت <code>string</code> چیست می‌توانیم از تابع <code>type</code> استفاده کنیم که نتیجه‌ی آن <code>str</code> خواهد بود.</p>
+                    <pre><code class="language-python"># Sample code snippet to check type
+                text = "Hello World"
+                print(type(text))</code></pre>
+                    <p>همانطور که می‌بینید تابع <code>type</code> عدد 10 را که در بین علامت نقل قول است را <code>str</code> در نظر گرفت.</p>
+                
+                    <h3>نوع Boolean</h3>
+                    <p>یکی از انواع موجود در پایتون <code>Boolean</code> است که در کل دو حالت <code>True</code> یا <code>False</code> را به خود می‌گیرد.</p>
+                    <pre><code class="language-python"># Sample code snippet for boolean
+                boolean_value = True
+                print(type(boolean_value))</code></pre>
+                    <p>همانطور که در آینده خواهید دید، عبارات در پایتون اغلب در زمینه بولی ارزیابی می‌شوند، به این معنی که آنها برای نشان دادن درستی یا نادرستی تفسیر می‌شوند. مقداری که در بافت بولی درست است، گاهی اوقات گفته می‌شود که «درست» است، و مقداری که در بافت بولی نادرست است، «نادرست» است. در آینده با این نوع داده در پایتون بیشتر آشنا خواهید شد.</p>
+                
+                    <h2>ورودی و خروجی (input/print)</h2>
+                    <p>برای اینکه یک برنامه مفید باشد، معمولا نیاز به دریافت داده‌های ورودی از کاربر و نمایش داده‌های نتیجه به کاربر دارد و بطورکلی با دنیای خارج ارتباط برقرار کند. در این بخش، با ورودی و خروجی پایتون آشنا خواهیم شد. برای دریافت ورودی راه‌های متفاوتی وجود دارد، این ورودی می‌تواند مستقیم، از طریق صفحه کلید یا از منابع خارجی مانند فایل‌ها یا پایگاه‌های داده وارد شود. خروجی را نیز می‌توان مستقیما در کنسول یا IDE، از طریق رابط گرافیکی کاربر (GUI) روی صفحه نمایش یا اینکه در یک منبع خارجی نمایش داد.</p>
+                
+                    <h3>خواندن ورودی از صفحه کلید</h3>
+                    <p>برنامه‌ها اغلب نیاز به دریافت داده‌ها از کاربر، معمولا از طریق ورودی از صفحه کلید دارند. یکی از راه‌های انجام این کار در پایتون استفاده از تابع <code>input()</code> می‌باشد:</p>
+                    <pre><code class="language-python"># Sample code snippet for input
+                user_input = input("Enter something: ")
+                print(user_input)</code></pre>
+                    <p>مثال بالا در <code>shell</code> اجرا شده است و خط <code>&gt;&gt;&gt;</code> بیانگر کدی است که نوشته‌ایم و خط بدون <code>&gt;&gt;&gt;</code> نشان‌دهنده‌ی نتیجه‌ی کد قبلی است که پس از فشردن کلید <code>Enter</code> نمایش داده می‌شود. چنانچه در آرگومان اختیاری تابع <code>input</code> نوشته‌ای قرار دهیم، هنگام اجرای کد پیام شما برای کاربر نمایش داده خواهد شد.</p>
+                    <pre><code class="language-python"># Sample code snippet with prompt
+                user_input = input("Please enter a number: ")
+                print("You entered:", user_input)</code></pre>
+                    <p>تابع <code>input</code> همواره رشته برمی‌گرداند، چنانچه بخواهیم نوع دیگری (مانند <code>int</code>، <code>float</code>) بگیریم، می‌بایست <code>string</code> را به نوع مورد نظرمان تبدیل نماییم که به این عمل <strong>casting</strong> می‌گوییم.</p>
+                    <pre><code class="language-python"># Sample code snippet for casting
+                user_input = input("Enter a number: ")
+                number = int(user_input)
+                print(number + 100)</code></pre>
+                    <p>در مثال بالا در ابتدا از کاربر عددی خواستیم و کاربر <code>50</code> را وارد کرد. اما وقتی خواستیم آن عدد را با <code>100</code> جمع کنیم با خطای <code>TypeError</code> مواجه شدیم که به ما می‌گوید نمی‌توان <code>str</code> را با <code>int</code> جمع نمود. برای رهایی از این خطا در کد بعدی <code>input</code> را در <code>int</code> قرار دادیم تا بتوانیم <code>string</code> را تبدیل به <code>int</code> نماییم. همانطور که می‌بینید با انجام این کار توانستیم با یک عدد جمع کنیم.</p>
+                    <p class="note">هنگامی که در کد ما خطایی رخ می‌دهد، پایتون به ما <code>Traceback</code> می‌دهد که در واقع مسیری است که در آن خطا رخ داده است. ما با دنبال کردن این مسیر از بالا به پایین می‌توانیم به منشا خطا برسیم، همچنین در آخر خطا همانطور که مشاهده می‌کنید نوع خطا نیز آورده شده است.</p>
+                    <p class="good">به عیب‌یابی و یافتن مشکل کد در دنیای برنامه‌نویسی دیباگ (<code>debug</code>) می‌گویند که به معنی رفع خطا یا خارج کردن حشره می‌باشد! کلمه‌ی <code>debug</code> به معنی رفع باگ (<code>bug</code>) است، که این کلمه خود به معنی حشره است و اولین بار هنگامی که حشره‌ای سبب مشکل پیدا کردن یکی از کامپیوترهای اولیه می‌شود وارد فرهنگ لغت برنامه نویسان می‌شود.</p>
+                
                 </article>
-            </div>
         </div>
+    </div>
 
     <footer>
         <a href="../index.html">بازگشت به بلاگ</a>
@@ -46,20 +372,16 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const sidebarList = document.getElementById('sidebar-list');
-            const headings = document.querySelectorAll('.blog-container h2');
-
-            headings.forEach(function (heading) {
-                const id = heading.id;
-                const text = heading.innerText;
-                const listItem = document.createElement('li');
-                const link = document.createElement('a');
-
-                link.href = `#${id}`;
-                link.innerText = text;
-
-                listItem.appendChild(link);
-                sidebarList.appendChild(listItem);
+            tocbot.init({
+                tocSelector: '#toc', // The container where the TOC will be injected
+                contentSelector: '#content', // The main content area (directly points to #content now)
+                headingSelector: 'h2', // , h3, h4Include all levels you want in the TOC
+                collapseDepth: 6, // How many levels of headers should be shown collapsed in the TOC
+                scrollSmooth: true, // Enable smooth scrolling to sections
+                scrollSmoothDuration: 420, // Smooth scrolling duration in milliseconds
+                scrollSmoothOffset: -10, // Offset for smooth scrolling
+                orderedList: false, // Use an ordered list (numbered)
+                hasInnerContainers: false, // Set this to false if no nested containers are needed
             });
         });
     </script>
