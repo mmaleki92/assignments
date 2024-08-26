@@ -1,5 +1,4 @@
-<!-- string methods -->
-
+<!-- basic python -->
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -63,25 +62,42 @@
     <script>
         // Fetch the JSON file and update the HTML content
         fetch('../../../../data/python/questions/post_3.json')
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => {
                 // Set the page title and header from metadata
                 document.getElementById('page-title').textContent = data.metadata.title;
                 document.getElementById('main-header').textContent = data.metadata.title;
-
+    
                 // Generate and insert the questions into the container
                 const questionsContainer = document.getElementById('questions-container');
+                
+                // Initialize a counter for incremental numbering
+                let counter = 0;
+    
                 data.questions.forEach(question => {
                     const questionDiv = document.createElement('div');
                     questionDiv.classList.add('question');
+                    
+                    // Create HTML content for each question with incremental numbering
                     questionDiv.innerHTML = `
-                        <h2>${question.title}</h2>
+                        <h2>${counter}. ${question.title}</h2>
                         ${question.content}
                     `;
+                    
+                    // Increment the counter
+                    counter++;
+    
+                    // Append the new question to the container
                     questionsContainer.appendChild(questionDiv);
                 });
             })
             .catch(error => console.error('Error fetching JSON:', error));
     </script>
+    
 </body>
 </html>
