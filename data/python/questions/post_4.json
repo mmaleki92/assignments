@@ -17,6 +17,11 @@
             "id": 1,
             "title": "افزودن لیست به خود",
             "content": "<div class='question'><p class='mixed-direction'> چنانچه یک لیست را به خودش توسطappendاضافه کنیم چه اتفاقی می‌افتد؟.</p><textarea id='answer0' name='answer0' rows='4' required></textarea></div>"
+        },
+        {
+            "title": "ارجاع در لیست",
+            "content": "<div class='question'>\n        <p class='mixed-direction'> این کد چه تغییری در y ایجاد می‌کند؟</p>\n        <script src=\"https://gist.github.com/mmaleki92/5671654bec8602b6c51bc022f0c8e796.js\"></script>        <textarea id='answer2' name='answer2' rows='4' required></textarea>\n        </div>",
+            "id": 2
         }
     ]
 }
