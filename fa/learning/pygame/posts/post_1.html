@@ -6,7 +6,22 @@
     <title>توضیح کد Pygame</title>
     <link rel="stylesheet" href="../../../../static/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <style>
+        .video-button {
+            display: inline-block;
+            background-color: #ff0000;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+        }
+        .video-button:hover {
+            background-color: #cc0000;
+        }
+    </style>
 </head>
 <body>
 
@@ -59,13 +74,24 @@
                 <code>pygame.display.update()</code>
             </div>
             <p>در این خط، صفحه نمایش به‌روزرسانی می‌شود. این تابع تمام تغییراتی که در پنجره گرافیکی ایجاد شده‌اند را نمایش می‌دهد.</p>
+
+            <h3>نحوه نمایش صفحه در Pygame</h3>
+            <p>در Pygame، سیستم مختصات به گونه‌ای تنظیم شده است که نقطه شروع (۰,۰) در گوشه بالای سمت چپ پنجره نمایش قرار دارد. این به این معنی است که مختصات y به صورت افزایشی از بالا به پایین تغییر می‌کند، به این صورت که مقادیر بزرگتر به سمت پایین حرکت می‌کنند. بنابراین، اگر شما چیزی را در مختصات y=۰ رسم کنید، این شیء در بالای پنجره ظاهر می‌شود.</p>
+            
+            <p>این سیستم مختصات ممکن است در مقایسه با برخی دیگر از سیستم‌های گرافیکی که نقطه شروع مختصات را در گوشه پایین سمت چپ قرار می‌دهند، معکوس به نظر برسد. در نتیجه، در هنگام طراحی و پیاده‌سازی گرافیک در Pygame، لازم است که به این ویژگی توجه داشته باشید.</p>
+
+            <div class="image-placeholder">
+                <h4>تصویر نمایش</h4>
+                <img src="../../../../static/img/pygame_window.jpg" alt="تصویر نمایش" style="max-width: 100%; height: auto;">
+            </div>
+
+            <h3>تماشای ویدیو آموزشی</h3>
+            <p>برای مشاهده توضیحات بیشتر و دیدن کد در عمل، می‌توانید ویدیو آموزشی ما را تماشا کنید:</p>
+            <a href="https://www.youtube.com/watch?v=SXkgzO0lYSc&t=1191s" class="video-button" target="_blank">تماشا کنید</a>
+
             <script src="https://gist.github.com/mmaleki92/882ff08bbbe92d62fb9625cc4607c468.js"></script>
-</div>
-
-</article>
-    
-</div>
-
+        </article>
+    </div>
 
 </body>
 </html>
