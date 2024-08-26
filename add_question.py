@@ -177,7 +177,7 @@ def create_post():
             return f"Post '{post_name}' already exists.", 400
         
         create_default_json_file(json_file_path, title=title, description=description)
-        update_index_json(index_json_path, new_file_path=f'{post_name}.json', new_title=title, new_description=description)
+        update_index_json(index_json_path, new_file_path=f'{post_name}.html', new_title=title, new_description=description)
         create_post_html(post_name)
         return redirect(url_for('view_post', post_name=post_name))
     

@@ -27,26 +27,26 @@
     {
         "title": "فایل‌ها",
         "description": "تمرین‌های فایل‌ها در پایتون",
-        "file_path": "post_6.json"
+        "file_path": "post_6.html"
     },
     {
         "title": "عبارت شرطی",
         "description": "تمرین عبارت‌های شرطی ",
-        "file_path": "post_7.json"
+        "file_path": "post_7.html"
     },
     {
         "title": "دیکشنری",
         "description": "تمرین‌های دیکشنری",
-        "file_path": "post_8.json"
+        "file_path": "post_8.html"
     },
     {
         "title": "تاپل",
         "description": "تمرین‌های ساختار تاپل",
-        "file_path": "post_9.json"
+        "file_path": "post_9.html"
     },
     {
         "title": "حلقه‌ی for",
         "description": "تمرین‌های حلقه for",
-        "file_path": "post_10.json"
+        "file_path": "post_10.html"
     }
 ]
