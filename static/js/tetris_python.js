@@ -16,7 +16,7 @@ window.onload = function() {
 
     // Tetris-style representation of "PYTHON MORE!" (simplified)
     const pythonShape = [
-        "####  #   #  ######  #  #    ##    #   #   #    #     ##    ####  ####  #",
+        "####  #   #   #####  #  #    ##    #   #   #    #     ##    ####  ####  #",
         "#  #   # #      #    #  #   #  #  # #  #  # #  ##    #  #   #  #  #     #",
         "####    #       #    ####   #  #  #  # #  #  ##  #   #  #   ####  ####  #",
         "#       #       #    #  #   #  #  #   ##  #   #  #   #  #   #  #  #      ",
