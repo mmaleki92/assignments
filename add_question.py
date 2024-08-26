@@ -141,7 +141,7 @@ def view_post(post_name):
                 image_file.save(os.path.join('static/img', image_filename))
                 image_url = url_for('static', filename=f'img/{image_filename}')
                 # Directly insert image into content
-                content += f'<img src="{image_url}" alt="Image">'
+                content += f'<img src="../../../..{image_url}" alt="Image">'
         
         new_question = {
             "title": title,
