@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Post - {{ post_name }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+        }
+        .question {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .back-link {
+            margin-top: 20px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Post: {{ post_name }}</h1>
+    
+    <h2>Submit a New Question</h2>
+    <form action="{{ url_for('view_post', post_name=post_name) }}" method="POST">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" required><br><br>
+        <label for="content">Content:</label><br>
+        <textarea id="content" name="content" required></textarea><br><br>
+        <button type="submit">Submit Question</button>
+    </form>
+    
+    <h2>Existing Questions</h2>
+    {% for question in questions %}
+    <div class="question">
+        <h3>{{ question.title }}</h3>
+        <p>{{ question.content | safe }}</p>
+    </div>
+    {% endfor %}
+
+    <a href="{{ url_for('index') }}" class="back-link">Back to Post Selection</a>
+</body>
+</html>
