@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Post - {{ post_name }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        #content {
+            width: 100%;
+            height: 200px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,7 +26,7 @@
     <div class="container">
         <section class="intro">
             <h2>Submit a New Question</h2>
-            <form action="{{ url_for('view_post', post_name=post_name) }}" method="POST">
+            <form action="{{ url_for('view_post', post_name=post_name) }}" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="title">Title:</label>
                     <input type="text" id="title" name="title" required>
@@ -24,6 +34,10 @@
                 <div class="form-group">
                     <label for="content">Content:</label>
                     <textarea id="content" name="content" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="image">Image:</label>
+                    <input type="file" id="image" name="image">
                 </div>
                 <div class="submit-button">
                     <button type="submit">Submit Question</button>
@@ -36,7 +50,9 @@
             {% for question in questions %}
             <div class="question">
                 <h3>{{ question.title }}</h3>
-                <p>{{ question.content | safe }}</p>
+                <div class="content">
+                    {{ question.content | safe }}
+                </div>
             </div>
             {% endfor %}
         </section>
@@ -45,6 +61,27 @@
             <a href="{{ url_for('index') }}" class="button">Back to Post Selection</a>
         </footer>
     </div>
+
+    <script>
+        document.getElementById('content').addEventListener('paste', function(event) {
+            var items = (event.clipboardData || event.originalEvent.clipboardData).items;
+            for (var i = 0; i < items.length; i++) {
+                if (items[i].kind === 'file') {
+                    var file = items[i].getAsFile();
+                    if (file && ['image/png', 'image/jpeg', 'image/gif'].includes(file.type)) {
+                        var reader = new FileReader();
+                        reader.onload = function(e) {
+                            var imageUrl = e.target.result;
+                            var img = document.createElement('img');
+                            img.src = imageUrl;
+                            document.getElementById('content').appendChild(img);
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>

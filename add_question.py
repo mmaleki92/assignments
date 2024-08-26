@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 import json
 import os
-import re  # For regular expressions
+import re
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 
@@ -41,17 +42,12 @@ def add_new_questions_to_json(json_file_path, new_questions):
     
     existing_questions = data.get('questions', [])
     
-    # existing_titles = {q['title'] for q in existing_questions}
-    # if all(q['title'] in existing_titles for q in new_questions):
-    #     return "All new questions already exist. No updates made."
-    
     next_id = determine_next_id(existing_questions)
     
     for question in new_questions:
         question_id = next_id
         question['id'] = question_id
         next_id += 1
-        question['content'] = question['content'].format(question_id=question_id)
     
     data['questions'].extend(new_questions)
     
@@ -121,6 +117,10 @@ def get_next_post_name():
             highest_number = max(highest_number, number)
     return f'post_{highest_number + 1}'
 
+# Allowed image file extensions
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in {'png', 'jpg', 'jpeg', 'gif'}
+
 @app.route('/')
 def index():
     posts = list_available_posts()
@@ -132,6 +132,17 @@ def view_post(post_name):
     if request.method == 'POST':
         title = request.form['title']
         content = request.form['content']
+        
+        # Handle file uploads
+        if 'image' in request.files:
+            image_file = request.files['image']
+            if image_file and allowed_file(image_file.filename):
+                image_filename = secure_filename(image_file.filename)
+                image_file.save(os.path.join('static/img', image_filename))
+                image_url = url_for('static', filename=f'img/{image_filename}')
+                # Directly insert image into content
+                content += f'<img src="{image_url}" alt="Image">'
+        
         new_question = {
             "title": title,
             "content": content
