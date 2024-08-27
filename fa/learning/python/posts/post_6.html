@@ -24,6 +24,11 @@
             height: auto;
             display: block;
         }
+
+        /* Style for code blocks */
+        pre {
+            white-space: pre-wrap; /* Ensures that whitespace and newlines are preserved */
+        }
     </style>
 </head>
 <body>
@@ -87,10 +92,13 @@
                     const questionDiv = document.createElement('div');
                     questionDiv.classList.add('question');
                     
+                    // Replace escaped newlines with actual line breaks for code content
+                    let content = question.content.replace(/\\n/g, '\n');
+                    
                     // Create HTML content for each question with incremental numbering
                     questionDiv.innerHTML = `
                         <h2>${counter}. ${question.title}</h2>
-                        ${question.content}
+                        ${content}
                     `;
 
                     // Increment the counter
