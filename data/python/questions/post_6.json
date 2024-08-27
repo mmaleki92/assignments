@@ -57,6 +57,11 @@
             "title": "فرمت‌های فایل",
             "content": "فرمت فایل‌هایی که می‌شیناسید را نام ببرید، در مورد فرمت mp4 تحقیق کنید و توضیح دهید.<textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 10
+        },
+        {
+            "title": "یب فایل",
+            "content": "<pre><code class='language-python'>import os\n\noriginal_file_path = 'old_name.txt'\nnew_file_path = 'new_name.txt'\n\nif os.path.exists(original_file_path):\n    os.rename(original_file_path, new_file_path)\n    print(f\"File has been renamed from '{original_file_path}' to '{new_file_path}'.\")\nelse:\n    print(f\"The file '{original_file_path}' does not exist.\")</code></pre><textarea id='answer7' name='answer7' rows='4' required></textarea>",
+            "id": 1
         }
     ]
 }
