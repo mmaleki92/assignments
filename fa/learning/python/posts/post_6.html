@@ -60,40 +60,54 @@
     </div>
 
     <script>
-document.addEventListener('DOMContentLoaded', () => {
-    fetch('../../../../data/python/questions/post_6.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(data => {
-            document.getElementById('page-title').textContent = data.metadata.title;
-            document.getElementById('main-header').textContent = data.metadata.title;
+        // Function to create and append a script element for the Gists
+        function appendGistScript(src) {
+            const script = document.createElement('script');
+            script.src = src;
+            document.body.appendChild(script);
+        }
 
-            const questionsContainer = document.getElementById('questions-container');
-            let counter = 0;
+        // Fetch the JSON file and update the HTML content
+        fetch('../../../../data/python/questions/post_6.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Set the page title and header from metadata
+                document.getElementById('page-title').textContent = data.metadata.title;
+                document.getElementById('main-header').textContent = data.metadata.title;
 
-            data.questions.forEach(question => {
-                const questionDiv = document.createElement('div');
-                questionDiv.classList.add('question');
+                // Generate and insert the questions into the container
+                const questionsContainer = document.getElementById('questions-container');
+                
+                let counter = 1; // Initialize a counter for incremental numbering
 
-                // Properly handle the injection of iframe content
-                questionDiv.innerHTML = `
-                    <h2>${counter}. ${question.title}</h2>
-                    ${question.content}
-                `;
+                data.questions.forEach(question => {
+                    const questionDiv = document.createElement('div');
+                    questionDiv.classList.add('question');
+                    
+                    // Insert question content and increment the counter
+                    questionDiv.innerHTML = `
+                        <h2>${counter}. ${question.title}</h2>
+                        ${question.content}
+                    `;
+                    counter++;
 
-                questionsContainer.appendChild(questionDiv);
-                counter++;
-            });
+                    // Append the new question to the container
+                    questionsContainer.appendChild(questionDiv);
 
-            // Ensure iframes are loaded properly
-            Prism.highlightAll();
-        })
-        .catch(error => console.error('Error fetching JSON:', error));
-});
+                    // If the content contains a Gist script, append it
+                    const scriptMatch = question.content.match(/<script src="(.+?)"><\/script>/);
+                    if (scriptMatch) {
+                        appendGistScript(scriptMatch[1]);
+                    }
+                });
+            })
+            .catch(error => console.error('Error fetching JSON:', error));
+    </script>
 
     </script>
     
