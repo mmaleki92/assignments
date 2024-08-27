@@ -20,7 +20,7 @@
         },
         {
             "title": "جدول ضرب",
-            "content": "برنامه‌ای بنویسید که با حلقه‌ی while جدول ضربی مانند زیر را چاپ کند.<img src=\"/static/../../../..img/Screenshot_from_2024-08-27_09-56-26.png\" alt=\"Image\"><textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "content": "برنامه‌ای بنویسید که با حلقه‌ی while جدول ضربی مانند زیر را چاپ کند.<img src=\"../../../../static/img/Screenshot_from_2024-08-27_09-56-26.png\" alt=\"Image\"><textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 3
         },
         {

@@ -10,12 +10,12 @@
     "questions": [
         {
             "title": "الگوی زیر را انجام دهید.",
-            "content": " <img src=\"/static/../../../../img/Screenshot_from_2024-08-27_10-09-39.png\" alt=\"Image\"><textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "content": " <img src=\"../../../../static/img/Screenshot_from_2024-08-27_10-09-39.png\" alt=\"Image\"><textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 1
         },
         {
             "title": "الگوی زیر را انجام دهید.",
-            "content": "با استفاده از حلقه while شکل زیر را درست کنید\r\n(توجه کنید که یک مربع است و هر دفعه مقداری می‌چرخد)<img src=\"/static/../../../../img/Screenshot_from_2024-08-27_10-10-34.png\" alt=\"Image\"><textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "content": "با استفاده از حلقه while شکل زیر را درست کنید\r\n(توجه کنید که یک مربع است و هر دفعه مقداری می‌چرخد)<img src=\"../../../../static/img/Screenshot_from_2024-08-27_10-10-34.png\" alt=\"Image\"><textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 2
         },
         {
