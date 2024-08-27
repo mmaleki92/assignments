@@ -48,5 +48,15 @@
         "title": "حلقه‌ی for",
         "description": "تمرین‌های حلقه for",
         "file_path": "posts/post_10.html"
+    },
+    {
+        "title": "حلقه‌ی while",
+        "description": "تمرین‌های حلقه‌ی نامعین while",
+        "file_path": "posts/post_11.html"
+    },
+    {
+        "title": "turtle",
+        "description": "تمرین‌های الگوهای turtle",
+        "file_path": "posts/post_12.html"
     }
 ]

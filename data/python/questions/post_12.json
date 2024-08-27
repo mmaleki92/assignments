@@ -1,0 +1,27 @@
+{
+    "metadata": {
+        "version": "1.0.0",
+        "author": "Morteza Maleki",
+        "date_created": "N/A",
+        "description": "تمرین‌های الگوهای turtle",
+        "category": "python",
+        "title": "turtle"
+    },
+    "questions": [
+        {
+            "title": "الگوی زیر را انجام دهید.",
+            "content": " <img src=\"/static/../../../..img/Screenshot_from_2024-08-27_10-09-39.png\" alt=\"Image\"><textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "id": 1
+        },
+        {
+            "title": "الگوی زیر را انجام دهید.",
+            "content": "با استفاده از حلقه while شکل زیر را درست کنید\r\n(توجه کنید که یک مربع است و هر دفعه مقداری می‌چرخد)<img src=\"/static/../../../..img/Screenshot_from_2024-08-27_10-10-34.png\" alt=\"Image\"><textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "id": 2
+        },
+        {
+            "title": "الگوی اختیاری",
+            "content": "با استفاده از turtle یک شکل زیبا ایجاد کنید.\r\nاختیاری: با کاربرد خلاقیت خودتان <textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "id": 3
+        }
+    ]
+}
