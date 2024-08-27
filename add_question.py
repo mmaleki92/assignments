@@ -139,9 +139,9 @@ def view_post(post_name):
             if image_file and allowed_file(image_file.filename):
                 image_filename = secure_filename(image_file.filename)
                 image_file.save(os.path.join('static/img', image_filename))
-                image_url = url_for('static', filename=f'../../../..img/{image_filename}')
+                image_url = url_for('static', filename=f'img/{image_filename}')
                 # Directly insert image into content
-                content += f'<img src="{image_url}" alt="Image">'
+                content += f'<img src="../../../..{image_url}" alt="Image">'
         content += "<textarea id='answer3' name='answer3' rows='4' required></textarea>"
 
         new_question = {
