@@ -94,13 +94,10 @@
                     // Append the new question to the container
                     questionsContainer.appendChild(questionDiv);
 
-                    // If the content includes a Gist URL, load the Gist script
-                    if (question.content.includes('https://gist.github.com')) {
-                        const gistUrl = question.content.match(/https:\/\/gist.github.com\/.*\.js/)[0];
-                        const script = document.createElement('script');
-                        script.src = gistUrl;
-                        script.async = true;
-                        document.body.appendChild(script);
+                    // If the content includes an iframe (for Gist), it's already embedded in the JSON
+                    if (question.content.includes('<iframe')) {
+                        // No need to add additional scripts, the iframe handles it
+                        console.log("Iframe embedded directly in question content.");
                     }
                 });
             })

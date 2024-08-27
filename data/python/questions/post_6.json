@@ -30,17 +30,17 @@
         },
         {
             "title": "کد زیر چه کاری انجام می‌دهد؟ توضیح دهید.",
-            "content": "<script src='https://gist.github.com/mmaleki92/662e93bcc720b869708884511540f413.js'></script><textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "content": "<iframe src='https://gist.github.com/mmaleki92/662e93bcc720b869708884511540f413.js' width='100%' height='400' frameborder='0'></iframe><textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 5
         },
         {
             "title": "کد زیر چه کاری انجام می‌دهد؟ توضیح دهید.",
-            "content": "<script src='https://gist.github.com/mmaleki92/b2b643c55f9ac9bfaf3dc6728c071f4d.js'></script><textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "content": "<iframe src='https://gist.github.com/mmaleki92/b2b643c55f9ac9bfaf3dc6728c071f4d.js' width='100%' height='400' frameborder='0'></iframe><textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 6
         },
         {
             "title": "کد زیر چه کاری انجام می‌دهد؟ توضیح دهید.",
-            "content": "<script src='https://gist.github.com/mmaleki92/d821b7cd0d32d65d870d3cfe0b1c2ecc.js'></script><textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "content": "<iframe src='https://gist.github.com/mmaleki92/d821b7cd0d32d65d870d3cfe0b1c2ecc.js' width='100%' height='400' frameborder='0'></iframe><textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 7
         },
         {
