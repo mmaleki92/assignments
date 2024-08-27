@@ -30,9 +30,9 @@
         },
         {
             "title": "کد زیر چه کاری انجام می‌دهد؟ توضیح دهید.",
-            "content": "<iframe src='https://gist.github.com/mmaleki92/662e93bcc720b869708884511540f413.js' width='100%' height='400' frameborder='0'></iframe><textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "content": "<pre><code class=\"language-python\">import os\n\noriginal_file_path = 'old_name.txt'\nnew_file_path = 'new_name.txt'\n\nif os.path.exists(original_file_path):\n    os.rename(original_file_path, new_file_path)\n    print(f\"File has been renamed from '{original_file_path}' to '{new_file_path}'.\")\nelse:\n    print(f\"The file '{original_file_path}' does not exist.\")</code></pre><textarea id='answer5' name='answer5' rows='4' required></textarea>",
             "id": 5
-        },
+        },        
         {
             "title": "کد زیر چه کاری انجام می‌دهد؟ توضیح دهید.",
             "content": "<iframe src='https://gist.github.com/mmaleki92/b2b643c55f9ac9bfaf3dc6728c071f4d.js' width='100%' height='400' frameborder='0'></iframe><textarea id='answer3' name='answer3' rows='4' required></textarea>",
@@ -40,9 +40,9 @@
         },
         {
             "title": "کد زیر چه کاری انجام می‌دهد؟ توضیح دهید.",
-            "content": "<iframe src='https://gist.github.com/mmaleki92/d821b7cd0d32d65d870d3cfe0b1c2ecc.js' width='100%' height='400' frameborder='0'></iframe><textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "content": "<pre><code class=\"language-python\">import os\n\noriginal_file_path = 'old_name.txt'\nnew_file_path = 'new_name.txt'\n\nif os.path.exists(original_file_path):\n    os.rename(original_file_path, new_file_path)\n    print(f\"File has been renamed from '{original_file_path}' to '{new_file_path}'.\")\nelse:\n    print(f\"The file '{original_file_path}' does not exist.\")</code></pre><textarea id='answer7' name='answer7' rows='4' required></textarea>",
             "id": 7
-        },
+        },        
         {
             "title": "ایجاد فولدر (پوشه) در فولدر",
             "content": "10 فولدر ایجاد کنید و در هر یک از فولدرهای ایجاد شده ۱۰ فولدر ایجاد کنید. <textarea id='answer3' name='answer3' rows='4' required></textarea>",
