@@ -30,7 +30,7 @@
         },
         {
             "title": "کد زیر چه کاری انجام می‌دهد؟ توضیح دهید.",
-            "content": "<script src=\"https://gist.github.com/mmaleki92/662e93bcc720b869708884511540f413.js\"></script><textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "content": "{% gist https://gist.github.com/mmaleki92/662e93bcc720b869708884511540f413.js %} <script src=\"https://gist.github.com/mmaleki92/662e93bcc720b869708884511540f413.js\"></script><textarea id='answer3' name='answer3' rows='4' required></textarea>",
             "id": 5
         },
         {
