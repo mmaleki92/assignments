@@ -6,115 +6,16 @@
     <title id="page-title">تمرین</title>
 
     <!-- Link to external CSS files -->
-    <link rel="stylesheet" href="../../../static/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
 
     <!-- Include custom JavaScript files -->
     <script src="../../../../static/js/submit_answers.js" defer></script>
     <script src="../../../../static/js/tetris_python.js" defer></script>
+    
+    <link rel="stylesheet" href="../../../../static/css/styles.css">
+    <link rel="stylesheet" href="../../../../static/css/questions_styles.css">
 
-    <style>
-/* Basic Reset and Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Tahoma, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-    font-size: 16px;
-    direction: rtl; /* Default direction for RTL layout */
-}
-
-/* Preserve Prism.js Styles */
-pre[class*="language-"],
-code[class*="language-"] {
-    font-family: 'Courier New', Courier, monospace; /* Ensure monospaced font */
-    line-height: 1.5; /* Consistent line height */
-    overflow-x: auto; /* Horizontal scroll for long lines */
-    padding: 10px; /* Add padding for better readability */
-    border-radius: 5px; /* Consistent border radius */
-    direction: ltr; /* Ensure code blocks are LTR */
-    white-space: pre; /* Preserve whitespace and indentation */
-}
-
-/* Code Block Specific Styles */
-pre {
-    color: #646400; /* Light text color */
-    border: 1px solid #ffffff00; /* Subtle border for contrast */
-    margin: 15px 0; /* Margin for spacing */
-}
-
-/* Inline Code Styling */
-code {
-    background-color: #686060; /* Light background for inline code */
-    color: #665e5e;
-    padding: 2px 4px; /* Padding for better readability */
-    border-radius: 3px; /* Rounded corners */
-}
-
-/* Other CSS as defined previously */
-header {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 6px rgba(223, 3, 3, 0.1);
-    text-align: center;
-}
-
-header h1 {
-    color: #fff;
-    font-size: 2rem;
-}
-
-/* Ensure Proper Text Direction for Code Blocks */
-[dir="rtl"] pre,
-[dir="rtl"] code {
-    direction: ltr; /* Override RTL for code blocks */
-}
-
-/* Additional styles... */
-
-/* Adjustments for Responsive Design */
-@media (max-width: 768px) {
-    .nav {
-        flex-direction: column;
-        align-items: flex-start; /* Align to the left in RTL mode */
-    }
-
-    .nav a {
-        margin-bottom: 10px;
-    }
-
-    .container {
-        width: 100%;
-        padding: 0 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    textarea {
-        padding: 6px; /* Smaller padding for very small screens */
-        font-size: 0.75rem; /* Smaller font size for very small screens */
-    }
-
-    .submit-button button {
-        width: 100%;
-        padding: 12px;
-        font-size: 1rem;
-    }
-}
-
-    </style>
 </head>
 <body>
     <!-- Include Prism.js for syntax highlighting -->
@@ -157,67 +58,14 @@ header h1 {
         </div>
     </div>
 
+    <!-- Include the external JS file -->
+    <script src="../../../../static/js/fetch_questions.js"></script>
+
+    <!-- Call the function with the JSON path -->
     <script>
-        // Fetch the JSON file and update the HTML content
-        fetch('../../../../data/python/questions/__file_name__.json')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                // Set the page title and header from metadata
-                document.getElementById('page-title').textContent = data.metadata.title;
-                document.getElementById('main-header').textContent = data.metadata.title;
-
-                // Generate and insert the questions into the container
-                const questionsContainer = document.getElementById('questions-container');
-                
-                // Initialize a counter for incremental numbering
-                let counter = 1;
-
-                data.questions.forEach(question => {
-                    const questionDiv = document.createElement('div');
-                    questionDiv.classList.add('question');
-                    
-                    // Create a heading for each question
-                    const questionTitle = document.createElement('h2');
-                    questionTitle.textContent = `${counter}. ${question.title}`;
-                    questionDiv.appendChild(questionTitle);
-
-                    // Create a paragraph or pre element depending on the content type
-                    if (question.content.includes('<code class')) {
-                        // Create a pre element for code content
-                        const codeBlock = document.createElement('pre');
-                        codeBlock.innerHTML = question.content;
-                        questionDiv.appendChild(codeBlock);
-                    } else {
-                        // Create a paragraph for non-code content
-                        const questionContent = document.createElement('p');
-                        questionContent.textContent = question.content;
-                        questionDiv.appendChild(questionContent);
-                    }
-
-                    // Create the textarea for user input
-                    const textarea = document.createElement('textarea');
-                    textarea.id = `answer${question.id}`;
-                    textarea.name = `answer${question.id}`;
-                    textarea.rows = 4;
-                    textarea.required = true;
-                    questionDiv.appendChild(textarea);
-
-                    // Increment the counter
-                    counter++;
-
-                    // Append the new question to the container
-                    questionsContainer.appendChild(questionDiv);
-                });
-
-                // Re-highlight code blocks after dynamically inserting content
-                Prism.highlightAll();
-            })
-            .catch(error => console.error('Error fetching JSON:', error));
+        
+        // Pass the path of the JSON file you want to load
+        fetchAndRenderQuestions('../../../../data/python/questions/__file_name__.json');  // Replace 'post_1.json' with your desired path
     </script>
 </body>
 </html>
