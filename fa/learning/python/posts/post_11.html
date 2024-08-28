@@ -6,141 +6,16 @@
     <title id="page-title">تمرین</title>
 
     <!-- Link to external CSS files -->
-    <link rel="stylesheet" href="../../../../static/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
 
     <!-- Include custom JavaScript files -->
     <script src="../../../../static/js/submit_answers.js" defer></script>
     <script src="../../../../static/js/tetris_python.js" defer></script>
+    
+    <link rel="stylesheet" href="../../../../static/css/styles.css">
+    <link rel="stylesheet" href="../../../../static/css/questions_styles.css">
 
-    <style>
-/* Basic Reset and Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Tahoma, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-    font-size: 16px;
-    direction: rtl; /* Default direction for RTL layout */
-}
-
-/* Preserve Prism.js Styles */
-pre[class*="language-"],
-code[class*="language-"] {
-    font-family: 'Courier New', Courier, monospace; /* Use a monospaced font */
-    line-height: 1.5; /* Consistent line height */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    padding: 10px; /* Add uniform padding */
-    border-radius: 5px; /* Rounded corners */
-    direction: ltr; /* Left-to-right for code */
-    white-space: pre; /* Preserve whitespace and indentation */
-    margin: 0; /* Remove margin */
-}
-/* Code Block Specific Styles */
-
-/* Specific styling for <pre> tags */
-    pre {
-    color: #646400; /* Code text color */
-    border: 1px solid #ffffff00; /* Border */
-    margin: 15px 0; /* Vertical spacing */
-    padding: 10px; /* Uniform padding */
-    text-align: left; /* Ensure left alignment */
-}
-
-
-/* Inline Code Styling */
-code {
-    background-color: #686060; /* Light background for inline code */
-    color: #665e5e;
-    padding: 2px 4px; /* Padding for better readability */
-    border-radius: 3px; /* Rounded corners */
-}
-/* Adjust code blocks to prevent indentation */
-pre > code {
-    display: block; /* Display as block to avoid indentation */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
-    text-indent: 0; /* Ensure no indentation */
-}
-
-/* Clear any default indentation or padding */
-pre code {
-    padding-left: 0 !important; /* Ensure no left padding */
-}
-/* Other CSS as defined previously */
-header {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 6px rgba(223, 3, 3, 0.1);
-    text-align: center;
-}
-
-header h1 {
-    color: #fff;
-    font-size: 2rem;
-}
-
-/* Ensure Proper Text Direction for Code Blocks */
-[dir="rtl"] pre,
-[dir="rtl"] code {
-    direction: ltr; /* Override RTL for code blocks */
-}
-/* Style adjustments for inline code snippets */
-p .mixed-direction code {
-    direction: ltr; /* Ensures code snippets are LTR */
-    unicode-bidi: embed; /* Isolates code from RTL context */
-    background-color: #f0f0f0; /* Light background for inline code */
-    color: #c7254e; /* Color for inline code */
-    padding: 2px 4px; /* Adds padding for better readability */
-    border-radius: 3px; /* Rounded corners for inline code */
-    font-family: 'Courier New', Courier, monospace; /* Monospaced font */
-}
-
-/* Additional styles... */
-
-/* Adjustments for Responsive Design */
-@media (max-width: 768px) {
-    .nav {
-        flex-direction: column;
-        align-items: flex-start; /* Align to the left in RTL mode */
-    }
-
-    .nav a {
-        margin-bottom: 10px;
-    }
-
-    .container {
-        width: 100%;
-        padding: 0 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    textarea {
-        padding: 6px; /* Smaller padding for very small screens */
-        font-size: 0.75rem; /* Smaller font size for very small screens */
-    }
-
-    .submit-button button {
-        width: 100%;
-        padding: 12px;
-        font-size: 1rem;
-    }
-}
-
-    </style>
 </head>
 <body>
     <!-- Include Prism.js for syntax highlighting -->
@@ -183,66 +58,13 @@ p .mixed-direction code {
         </div>
     </div>
 
+    <!-- Include the external JS file -->
+    <script src="../../../../static/js/fetch_questions.js"></script>
+
+    <!-- Call the function with the JSON path -->
     <script>
-fetch('../../../../data/python/questions/post_11.json')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-    })
-    .then(data => {
-        document.getElementById('page-title').textContent = data.metadata.title;
-        document.getElementById('main-header').textContent = data.metadata.title;
-
-        const questionsContainer = document.getElementById('questions-container');
-        let counter = 1;
-
-        data.questions.forEach(question => {
-            const questionDiv = document.createElement('div');
-            questionDiv.classList.add('question');
-
-            // Create question title
-            const questionTitle = document.createElement('h2');
-            questionTitle.textContent = `${counter}. ${question.title}`;
-            questionDiv.appendChild(questionTitle);
-
-            // Handling mixed content of text and code
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(question.content, 'text/html');
-            const elements = doc.body.childNodes;
-
-            elements.forEach(element => {
-                if (element.nodeName === 'PRE') {
-                    // Create a pre element for code content
-                    const codeBlock = document.createElement('pre');
-                    codeBlock.innerHTML = element.innerHTML;
-                    questionDiv.appendChild(codeBlock);
-                } else {
-                    // Create a paragraph for non-code content
-                    const paragraph = document.createElement('p');
-                    paragraph.innerHTML = element.textContent;
-                    questionDiv.appendChild(paragraph);
-                }
-            });
-
-            // Create the textarea for user input
-            const textarea = document.createElement('textarea');
-            textarea.id = `answer${question.id}`;
-            textarea.name = `answer${question.id}`;
-            textarea.rows = 4;
-            textarea.required = true;
-            questionDiv.appendChild(textarea);
-
-            counter++;
-            questionsContainer.appendChild(questionDiv);
-        });
-
-        // Re-highlight code blocks after dynamically inserting content
-        Prism.highlightAll();
-    })
-    .catch(error => console.error('Error fetching JSON:', error));
-
+        // Pass the path of the JSON file you want to load
+        fetchAndRenderQuestions('../../../../data/python/questions/post_11.json');  // Replace 'post_1.json' with your desired path
     </script>
 </body>
 </html>

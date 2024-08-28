@@ -1,0 +1,124 @@
+/* Basic Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    direction: rtl; /* Default direction for RTL layout */
+}
+
+/* Preserve Prism.js Styles */
+pre[class*="language-"],
+code[class*="language-"] {
+    font-family: 'Courier New', Courier, monospace; /* Use a monospaced font */
+    line-height: 1.5; /* Consistent line height */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 10px; /* Add uniform padding */
+    border-radius: 5px; /* Rounded corners */
+    direction: ltr; /* Left-to-right for code */
+    white-space: pre; /* Preserve whitespace and indentation */
+    margin: 0; /* Remove margin */
+}
+/* Code Block Specific Styles */
+
+/* Specific styling for <pre> tags */
+    pre {
+    color: #646400; /* Code text color */
+    border: 1px solid #ffffff00; /* Border */
+    margin: 15px 0; /* Vertical spacing */
+    padding: 10px; /* Uniform padding */
+    text-align: left; /* Ensure left alignment */
+}
+
+
+/* Inline Code Styling */
+code {
+    background-color: #686060; /* Light background for inline code */
+    color: #665e5e;
+    padding: 2px 4px; /* Padding for better readability */
+    border-radius: 3px; /* Rounded corners */
+}
+/* Adjust code blocks to prevent indentation */
+pre > code {
+    display: block; /* Display as block to avoid indentation */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    text-indent: 0; /* Ensure no indentation */
+}
+
+/* Clear any default indentation or padding */
+pre code {
+    padding-left: 0 !important; /* Ensure no left padding */
+}
+/* Other CSS as defined previously */
+header {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(223, 3, 3, 0.1);
+    text-align: center;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 2rem;
+}
+
+/* Ensure Proper Text Direction for Code Blocks */
+[dir="rtl"] pre,
+[dir="rtl"] code {
+    direction: ltr; /* Override RTL for code blocks */
+}
+/* Style adjustments for inline code snippets */
+p .mixed-direction code {
+    direction: ltr; /* Ensures code snippets are LTR */
+    unicode-bidi: embed; /* Isolates code from RTL context */
+    background-color: #f0f0f0; /* Light background for inline code */
+    color: #c7254e; /* Color for inline code */
+    padding: 2px 4px; /* Adds padding for better readability */
+    border-radius: 3px; /* Rounded corners for inline code */
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font */
+}
+
+/* Additional styles... */
+
+/* Adjustments for Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start; /* Align to the left in RTL mode */
+    }
+
+    .nav a {
+        margin-bottom: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    textarea {
+        padding: 6px; /* Smaller padding for very small screens */
+        font-size: 0.75rem; /* Smaller font size for very small screens */
+    }
+
+    .submit-button button {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
