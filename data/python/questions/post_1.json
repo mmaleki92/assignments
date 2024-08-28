@@ -10,29 +10,28 @@
     "questions": [
       {
         "id": 0,
-        "title": "سؤال 0: مبانی پایتون",
-        "content": "<p class='mixed-direction'>آیا نرم افزار IDLE پایتون را نصب کرده‌اید؟</p><textarea id='answer0' name='answer0' rows='4' required></textarea>"
+        "title": "مبانی پایتون",
+        "content": "آیا نرم افزار IDLE پایتون را نصب کرده‌اید؟"
       },
       {
         "id": 1,
-        "title": "سؤال 1: مبانی پایتون",
-        "content": "<p>پایتون یک زبان برنامه‌نویسی سطح بالا و همه‌منظوره است که برای ساخت انواع مختلف برنامه‌ها و اسکریپت‌ها استفاده می‌شود. برخی از ویژگی‌های اصلی پایتون شامل سادگی در نوشتن کد، خوانایی و قابلیت توسعه‌پذیری است.</p><p>در زیر یک مثال ساده از نحوه استفاده از متغیرها و چاپ خروجی در پایتون آورده شده است:</p><script src='https://gist.github.com/mmaleki92/b0b3dc07338a51052e800f83f7b4374c.js'></script><textarea id='answer1' name='answer1' rows='4' required></textarea>"
+        "title": "مبانی پایتون",
+        "content": "پایتون یک زبان برنامه‌نویسی سطح بالا و همه‌منظوره است که برای ساخت انواع مختلف برنامه‌ها و اسکریپت‌ها استفاده می‌شود. برخی از ویژگی‌های اصلی پایتون شامل سادگی در نوشتن کد، خوانایی و قابلیت توسعه‌پذیری است.</p><p>در زیر یک مثال ساده از نحوه استفاده از متغیرها و چاپ خروجی در پایتون آورده شده است:<pre><code class='language-python'>message = \"سلام، دنیای پایتون!\"\nprint(message)</code></pre>"
       },
       {
         "id": 2,
-        "title": "سؤال 2: استفاده از IDLE",
-        "content": "<p>IDLE (Integrated Development and Learning Environment) محیط توسعه رسمی برای پایتون است. شما می‌توانید از آن برای نوشتن و اجرای کدهای پایتون استفاده کنید.</p><textarea id='answer2' name='answer2' rows='4' required></textarea>"
+        "title": "استفاده از IDLE",
+        "content": "IDLE (Integrated Development and Learning Environment) محیط توسعه رسمی برای پایتون است. شما می‌توانید از آن برای نوشتن و اجرای کدهای پایتون استفاده کنید."
       },
       {
         "id": 3,
         "title": "سؤال 3: نسخه پایتون",
-        "content": "<p>برای بررسی نسخه پایتون که در حال حاضر بر روی سیستم شما نصب شده است، می‌توانید از دستور زیر در ترمینال استفاده کنید:</p><script src='https://gist.github.com/mmaleki92/adb2da81fe3286dcd03ca3a72b0fe8c5.js'></script><textarea id='answer3' name='answer3' rows='4' required></textarea>"
+        "content": "<p>برای بررسی نسخه پایتون که در حال حاضر بر روی سیستم شما نصب شده است، می‌توانید از دستور زیر در ترمینال استفاده کنید:</p> <pre><code class='language-python'>import sys\n\nprint(\"نسخه پایتون:\", sys.version)</code></pre><textarea id='answer3' name='answer3' rows='4' required></textarea>"
       },
       {
         "id": 4,
         "title": "سؤال 4: ورودی و خروجی در پایتون",
-        "content": "<p class='mixed-direction'>در پایتون، می‌توانید از تابع input() برای دریافت ورودی از کاربر و از تابع print() برای نمایش خروجی استفاده کنید.</p><p>در زیر یک مثال ساده از نحوه دریافت ورودی و نمایش آن به کاربر آورده شده است:</p><script src='https://gist.github.com/mmaleki92/e0ca98d392ead998d7421e2c3cca839b.js'></script><textarea id='answer4' name='answer4' rows='4' required></textarea>"
-      }
+        "content": "<p class='mixed-direction'>در پایتون، می‌توانید از تابع <code class='language-python'>input()</code> برای دریافت ورودی از کاربر و از تابع <code class='language-python'>print()</code> برای نمایش خروجی استفاده کنید.</p><p>در زیر یک مثال ساده از نحوه دریافت ورودی و نمایش آن به کاربر آورده شده است:</p><pre><code class='language-python'>name = input(\"نام خود را وارد کنید: \")\nprint(\"سلام، \" + name + \"!\")</code></pre>"      }
     ]
   }
   

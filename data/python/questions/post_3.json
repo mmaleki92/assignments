@@ -11,17 +11,17 @@
         {
             "id": 0,
             "title": "متد رشته چیست؟",
-            "content": "<div class='question'><p class='mixed-direction'> متد در ساختارهایی مانند رشته به چه معناست، توضیح دهید.</p><textarea id='answer0' name='answer0' rows='4' required></textarea></div>"
+            "content": "<p class='mixed-direction'> متد در ساختارهایی مانند رشته به چه معناست، توضیح دهید.</p>"
         },
         {
             "id": 1,
             "title": "متد جایگزینی",
-            "content": "<div class='question'><p class='mixed-direction'> آیا متد replace رشته را تغییر می دهد؟</p><textarea id='answer1' name='answer1' rows='4' required></textarea></div>"
+            "content": "<p class='mixed-direction'> آیا متد replace رشته را تغییر می دهد؟</p>"
         },
         {
             "id": 1,
             "title": "یافتن رشته",
-            "content": "<div class='question'><p class='mixed-direction'>چگونه می‌توان یک رشته را درون رشته‌ی دیگر پیدا کرد؟</p><textarea id='answer2' name='answer2' rows='4' required></textarea></div>"
+            "content": "<p class='mixed-direction'>چگونه می‌توان یک رشته را درون رشته‌ی دیگر پیدا کرد؟</p"
         }
     ]
 }

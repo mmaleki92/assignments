@@ -10,42 +10,42 @@
     "questions": [
         {
             "title": "چاپ N عدد",
-            "content": "برنامه‌ای بنویسید که با استفاده از حلقه‌ی while از 1 تا N را چاپ کند (N یک عدد است که توسط کاربر وارد می‌شود).\r\n\r\n<textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "content": "برنامه‌ای بنویسید که با استفاده از حلقه‌ی while از 1 تا N را چاپ کند (N یک عدد است که توسط کاربر وارد می‌شود).\r\n\r\n",
             "id": 1
         },
         {
             "title": "فاکتوریل با while",
-            "content": "برنامه‌ای بنویسید که با حلقه‌ی while فاکتوریل یک مقدار داده شده توسط کاربر را محاسبه کند.<textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "content": "برنامه‌ای بنویسید که با حلقه‌ی while فاکتوریل یک مقدار داده شده توسط کاربر را محاسبه کند.",
             "id": 2
         },
         {
             "title": "جدول ضرب",
-            "content": "برنامه‌ای بنویسید که با حلقه‌ی while جدول ضربی مانند زیر را چاپ کند.<img src=\"../../../../static/img/Screenshot_from_2024-08-27_09-56-26.png\" alt=\"Image\"><textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "content": "برنامه‌ای بنویسید که با حلقه‌ی while جدول ضربی مانند زیر را چاپ کند.<img src=\"../../../../static/img/Screenshot_from_2024-08-27_09-56-26.png\" alt=\"Image\">",
             "id": 3
         },
         {
             "title": "مجموع ارقام یک لیست",
-            "content": "با استفاده از حلقه‌ی while برنامه‌ای بنویسید که مجموع اعداد یک لیست را محاسبه کند.\r\n<textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "content": "با استفاده از حلقه‌ی while برنامه‌ای بنویسید که مجموع اعداد یک لیست را محاسبه کند.\r\n",
             "id": 4
         },
         {
             "title": "نتیجه‌ی کد زیر چیست؟",
-            "content": "<script src=\"https://gist.github.com/mmaleki92/b931b777321aed8345120605aae73b37.js\"></script><textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "content": "<code class='language-python'>True</code> ایجاد کنید:</p><pre><code class='language-python'>while True:\n    print(\"Hi!\")</code></pre>",
             "id": 5
         },
         {
             "title": "نتیجه‌ی کد زیر چیست؟کامل توضیح دهید",
-            "content": "<script src=\"https://gist.github.com/mmaleki92/689b3cfe9058e6fa85489675a0fe9abe.js\"></script><textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "content": "<pre><code class='language-python'>a = 0\n\nwhile a < 10:\n    print(a)\n    a += 1</code></pre>",
             "id": 6
         },
         {
             "title": "سنگ-کاغذ-قیچی در حلقه",
-            "content": "با حلقه‌ی while یک بازی سنگ کاغذ قیچی بی نهایت درست کنید.\r\n- بازی با کامپیوتر باشد و شما باید ورودی دهید.\r\n- انتخاب کامپیوتر به صورت رندوم باشد.<textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "content": "با حلقه‌ی while یک بازی سنگ کاغذ قیچی بی نهایت درست کنید.\r\n- بازی با کامپیوتر باشد و شما باید ورودی دهید.\r\n- انتخاب کامپیوتر به صورت رندوم باشد.",
             "id": 7
         },
         {
             "title": "توقف و ادامه (continue - break)",
-            "content": "برای حلقه‌ها مفاهیم توقف و ادامه (continue - break) را با ایجاد یک مثال توضیح دهید.<textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "content": "برای حلقه‌ها مفاهیم توقف و ادامه (continue - break) را با ایجاد یک مثال توضیح دهید.",
             "id": 8
         }
     ]

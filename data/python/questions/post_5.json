@@ -10,17 +10,17 @@
     "questions": [
         {
             "title": "دیوار pygame",
-            "content": "<div class='question'>\n        <p class='mixed-direction'> \nبرای بازی اولیه مار متحرک دیوار اضافه کنید که با برخورد به آن بازی تمام شود.\n </p>  <textarea id='answer0' name='answer0' rows='4' required></textarea>\n    </div>",
+            "content": "<p class='mixed-direction'> \nبرای بازی اولیه مار متحرک دیوار اضافه کنید که با برخورد به آن بازی تمام شود.\n </p> ",
             "id": 1
         },
         {
             "title": "تصویر آینه‌ای",
-            "content": "<div class='question'>\n        <p class='mixed-direction'>\n        برای بازی اولیه مار متحرک دیوار یک شکل دیگر به صورت آینه‌ای ایجاد کنید\nبه این صورت که حرکت مربع شما باعث حرکت شکل دیگر به صورت آینه‌ای شود \n        </p>\n   <textarea id='answer1' name='answer1' rows='4' required> </textarea>    </div>",
+            "content": "<p class='mixed-direction'>\n        برای بازی اولیه مار متحرک دیوار یک شکل دیگر به صورت آینه‌ای ایجاد کنید\nبه این صورت که حرکت مربع شما باعث حرکت شکل دیگر به صورت آینه‌ای شود \n        </p>",
             "id": 2
         },
         {
             "title": "پلتفرم در صفحه",
-            "content": "<div class='question'>\n        <p class='mixed-direction'>\n\n        برای بازی اولیه مار متحرک دیوار یک پلتفرم ایجاد کنید، به این صورت که وقتی وارد آن می‌شود از مربع دیگر خارج شود.\n                </p>\n     <textarea id='answer2' name='answer2' rows='4' required></textarea>   </div>",
+            "content": "<p class='mixed-direction'>\n\n        برای بازی اولیه مار متحرک دیوار یک پلتفرم ایجاد کنید، به این صورت که وقتی وارد آن می‌شود از مربع دیگر خارج شود.\n                </p>\n    ",
             "id": 3
         }
     ]

@@ -10,22 +10,22 @@
     "questions": [
         {
             "title": "شمارش محتوای فایل متنی",
-            "content": "برنامه‌ای بنویسید که تعداد خطوط، کلمات و کاراکترهای یک فایل متنی را\r\n شمارش کند و چاپ کند.\r\n(توجه: فایلی مانند mammad.txt که شامل جندین خط نوشته باشد را کنار فایل پایتون قرار دهید تا آن را بخوانید و شمارش را انجام دهد)<textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "content": "برنامه‌ای بنویسید که تعداد خطوط، کلمات و کاراکترهای یک فایل متنی را\r\n شمارش کند و چاپ کند.\r\n(توجه: فایلی مانند mammad.txt که شامل جندین خط نوشته باشد را کنار فایل پایتون قرار دهید تا آن را بخوانید و شمارش را انجام دهد)",
             "id": 1
         },
         {
             "title": "ویرایش فایل متنی موجود",
-            "content": "برنامه‌ای بنویسید که داده‌ها را از یک فایل متنی (.txt) بخواند و پس از تغییر بخشی از محتویات آن، محتوای جدید را در یک فایل دیگر ذخیره کند.<textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "content": "برنامه‌ای بنویسید که داده‌ها را از یک فایل متنی (.txt) بخواند و پس از تغییر بخشی از محتویات آن، محتوای جدید را در یک فایل دیگر ذخیره کند.",
             "id": 2
         },
         {
             "title": "بستن فایل",
-            "content": "در پایتون چنانچه فایلی را توسط open باز کنیم و آن را close نکنیم، چه اتفاقی می‌افتد؟<textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "content": "در پایتون چنانچه فایلی را توسط open باز کنیم و آن را close نکنیم، چه اتفاقی می‌افتد؟",
             "id": 3
         },
         {
             "title": "ایجاد فولدر (پوشه)",
-            "content": "برنامه‌ای بنویسید که یک فولدر ایجاد کند و درون آن فولدر دو فولدر با نام‌های متفاوت ایجاد کند.<textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "content": "برنامه‌ای بنویسید که یک فولدر ایجاد کند و درون آن فولدر دو فولدر با نام‌های متفاوت ایجاد کند.",
             "id": 4
         },
         {
@@ -35,7 +35,7 @@
         },        
         {
             "title": "کد زیر چه کاری انجام می‌دهد؟ توضیح دهید.",
-            "content": "<iframe src='https://gist.github.com/mmaleki92/b2b643c55f9ac9bfaf3dc6728c071f4d.js' width='100%' height='400' frameborder='0'></iframe><textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "content": "</p><pre><code class='language-python'>file_path = 'example_file.txt'\n\nwith open(file_path, 'w') as file:\n    file.write(\"Hello, world!\\n\")\n    file.write(\"This is a second line of text.\\n\")</code></pre>",
             "id": 6
         },
         {
@@ -45,23 +45,18 @@
         },        
         {
             "title": "ایجاد فولدر (پوشه) در فولدر",
-            "content": "10 فولدر ایجاد کنید و در هر یک از فولدرهای ایجاد شده ۱۰ فولدر ایجاد کنید. <textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "content": "10 فولدر ایجاد کنید و در هر یک از فولدرهای ایجاد شده ۱۰ فولدر ایجاد کنید. ",
             "id": 8
         },
         {
             "title": "ایجاد فایل درون فولدر",
-            "content": "توسط یک کد پایتون یک فولدر ایجاد کنید و وارد آن شوید سپس در آن فولدر یک فایل تکست ایجاد کنید.<textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "content": "توسط یک کد پایتون یک فولدر ایجاد کنید و وارد آن شوید سپس در آن فولدر یک فایل تکست ایجاد کنید.",
             "id": 9
         },
         {
             "title": "فرمت‌های فایل",
-            "content": "فرمت فایل‌هایی که می‌شیناسید را نام ببرید، در مورد فرمت mp4 تحقیق کنید و توضیح دهید.<textarea id='answer3' name='answer3' rows='4' required></textarea>",
+            "content": "فرمت فایل‌هایی که می‌شناسید را نام ببرید، در مورد فرمت mp4 تحقیق کنید و توضیح دهید.",
             "id": 10
-        },
-        {
-            "title": "یب فایل",
-            "content": "<pre><code class='language-python'>import os\n\noriginal_file_path = 'old_name.txt'\nnew_file_path = 'new_name.txt'\n\nif os.path.exists(original_file_path):\n    os.rename(original_file_path, new_file_path)\n    print(f\"File has been renamed from '{original_file_path}' to '{new_file_path}'.\")\nelse:\n    print(f\"The file '{original_file_path}' does not exist.\")</code></pre><textarea id='answer7' name='answer7' rows='4' required></textarea>",
-            "id": 1
         }
     ]
 }
