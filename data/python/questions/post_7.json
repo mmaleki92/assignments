@@ -11,27 +11,37 @@
         {
             "title": "تفاوت عبارت‌های شرطی",
             "content": "تفاوت میان دو عبارت زیر در چیست؟ چه جاهایی می‌بایست از else استفاده کرد؟\r\n</p><pre><code class='language-python'>temperature = 75\nhumidity = 60\n\nif temperature > 80:\n    print(\"It's hot outside.\")\n\nif humidity > 70:\n    print(\"It's humid outside.\")\nelse:\n    print(\"The weather is comfortable.\")</code></pre>",
-            "id": 1
+            "id": 1,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": "سنگ-کاغذ-قیچی",
             "content": "برنامه ای بنویسید که سنگ کاغذ قیچی را اجرا کند:\r\nبه این صورت که دو کاربر یک و دو، یکی از سه گزینه را انتخاب کنند و برنامه ی شما بگوید کدامیک برنده شده است.",
-            "id": 2
+            "id": 2,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": "عبارت شرطی elif",
             "content": "برنامه ای بنویسید که سن کاربر را به عنوان ورودی بگیرد و خروجی را برای سن های متفاوت چاپ کند.\r\n نوزاد (0-2 ساله)\r\n خردسال (3-4 ساله)\r\n کودک (5-12 ساله)\r\n نوجوان (13-18 سال)\r\n بزرگسال (19 تا 59 سال)\r\n مسن (60 سال یا بالاتر)",
-            "id": 3
+            "id": 3,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": "شماره کارت",
             "content": "برنامه ای بنویسید که شماره کارت را بگیرد و اگر 16 رقم بود درست بودن آن را تایید کند و اگر نبود رد صلاحیت کند.",
-            "id": 4
+            "id": 4,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": "تشخیص ایمیل",
             "content": "برنامه ای بنویسید که ایمیل را بگیرد و بگوید صحیح است یا خیر. یعنی @ داشته باشد و در آخر .com باشد.",
-            "id": 5
+            "id": 5,
+            "textarea": true,
+            "upload_area": false
         }
     ]
 }

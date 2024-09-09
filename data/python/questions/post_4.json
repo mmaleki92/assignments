@@ -11,82 +11,114 @@
         {
             "id": 0,
             "title": "تغییر مقادیر لیست",
-            "content": "<div class='question'><p class='mixed-direction'>چگونه مقدار یکی از مولفه‌های یک لیست را می‌توان تغییر داد؟ کدی از تغییر مقدار بنویسید.</p>re"
+            "content": "<div class='question'><p class='mixed-direction'>چگونه مقدار یکی از مولفه‌های یک لیست را می‌توان تغییر داد؟ کدی از تغییر مقدار بنویسید.</p>re",
+            "textarea": true,
+            "upload_area": false
         },
         {
             "id": 1,
             "title": "افزودن لیست به خود",
-            "content": "<div class='question'><p class='mixed-direction'> چنانچه یک لیست را به خودش توسطappendاضافه کنیم چه اتفاقی می‌افتد؟.</p>re"
+            "content": "<div class='question'><p class='mixed-direction'> چنانچه یک لیست را به خودش توسطappendاضافه کنیم چه اتفاقی می‌افتد؟.</p>re",
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": "ارجاع در لیست",
             "content": "<p class='mixed-direction'> این کد چه تغییری در y ایجاد می‌کند؟</p>>",
-            "id": 2
+            "id": 2,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": "کاربرد متدها",
             "content": "<p class='mixed-direction'> \n        چگونه از یک متد مانند متد لیست استفاده می‌کنیم؟ کدی از کاربرد count بنویسید\n        </p> ",
-            "id": 3
+            "id": 3,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": "تابع max در پایتون",
             "content": "<p class='mixed-direction'> \n        برنامه ای بنویسید که بزرگترین عدد درون یک لیست را حساب کند.\n        </p> ",
-            "id": 4
+            "id": 4,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": "جابجایی مقادیر لیست",
             "content": "<p class='mixed-direction'> \n        ،برنامه‌ای بنویسید که مولفه های اول و آخر یک لیست را با هم جابجا کند\n     یعنی [1, 2, 3,  4] به \n     [4, 2, 3, 1]\n     تبدیل شود.\n        </p> ",
-            "id": 5
+            "id": 5,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": " حذف تکرار در لیست",
             "content": "<p class='mixed-direction'> \n        برنامه ای بنویسید که اعضای تکراری یک لیست را حذف کند.\n        </p> ",
-            "id": 6
+            "id": 6,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": " یافتن مولفه درون لیست",
             "content": "<p class='mixed-direction'> \nبرنامه‌ای بنویسید که اندیس یک مولفه در لیست را پیدا کند.\nبه طور مثال\n[1,2,3,4,5]\nوقتی 2 را بدهیم بگوید که اندیس آن 1 است.\nراهنمایی: از متدهای لیست استفاده کنید\n        </p> ",
-            "id": 7
+            "id": 7,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": "اندازه لیست",
             "content": "<p class='mixed-direction'> \n        تعداد مولفه های یک لیست را حساب کند.\n        </p> ",
-            "id": 8
+            "id": 8,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": "مرتب کردن از کوچک به بزرگ",
             "content": "<p class='mixed-direction'> \n       .تعداد مولفه های یک لیست را حساب کند و مولفه های آن را مرتب کند.\n        از کوچک به بزرگ\n        </p> ",
-            "id": 9
+            "id": 9,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": "بررسی مقدار درون لیست",
             "content": "<p class='mixed-direction'> \n        برنامه‌ای بنویسید که چک کند یک مولفه درون لیست وجود دارد یا خیر\n        </p> ",
-            "id": 10
+            "id": 10,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": "متد split رشته",
             "content": "<p class='mixed-direction'> \n        یک لیست توسط جدا کردن رشته توسط\n        split\n        ایجاد کنید.       \n          </p> ",
-            "id": 11
+            "id": 11,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": "شرط + لیست",
             "content": "<p class='mixed-direction'> \n    تعداد مولفه‌های یک لیست را چک کنید و چنانچه مقدارشان برابر ۴ بود نتیجه‌ی موفقیت آمیز اعلام کنید.\n          </p> ",
-            "id": 12
+            "id": 12,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": "میانگین لیست",
             "content": "<p class='mixed-direction'> \nدر ابتدا لیستی از اعداد درست کنید، سپس مقدار میانگین آن را محاسبه نمایید و چاپ کنید.          </p> ",
-            "id": 13
+            "id": 13,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": "متد extend",
             "content": "<p class='mixed-direction'> \nدو لیست را توسط متد\nextend\nترکیب کنید.\n                  </p> ",
-            "id": 14
+            "id": 14,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": "متد count",
             "content": "<p class='mixed-direction'> \nیک لیست حاوی چند رقم را ایجاد کنید، تعداد رخداد رقم ۶ را در آن چاپ نمایید.\nبا استفاده از count\n                  </p> ",
-            "id": 15
+            "id": 15,
+            "textarea": true,
+            "upload_area": false
         }
     ]
 }

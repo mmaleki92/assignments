@@ -122,3 +122,20 @@ p .mixed-direction code {
         font-size: 1rem;
     }
 }
+/* File upload input styles */
+input[type="file"] {
+    display: block;
+    margin: 10px 0;
+    padding: 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Labels for file upload */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #555;
+}

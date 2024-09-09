@@ -11,42 +11,58 @@
         {
             "title": "دنباله‌ی فیبونانچی",
             "content": "برنامه‌ای بنویسید که دنباله‌ی فیبونانچی را توسط حلقه‌ی for چاپ کند.\r\nبرنامه‌ی شما می‌بایست این دنباله را تا مقدار n که از کاربر می‌گیرد ادامه دهد.",
-            "id": 1
+            "id": 1,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": "فاکتوریل",
             "content": "برنامه‌ای بنویسید که فاکتوریل یک عدد را توسط حلقه‌ی for محاسبه کند.",
-            "id": 2
+            "id": 2,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": "عدد اول",
             "content": "برنامه‌ای بنویسید که با حلقه‌ی for بررسی کند که آیا عدد داده شده اول است یا خیر",
-            "id": 3
+            "id": 3,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": "الگوی مثلث",
             "content": " الگوری زیر را با حلقه for  انجام دهید<img src=\"../../../../static/img/Screenshot_from_2024-08-26_20-58-04.png\" alt=\"Image\">",
-            "id": 4
+            "id": 4,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": "الگوی ساعت شنی",
             "content": " الگوی زیر را با حلقه for  انجام دهید.\r\n\r\n<img src=\"../../../../static/img/Screenshot_from_2024-08-26_20-59-23.png\" alt=\"Image\">",
-            "id": 5
+            "id": 5,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": "الگوی مثلث تو پر",
             "content": "الگوی زیر را با حلقه  for انجام دهید.\r\n<img src=\"../../../../static/img/Screenshot_from_2024-08-26_21-00-43.png\" alt=\"Image\">",
-            "id": 6
+            "id": 6,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": "الگوی لوزی",
             "content": " الگوی زیر را با حلقه for انجام دهید. <img src=\"../../../../static/img/Screenshot_from_2024-08-26_21-01-25.png\" alt=\"Image\">",
-            "id": 7
+            "id": 7,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": "الگوی درخت",
             "content": " الگوی زیر را با حلقه for انجام دهید. \r\n<img src=\"../../../../static/img/Screenshot_from_2024-08-26_21-02-27.png\" alt=\"Image\">",
-            "id": 8
+            "id": 8,
+            "textarea": true,
+            "upload_area": false
         }
     ]
 }

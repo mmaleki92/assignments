@@ -11,6 +11,7 @@
             width: 100%;
             height: 200px;
         }
+
         img {
             max-width: 100%;
             height: auto;
@@ -39,6 +40,11 @@
                     <label for="image">Image:</label>
                     <input type="file" id="image" name="image">
                 </div>
+                <!-- Add option to include textarea -->
+                <div class="form-group">
+                    <label for="include_textarea">Include Textarea for Answer:</label>
+                    <input type="checkbox" id="include_textarea" name="include_textarea" value="true">
+                </div>
                 <div class="submit-button">
                     <button type="submit">Submit Question</button>
                 </div>
@@ -53,6 +59,10 @@
                 <div class="content">
                     {{ question.content | safe }}
                 </div>
+                {% if question.textarea %}
+                <!-- Render a textarea if the property is true -->
+                <textarea id="answer{{ question.id }}" name="answer{{ question.id }}" rows="4" required></textarea>
+                {% endif %}
             </div>
             {% endfor %}
         </section>

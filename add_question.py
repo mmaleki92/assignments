@@ -132,7 +132,7 @@ def view_post(post_name):
     if request.method == 'POST':
         title = request.form['title']
         content = request.form['content']
-        
+
         # Handle file uploads
         if 'image' in request.files:
             image_file = request.files['image']
@@ -142,11 +142,14 @@ def view_post(post_name):
                 image_url = url_for('static', filename=f'img/{image_filename}')
                 # Directly insert image into content
                 content += f'<img src="../../../..{image_url}" alt="Image">'
-        content += "<textarea id='answer3' name='answer3' rows='4' required></textarea>"
+
+        # Check if textarea should be included
+        include_textarea = request.form.get('include_textarea') == 'true'
 
         new_question = {
             "title": title,
-            "content": content
+            "content": content,
+            "textarea": include_textarea  # Add the textarea property
         }
         message = add_new_questions_to_json(json_file_path, [new_question])
         return redirect(url_for('view_post', post_name=post_name, message=message))

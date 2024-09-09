@@ -11,17 +11,23 @@
         {
             "title": "دیوار pygame",
             "content": "<p class='mixed-direction'> \nبرای بازی اولیه مار متحرک دیوار اضافه کنید که با برخورد به آن بازی تمام شود.\n </p> ",
-            "id": 1
+            "id": 1,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": "تصویر آینه‌ای",
             "content": "<p class='mixed-direction'>\n        برای بازی اولیه مار متحرک دیوار یک شکل دیگر به صورت آینه‌ای ایجاد کنید\nبه این صورت که حرکت مربع شما باعث حرکت شکل دیگر به صورت آینه‌ای شود \n        </p>",
-            "id": 2
+            "id": 2,
+            "textarea": true,
+            "upload_area": false
         },
         {
             "title": "پلتفرم در صفحه",
             "content": "<p class='mixed-direction'>\n\n        برای بازی اولیه مار متحرک دیوار یک پلتفرم ایجاد کنید، به این صورت که وقتی وارد آن می‌شود از مربع دیگر خارج شود.\n                </p>\n    ",
-            "id": 3
+            "id": 3,
+            "textarea": true,
+            "upload_area": false
         }
     ]
 }

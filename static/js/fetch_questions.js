@@ -7,10 +7,18 @@ function fetchAndRenderQuestions(jsonPath) {
             return response.json();
         })
         .then(data => {
+            console.log('Fetched Data:', data); // Debugging line
+
+            // Set the page title and main header
             document.getElementById('page-title').textContent = data.metadata.title;
             document.getElementById('main-header').textContent = data.metadata.title;
 
             const questionsContainer = document.getElementById('questions-container');
+            if (!questionsContainer) {
+                console.error('Element with id "questions-container" not found.');
+                return;
+            }
+
             let counter = 1;
 
             data.questions.forEach(question => {
@@ -47,13 +55,32 @@ function fetchAndRenderQuestions(jsonPath) {
                     }
                 });
 
-                // Create the textarea for user input
-                const textarea = document.createElement('textarea');
-                textarea.id = `answer${question.id}`;
-                textarea.name = `answer${question.id}`;
-                textarea.rows = 4;
-                textarea.required = true;
-                questionDiv.appendChild(textarea);
+                // Conditionally create the textarea for user input
+                if (question.textarea) {
+                    const textarea = document.createElement('textarea');
+                    textarea.id = `answer${question.id}`;
+                    textarea.name = `answer${question.id}`;
+                    textarea.rows = 4;
+                    textarea.required = true;
+                    questionDiv.appendChild(textarea);
+                }
+
+                // Conditionally create the file upload area
+                if (question.upload_area) {
+                    // Create a label for file upload input
+                    const fileUploadLabel = document.createElement('label');
+                    fileUploadLabel.setAttribute('for', `file-upload-${question.id}`);
+                    fileUploadLabel.textContent = 'بارگذاری فایل:';
+
+                    // Create the file input element
+                    const fileUploadInput = document.createElement('input');
+                    fileUploadInput.type = 'file';
+                    fileUploadInput.id = `file-upload-${question.id}`;
+                    fileUploadInput.name = `file-upload-${question.id}`;
+
+                    questionDiv.appendChild(fileUploadLabel);
+                    questionDiv.appendChild(fileUploadInput);
+                }
 
                 counter++;
                 questionsContainer.appendChild(questionDiv);
