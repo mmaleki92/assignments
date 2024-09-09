@@ -32,7 +32,6 @@ def load_questions(post_name):
         return data['questions'], json_file_path
     return [], json_file_path
 
-# Function to add new questions to a specific post
 def add_new_questions_to_json(json_file_path, new_questions):
     if not os.path.exists(json_file_path):
         create_default_json_file(json_file_path)
@@ -41,12 +40,10 @@ def add_new_questions_to_json(json_file_path, new_questions):
         data = json.load(file)
     
     existing_questions = data.get('questions', [])
-    
     next_id = determine_next_id(existing_questions)
     
     for question in new_questions:
-        question_id = next_id
-        question['id'] = question_id
+        question['id'] = next_id
         next_id += 1
     
     data['questions'].extend(new_questions)
@@ -129,28 +126,36 @@ def index():
 @app.route('/view_post/<post_name>', methods=['GET', 'POST'])
 def view_post(post_name):
     questions, json_file_path = load_questions(post_name)
+    
     if request.method == 'POST':
         title = request.form['title']
         content = request.form['content']
-
-        # Handle file uploads
-        if 'image' in request.files:
-            image_file = request.files['image']
-            if image_file and allowed_file(image_file.filename):
-                image_filename = secure_filename(image_file.filename)
-                image_file.save(os.path.join('static/img', image_filename))
-                image_url = url_for('static', filename=f'img/{image_filename}')
-                # Directly insert image into content
-                content += f'<img src="../../../..{image_url}" alt="Image">'
-
-        # Check if textarea should be included
+        code = request.form['code']  # Retrieve code from the form
         include_textarea = request.form.get('include_textarea') == 'true'
+        upload_area = request.form.get('upload_area') == 'true'
+
+        # Format the code snippet using pre/code tags for HTML display
+        if code:
+            formatted_code = f"<pre><code class='language-python'>{code}</code></pre>"
+            content += formatted_code  # Append formatted code to content
 
         new_question = {
             "title": title,
             "content": content,
-            "textarea": include_textarea  # Add the textarea property
+            "textarea": include_textarea,
+            "upload_area": upload_area
         }
+
+        # Handle file uploads if upload_area is true
+        if upload_area and 'file_upload' in request.files:
+            uploaded_file = request.files['file_upload']
+            if uploaded_file and allowed_file(uploaded_file.filename):
+                file_filename = secure_filename(uploaded_file.filename)
+                file_upload_path = os.path.join('static/uploads', file_filename)
+                uploaded_file.save(file_upload_path)
+                file_url = url_for('static', filename=f'uploads/{file_filename}')
+                new_question['file_url'] = file_url
+
         message = add_new_questions_to_json(json_file_path, [new_question])
         return redirect(url_for('view_post', post_name=post_name, message=message))
     

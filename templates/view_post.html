@@ -16,6 +16,15 @@
             max-width: 100%;
             height: auto;
         }
+
+        /* Style for the code editor area */
+        .code-editor {
+            width: 100%;
+            height: 200px;
+            font-family: monospace;
+            font-size: 14px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 
@@ -37,13 +46,25 @@
                     <textarea id="content" name="content" required></textarea>
                 </div>
                 <div class="form-group">
+                    <label for="code">Code (optional):</label>
+                    <textarea id="code" name="code" class="code-editor" placeholder="Paste your code here..."></textarea>
+                </div>
+                <div class="form-group">
                     <label for="image">Image:</label>
                     <input type="file" id="image" name="image">
                 </div>
-                <!-- Add option to include textarea -->
                 <div class="form-group">
                     <label for="include_textarea">Include Textarea for Answer:</label>
                     <input type="checkbox" id="include_textarea" name="include_textarea" value="true">
+                </div>
+                <div class="form-group">
+                    <label for="upload_area">Include Upload Area:</label>
+                    <input type="checkbox" id="upload_area" name="upload_area" value="true">
+                </div>
+                <!-- File upload field, shown if upload_area is true -->
+                <div class="form-group" id="file_upload_group" style="display: none;">
+                    <label for="file_upload">Upload File:</label>
+                    <input type="file" id="file_upload" name="file_upload">
                 </div>
                 <div class="submit-button">
                     <button type="submit">Submit Question</button>
@@ -63,6 +84,12 @@
                 <!-- Render a textarea if the property is true -->
                 <textarea id="answer{{ question.id }}" name="answer{{ question.id }}" rows="4" required></textarea>
                 {% endif %}
+                {% if question.upload_area and question.file_url %}
+                <!-- Display the uploaded file if upload_area is true -->
+                <div class="upload-area">
+                    <a href="{{ question.file_url }}" target="_blank">Download Uploaded File</a>
+                </div>
+                {% endif %}
             </div>
             {% endfor %}
         </section>
@@ -73,22 +100,12 @@
     </div>
 
     <script>
-        document.getElementById('content').addEventListener('paste', function(event) {
-            var items = (event.clipboardData || event.originalEvent.clipboardData).items;
-            for (var i = 0; i < items.length; i++) {
-                if (items[i].kind === 'file') {
-                    var file = items[i].getAsFile();
-                    if (file && ['image/png', 'image/jpeg', 'image/gif'].includes(file.type)) {
-                        var reader = new FileReader();
-                        reader.onload = function(e) {
-                            var imageUrl = e.target.result;
-                            var img = document.createElement('img');
-                            img.src = imageUrl;
-                            document.getElementById('content').appendChild(img);
-                        };
-                        reader.readAsDataURL(file);
-                    }
-                }
+        document.getElementById('upload_area').addEventListener('change', function() {
+            var fileUploadGroup = document.getElementById('file_upload_group');
+            if (this.checked) {
+                fileUploadGroup.style.display = 'block';
+            } else {
+                fileUploadGroup.style.display = 'none';
             }
         });
     </script>
