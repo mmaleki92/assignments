@@ -58,5 +58,10 @@
         "title": "turtle",
         "description": "تمرین‌های الگوهای turtle",
         "file_path": "posts/post_12.html"
+    },
+    {
+        "title": "تابع",
+        "description": "تمرین‌های توابع در پایتون",
+        "file_path": "posts/post_13.html"
     }
 ]

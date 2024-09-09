@@ -1,0 +1,54 @@
+{
+    "metadata": {
+        "version": "1.0.0",
+        "author": "Morteza Maleki",
+        "date_created": "N/A",
+        "description": "تمرین‌های توابع در پایتون",
+        "category": "python",
+        "title": "تابع"
+    },
+    "questions": [
+        {
+            "title": "تابعی بنویسید که یک رشته به عنوان ورودی دریافت کند و تعداد حروف 'a' در آن رشته را برگرداند ",
+            "content": "توجه کنید که تعداد حروف را می‌بایست برگرداند (با استفاده از کلیدواژه return) و نباید چاپ کند.",
+            "textarea": false,
+            "upload_area": true,
+            "id": 1
+        },
+        {
+            "title": "تابعی بنویسید که یک لیست از اعداد را به عنوان ورودی دریافت کند و با استفاده از یک حلقه for تمام اعداد زوج را به صورت لیست برگرداند.",
+            "content": "توجه: ورودی یک لیست خواهد بود و خروجی نیز یک لیست باید باشد.<pre><code class='language-python'>def filter_even_numbers(numbers):\r\n    # for inja bashad</code></pre>",
+            "textarea": false,
+            "upload_area": true,
+            "id": 2
+        },
+        {
+            "title": "تابعی بنویسید که یک دیکشنری با کلیدها و مقادیر عددی را به عنوان ورودی دریافت کند و دیکشنری جدیدی برگرداند که مقادیر آن به توان دو رسیده باشد.",
+            "content": " <pre><code class='language-python'>def square_dict_values(d):\r\n    # code inja neveshte shavad</code></pre>",
+            "textarea": false,
+            "upload_area": true,
+            "id": 3
+        },
+        {
+            "title": "تابعی بنویسید که یک تاپل از اعداد را به عنوان ورودی دریافت کند و کمترین عدد را با استفاده از یک حلقه while پیدا کند.",
+            "content": " <pre><code class='language-python'>def find_min(t):\r\n    # Implement function here</code></pre>",
+            "textarea": false,
+            "upload_area": true,
+            "id": 4
+        },
+        {
+            "title": "تابعی بنویسید که یک دیکشنری از نام کشورها و جمعیت آن‌ها به عنوان ورودی دریافت کند و سه کشوری که بیشترین جمعیت را دارند را به ترتیب نزولی برگرداند.",
+            "content": " <pre><code class='language-python'>def top_three_populous_countries(countries):\r\n    # Implement function here</code></pre>",
+            "textarea": false,
+            "upload_area": true,
+            "id": 5
+        },
+        {
+            "title": "تابعی بنویسید که یک تاپل از اعداد را به عنوان ورودی دریافت کند و اعداد را به ترتیب نزولی مرتب کرده و به صورت یک لیست برگرداند.",
+            "content": " <pre><code class='language-python'>def sort_tuple_descending(t):\r\n    # Implement function here\r\n</code></pre>",
+            "textarea": false,
+            "upload_area": true,
+            "id": 6
+        }
+    ]
+}

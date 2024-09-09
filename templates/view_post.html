@@ -30,27 +30,27 @@
 
 <body>
     <header>
-        <h1>Post: {{ post_name }}</h1>
+        <h1>پست: {{ post_name }}</h1>
     </header>
 
     <div class="container">
         <section class="intro">
-            <h2>Submit a New Question</h2>
+            <h2>افزودن سوال</h2>
             <form action="{{ url_for('view_post', post_name=post_name) }}" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="title">Title:</label>
+                    <label for="title">عنوان:</label>
                     <input type="text" id="title" name="title" required>
                 </div>
                 <div class="form-group">
-                    <label for="content">Content:</label>
+                    <label for="content">محتوا:</label>
                     <textarea id="content" name="content" required></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="code">Code (optional):</label>
-                    <textarea id="code" name="code" class="code-editor" placeholder="Paste your code here..."></textarea>
+                    <label for="code">کد (اختیاری)</label>
+                    <textarea id="code" name="code" class="code-editor" placeholder="کد خود را در این مکان قرار دهید..."></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="image">Image:</label>
+                    <label for="image">تصویر:</label>
                     <input type="file" id="image" name="image">
                 </div>
                 <div class="form-group">
@@ -73,7 +73,7 @@
         </section>
 
         <section class="blog-container">
-            <h2>Existing Questions</h2>
+            <h2>سوال‌های موجود:</h2>
             {% for question in questions %}
             <div class="question">
                 <h3>{{ question.title }}</h3>
