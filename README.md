@@ -6,7 +6,7 @@ Our goal is to ensure that every post stands out, offering unique and distinct c
 
 Dive in and enjoy the journey of coding with us!
 
-![image](https://github.com/user-attachments/assets/3b38d141-8d36-47d5-abe0-67fd61b53c5c)
+![image](static/img/home_page.png)
 
 in Persian and English | به زبان انگلیسی و فارسی
 
