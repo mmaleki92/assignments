@@ -63,5 +63,10 @@
         "title": "تابع",
         "description": "تمرین‌های توابع در پایتون",
         "file_path": "posts/post_13.html"
+    },
+    {
+        "title": "آزمون ۱",
+        "description": "آزمون مروری موضوع‌های مقدماتی",
+        "file_path": "posts/post_15.html"
     }
 ]

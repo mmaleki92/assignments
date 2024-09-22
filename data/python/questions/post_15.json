@@ -1,0 +1,110 @@
+{
+    "metadata": {
+        "version": "1.0.0",
+        "author": "Morteza Maleki",
+        "date_created": "N/A",
+        "description": "آزمون مروری موضوع‌های مقدماتی",
+        "category": "python",
+        "title": "آزمون ۱"
+    },
+    "questions": [
+        {
+            "title": "نتیجه‌ی کد چیست؟ توضیح دهید.",
+            "content": " <pre><code class='language-python'>for x in range(0.5, 5.5, 0.5):\r\n    print(x)</code></pre>",
+            "textarea": true,
+            "upload_area": false,
+            "id": 1
+        },
+        {
+            "title": "خروجی کد زیر چیست؟",
+            "content": " <pre><code class='language-python'>s = \"James Bond\"\r\n\r\nprint(s[-3:])</code></pre>",
+            "textarea": true,
+            "upload_area": false,
+            "id": 2
+        },
+        {
+            "title": "خروجی کد زیر چیست؟",
+            "content": " <pre><code class='language-python'>def calculate(num1, num2=4):\r\n    res = num1 + num2\r\n    print(res)\r\n\r\ncalculate(4)</code></pre>",
+            "textarea": true,
+            "upload_area": false,
+            "id": 3
+        },
+        {
+            "title": "خروجی کد زیر چیست؟",
+            "content": " <pre><code class='language-python'>list_one = [20, 40, 60, 80]\r\nlist_two = [20, 40, 60, 80]\r\n\r\nprint(list_one == list_two)\r\nprint(list_one is list_two)\r\n</code></pre>",
+            "textarea": true,
+            "upload_area": false,
+            "id": 4
+        },
+        {
+            "title": "خروجی کد زیر چیست؟",
+            "content": " <pre><code class='language-python'>v1 = 1\r\nv2 = 2\r\nv3 = \"3\"\r\nprint(v1 + v2 + v3)</code></pre>",
+            "textarea": true,
+            "upload_area": false,
+            "id": 5
+        },
+        {
+            "title": "نتیجه‌ی کد زیر چیست؟",
+            "content": "  <pre><code class='language-python'>s = \"hello\" + \"world\" + \"!\"\r\n\r\nprint(s.upper())</code></pre>",
+            "textarea": true,
+            "upload_area": false,
+            "id": 6
+        },
+        {
+            "title": "خروجی کد زیر چیست؟",
+            "content": " <pre><code class='language-python'>for i in range(10, 15, 1):\r\n    print(i, end=\", \")</code></pre>",
+            "textarea": true,
+            "upload_area": false,
+            "id": 7
+        },
+        {
+            "title": "کد زیر را توضیح دهید. هدف آن چیست؟ روش کار آن چگونه است؟ و قسمت‌های مختلف آن را شرح دهید.",
+            "content": " <pre><code class='language-python'>numbers = [1, 2, 3, 4, 5]\r\n\r\nnumbers.append(6)\r\nnumbers.insert(2, 4)\r\nremoved_elemnt = numbers.pop(3)\r\n</code></pre>",
+            "textarea": true,
+            "upload_area": false,
+            "id": 8
+        },
+        {
+            "title": "کد زیر را کامل توضیح دهید.",
+            "content": " <pre><code class='language-python'>def s(x):\r\n    return x * x\r\n\r\ntot = 0\r\nfor n in [1, 2, 3]:\r\n    tot = tot + s(n)\r\nprint(tot)</code></pre>",
+            "textarea": true,
+            "upload_area": false,
+            "id": 9
+        },
+        {
+            "title": "به صورت کیفی به این سوال توضیح دهید.",
+            "content": "برای اجرای الگوی زیر چگونه می‌توانید عددی که کاربر وارد کرده را دریافت و ذخیره کنید؟ چه نوع حلقه‌ای برای ایجاد این الگو نیاز دارید؟ چگونه می‌توانید اعداد را به تعداد دفعات مورد نیاز چاپ کنید؟چه چیزی باید در نظر گرفته شود تا اطمینان حاصل شود که برنامه برای هر عدد صحیح مثبتی که کاربر وارد کرده کار می‌کند؟ <pre><code class='language-python'>1\r\n22\r\n333\r\n4444\r\n55555\r\n666666</code></pre>",
+            "textarea": true,
+            "upload_area": false,
+            "id": 10
+        },
+        {
+            "title": "چرا تابع یا فانکشن می نویسیم؟",
+            "content": " ",
+            "textarea": true,
+            "upload_area": false,
+            "id": 11
+        },
+        {
+            "title": "سوالات را جواب دهید.",
+            "content": "در کد زیر چند پرینت انجام می‌شود؟\r\nکد را بنویسید و توضیح بدهید که چرا اعداد اینگونه نمایش داده می‌شوند؟<pre><code class='language-python'>for i in range(10):\r\n    for j in range(5):\r\n        print(i, j)</code></pre>",
+            "textarea": true,
+            "upload_area": false,
+            "id": 12
+        },
+        {
+            "title": "توضیح کد.",
+            "content": "کد زیر چه زمانی متوقف می‌شود؟ چگونه می‌توانیم متوقفش کنیم؟<pre><code class='language-python'>while True:\r\n    print(\"Hi!\")</code></pre>",
+            "textarea": true,
+            "upload_area": false,
+            "id": 13
+        },
+        {
+            "title": "الگو",
+            "content": "برنامه‌ای بنویسید که الگوی زیر را چاپ کند.<pre><code class='language-python'>1\r\n21\r\n321\r\n4321\r\n54321\r\n6543221</code></pre>",
+            "textarea": false,
+            "upload_area": true,
+            "id": 14
+        }
+    ]
+}

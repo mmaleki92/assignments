@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">تمرین</title>
+
+    <!-- Link to external CSS files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+
+    <!-- Include custom JavaScript files -->
+    <script src="../../../../static/js/submit_answers.js" defer></script>
+    <script src="../../../../static/js/tetris_python.js" defer></script>
+    
+    <link rel="stylesheet" href="../../../../static/css/styles.css">
+    <link rel="stylesheet" href="../../../../static/css/questions_styles.css">
+
+</head>
+<body>
+    <!-- Include Prism.js for syntax highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">خانه</a></li>
+                <li><a href="../index.html">پایتون</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 id="main-header">تمرین</h1>
+        <canvas id="tetrisCanvas"></canvas>
+
+        <!-- User Information Form -->
+        <form id="user-info-form" action="javascript:void(0);" onsubmit="saveUserInfo(event)">
+            <div class="form-group">
+                <label for="name">نام:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="password">کلمه عبور:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="submit-button">
+                <input type="submit" value="ثبت اطلاعات">
+            </div>
+        </form>
+
+        <!-- Questions Container -->
+        <div id="questions-container"></div>
+
+        <div class="submit-button">
+            <button onclick="submitAllAnswers()">ارسال تمام پاسخ‌ها</button>
+        </div>
+    </div>
+
+    <!-- Include the external JS file -->
+    <script src="../../../../static/js/fetch_questions.js"></script>
+
+    <!-- Call the function with the JSON path -->
+    <script>
+        
+        // Pass the path of the JSON file you want to load
+        fetchAndRenderQuestions('../../../../data/python/questions/post_15.json');  // Replace 'post_1.json' with your desired path
+    </script>
+</body>
+</html>
