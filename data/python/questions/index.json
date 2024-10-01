@@ -68,5 +68,10 @@
         "title": "آزمون ۱",
         "description": "آزمون مروری موضوع‌های مقدماتی",
         "file_path": "posts/post_15.html"
+    },
+    {
+        "title": "شی گرایی (oop)",
+        "description": "تمرین‌های شی‌گرایی و برنامه نویسی شی گرا",
+        "file_path": "posts/post_16.html"
     }
 ]

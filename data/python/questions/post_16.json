@@ -1,0 +1,68 @@
+{
+    "metadata": {
+        "version": "1.0.0",
+        "author": "Morteza Maleki",
+        "date_created": "N/A",
+        "description": "تمرین‌های شی‌گرایی و برنامه نویسی شی گرا",
+        "category": "python",
+        "title": "شی گرایی (oop)"
+    },
+    "questions": [
+        {
+            "title": "نمایش فضای نام",
+            "content": "برنامه پایتونی بنویسید که یک ماژول array را import کند و فضای نام ماژول مذکور را نمایش دهد.<pre><code class='language-python'>import array</code></pre>",
+            "textarea": true,
+            "upload_area": false,
+            "id": 1
+        },
+        {
+            "title": "فضای نام یک کلاس ایجاد شده توسط خودتان",
+            "content": "برنامه پایتونی برای ایجاد یک کلاس و نمایش فضای نام آن کلاس بنویسید.",
+            "textarea": true,
+            "upload_area": false,
+            "id": 2
+        },
+        {
+            "title": "فضای نام یک نمونه ",
+            "content": "یک برنامه پایتون بنویسید تا نمونه ای از یک کلاس مشخص را ایجاد کند و فضای نام نمونه مذکور را نمایش دهد.",
+            "textarea": true,
+            "upload_area": false,
+            "id": 3
+        },
+        {
+            "title": "بررسی نمونه‌های کلاس‌ها",
+            "content": "یک برنامه پایتون برای ایجاد دو کلاس خالی Student و Marks بنویسید. حال چند نمونه ایجاد کنید و بررسی کنید که آیا نمونه‌هایی از کلاس های گفته شده هستند یا خیر.",
+            "textarea": true,
+            "upload_area": false,
+            "id": 4
+        },
+        {
+            "title": "تبدیل اعداد به حروف",
+            "content": "کلاس پایتونی بنویسید که در آن کلاس با ایجاد یک متد بتوانید اعداد را به حروف تبدیل کنید.\r\n\r\n<pre><code class='language-python'># 1 --> یک</code></pre>",
+            "textarea": true,
+            "upload_area": false,
+            "id": 5
+        },
+        {
+            "title": "اصلاح کد",
+            "content": "کد زیر دو باگ دارد، آن را اصلاح کنید و کد درست را ارسال کنید.<pre><code class='language-python'>class Pet:\r\n    def init(self, name):\r\n        self.name = name\r\n        \r\n    def move():\r\n        return f\"{self.name} is moving...\"</code></pre>",
+            "textarea": true,
+            "upload_area": false,
+            "id": 6
+        },
+        {
+            "title": "متد __str__ را توضیح دهید و یک مثال از آن بنویسید.",
+            "content": " ",
+            "textarea": true,
+            "upload_area": false,
+            "id": 7
+        },
+        {
+            "title": "کلاس شبیه int",
+            "content": "یک کلاس همانند int پایتون ایجاد کنید که عملیات جمع/تفریق/ضرب/تقسیم را داشته باشد اما تقسیم بر صفر را  None برگرداند.",
+            "textarea": true,
+            "upload_area": false,
+            "id": 8
+        }
+    ]
+}
